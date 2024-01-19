@@ -27,7 +27,7 @@ class LoginPage extends StatelessWidget {
             SizedBox(height: 18.h,),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
-              child: CustomText(text: AppTexts.login, color: Colors.black, fontSize: Dimensions.fontSizeXXXLarge, fontWeight: FontWeight.w700,),
+              child: CustomText(text: AppTexts.login, color: Colors.black, fontSize: Dimensions.fontSizeXXXLarge.w, fontWeight: FontWeight.w700,),
             ),
             SizedBox(height: 73.h,),
             CustomTextField(labelText: AppTexts.email),

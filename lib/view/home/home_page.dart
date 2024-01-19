@@ -85,8 +85,8 @@ class HomePage extends StatelessWidget {
                 color: AppColors.grayColor,
               ),
             ),
-            SizedBox(height: 22.h,),
-            HomeListView(controller: controller, containerColor: AppColors.defaultTextColor, containerText: AppTexts.newProducts,),
+            SizedBox(height: 2.h,),
+            HomeListView(controller: controller, containerColor: AppColors.blackColor, containerText: AppTexts.newProducts,),
           ],
         ),
       ),
@@ -112,7 +112,7 @@ class HomeListView extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 18.0),
       child: Container(
-        height: 300.h,
+        height: 320.h,
         child: ListView.builder(
           shrinkWrap: true,
           scrollDirection: Axis.horizontal,
@@ -159,15 +159,14 @@ class HomeListView extends StatelessWidget {
                           child: Container(
                             height: 40.h,
                             width: 40.w,
-                            decoration: const ShapeDecoration(
+                            decoration: ShapeDecoration(
                                 color: Colors.white,
-                                shape: CircleBorder(),
+                                shape: const CircleBorder(),
                               shadows: [
                                 BoxShadow(
-                                  color: Color(0x14000000),
+                                  color: AppColors.shadowColor,
                                   blurRadius: 4,
-                                  offset: Offset(0, 4),
-                                  spreadRadius: 0,
+                                  offset: const Offset(0, 4),
                                 )
                               ],
                             ),

@@ -32,7 +32,7 @@ class ForgotPassword extends StatelessWidget {
             SizedBox(height: 87.h,),
             Padding(
               padding: const EdgeInsets.only(left: 15.0),
-              child: CustomText(text: AppTexts.pleaseEnterYourMail, fontSize: 14, color: AppColors.defaultTextColor,),
+              child: CustomText(text: AppTexts.pleaseEnterYourMail, fontSize: 14, color: AppColors.blackColor,),
             ),
             SizedBox(height: 16.h,),
             CustomTextField(labelText: AppTexts.email,),

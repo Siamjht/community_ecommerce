@@ -1,6 +1,5 @@
 import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:community_ecommerce/view/auth_pages/login_page.dart';
-import 'package:community_ecommerce/view/auth_pages/signup_page.dart';
 import 'package:community_ecommerce/view/categorie_screen.dart';
 import 'package:community_ecommerce/view/home/home_page.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +8,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../utils/app_icons.dart';
 import '../../utils/app_texts.dart';
 import '../auth_pages/forgot_password.dart';
+import '../bag/my_bag_page.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -21,7 +21,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   final _pageData = [
     HomePage(),
     CategorieScreen(),
-    SignUpPage(),
+    MyBagPage(),
     LoginPage(),
     ForgotPassword()
   ];

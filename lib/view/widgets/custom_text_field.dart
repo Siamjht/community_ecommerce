@@ -10,8 +10,10 @@ import 'package:get/get.dart';
 import '../../utils/app_icons.dart';
 
 class CustomTextField extends StatelessWidget {
-  CustomTextField({super.key, required this.labelText});
+  CustomTextField({super.key, required this.labelText, this.height = 64});
   final String labelText;
+  final double height;
+
   Controller textFieldController = Get.put(Controller());
 
   @override
@@ -20,47 +22,49 @@ class CustomTextField extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Container(
         decoration:BoxDecoration(
-          border: Border.all(color: AppColors.errorMarkColor),
+          border: textFieldController.isValided? null : Border.all(color: AppColors.errorMarkColor),
           borderRadius: BorderRadius.circular(4),
           color: AppColors.whiteColor,
         ),
-        height: 64.h,
+        height: height,
         width: 343.w,
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 16),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Expanded(
-                child: TextField(
-                  controller: textFieldController.nameController,
-                  onTap: (){
+          child: Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: TextField(
+                    controller: textFieldController.nameController,
+                    onTap: (){
 
-                  },
-                  decoration: InputDecoration(
-                    suffixIcon: textFieldController.isValided? Icon(Icons.check, color: AppColors.successMarkColor,)
-                        :  SvgPicture.asset(AppIcons.crossIcon, color:AppColors.errorMarkColor, height: 14.h,width: 14.w,),
-                    labelStyle: TextStyle(
-                      color: AppColors.grayColor,
+                    },
+                    decoration: InputDecoration(
+                      suffixIcon: textFieldController.isValided? Icon(Icons.check, color: AppColors.successMarkColor,)
+                          :  SvgPicture.asset(AppIcons.crossIcon, color:AppColors.errorMarkColor, height: 14.h,width: 14.w,),
+                      labelStyle: TextStyle(
+                        color: AppColors.grayColor,
+                      ),
+                      labelText: labelText,
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.circular(4),
+                      )
                     ),
-                    labelText: labelText,
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.circular(4),
-                    )
                   ),
                 ),
-              ),
-              // Obx(() =>
-              //     Checkbox(
-              //
-              //     checkColor: AppColors.successMarkColor,
-              //     value: textFieldController.isChecked.value,
-              //     onChanged: (bool? value){
-              //       textFieldController.isChecked.value = value!;},
-              //     ),
-              // ),
-            ],
+                // Obx(() =>
+                //     Checkbox(
+                //
+                //     checkColor: AppColors.successMarkColor,
+                //     value: textFieldController.isChecked.value,
+                //     onChanged: (bool? value){
+                //       textFieldController.isChecked.value = value!;},
+                //     ),
+                // ),
+              ],
+            ),
           ),
         ),
       ),

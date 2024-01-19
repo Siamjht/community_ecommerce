@@ -61,4 +61,15 @@ class AppTexts{
   static const skirts = "Skirts";
   static const dresses = "Dresses";
 
+  ///<<<---------------------------My bag Pages texts------------------->>>>
+
+  static const myBag = "My Bag";
+  static const colorItem = "Color";
+  static const sizeItem = "Size";
+  static const enterPromoCode = 'Enter your promo code';
+  static const checkOut = "Check Out";
+  static const totalAmount = 'Total amount:';
+  static const totalPrice = '124\$';
+
+
 }
