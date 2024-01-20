@@ -70,6 +70,17 @@ class AppTexts{
   static const checkOut = "Check Out";
   static const totalAmount = 'Total amount:';
   static const totalPrice = '124\$';
+  ///<<<--------------------------Modal bottom sheet------------------->>>>
+  static const yourPromoCode = 'Your Promo Codes';
+  static const personalOffer = 'Personal offer';
+  static const daysRemaining6 = '6 days remaining';
+  static const myPromoCode2020 = 'mypromocode2020';
+  static const summerSale = 'Summer Sale';
+  static const summer2020 = 'summer2020';
+  static const daysRemaining23 = '23 days remaining';
+  static const apply = 'Apply';
+
+
 
 
 }

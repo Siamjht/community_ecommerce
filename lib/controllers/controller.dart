@@ -1,6 +1,7 @@
 
 
 import 'package:community_ecommerce/models/product_details.dart';
+import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:community_ecommerce/utils/images.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
@@ -9,6 +10,7 @@ class Controller extends GetxController{
   TextEditingController nameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  TextEditingController promoCodeController = TextEditingController();
 
   List imagesList = [
     AppImages.blouse,
@@ -32,7 +34,15 @@ class Controller extends GetxController{
     ProductDetails(image: AppImages.categoryShoes, name: "Shoes", color: "Black", size: '41', price: "10\$", quantity: 20),
   ];
 
+  List promoCodesList = [
+    [AppColors.errorMarkColor , '10', "Personal Offer", 'mypromocode2023' , '6 days remaining'],
+    [AppColors.successMarkColor, '15', "Summer Sale", 'summer2024' , '23 days remaining'],
+    [AppColors.blackColor , '10', "Personal Offer", 'mypromocode2023' , '9 days remaining'],
+    [AppColors.errorMarkColor , '13', "Personal Offer", 'mypromocode2024' , '5 days remaining'],
+  ];
 
   RxBool isChecked = false.obs;
   bool isValided = true;
+
+
 }

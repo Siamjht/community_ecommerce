@@ -8,7 +8,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../utils/app_icons.dart';
 import '../../utils/app_texts.dart';
 import '../auth_pages/forgot_password.dart';
-import '../bag/my_bag_page.dart';
+import '../my_bag/my_bag_page.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});

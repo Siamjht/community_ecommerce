@@ -1,7 +1,6 @@
 
 import 'package:community_ecommerce/controllers/controller.dart';
 import 'package:community_ecommerce/utils/app_colors.dart';
-import 'package:community_ecommerce/utils/app_texts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -54,15 +53,6 @@ class CustomTextField extends StatelessWidget {
                     ),
                   ),
                 ),
-                // Obx(() =>
-                //     Checkbox(
-                //
-                //     checkColor: AppColors.successMarkColor,
-                //     value: textFieldController.isChecked.value,
-                //     onChanged: (bool? value){
-                //       textFieldController.isChecked.value = value!;},
-                //     ),
-                // ),
               ],
             ),
           ),
