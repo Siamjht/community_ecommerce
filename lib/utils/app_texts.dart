@@ -70,6 +70,24 @@ class AppTexts{
   static const checkOut = "Check Out";
   static const totalAmount = 'Total amount:';
   static const totalPrice = '124\$';
+  //-----------------------------------------
+
+  static const checkoutAppbar  = 'Checkout';
+  static const shippingAddress  = 'Shipping Address';
+  static const change = 'change';
+  static const clientName = 'John Doe';
+  static const clientAddress1 = '3 Newbridge Court';
+  static const clientAddress2 = 'Chino Hills, CA 91709, United States';
+  static const payment = 'Payment';
+  static const cardNumber = '**** **** **** 3947';
+  static const deliveryMethod = 'Deliver Method';
+  static const order = 'Order:';
+  static const delivery = 'Delivery:';
+  static const summary = 'Summary:';
+  static const submitOrder = 'Submit Order';
+
+
+
   ///<<<--------------------------Modal bottom sheet------------------->>>>
   static const yourPromoCode = 'Your Promo Codes';
   static const personalOffer = 'Personal offer';
@@ -79,6 +97,7 @@ class AppTexts{
   static const summer2020 = 'summer2020';
   static const daysRemaining23 = '23 days remaining';
   static const apply = 'Apply';
+
 
 
 

@@ -1,6 +1,8 @@
 import 'package:community_ecommerce/controllers/controller.dart';
+import 'package:community_ecommerce/routes/routes.dart';
 import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:community_ecommerce/utils/dimentions.dart';
+import 'package:community_ecommerce/view/my_bag/my_bag_page/my_bag_checkout_page.dart';
 import 'package:community_ecommerce/view/widgets/custom_elevated_button.dart';
 import 'package:community_ecommerce/view/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
@@ -87,7 +89,9 @@ class MyBagPage extends StatelessWidget {
             ),
             Center(
                 child: CustomElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.toNamed(RouteName.myBagCheckoutPage);
+                    },
                     titleText: AppTexts.checkOut.toUpperCase(),
                     buttonWidth: 343.w),
             ),

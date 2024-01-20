@@ -26,4 +26,12 @@ class AppIcons{
   static String facebookIcon = "assets/icons/facebookIcon.svg";
 
   static String favoriteIcon = "assets/icons/favoriteIcon.svg";
+
+  ///<<<<<-------------my bag checkout page icons------------------->>>>>>>>>
+
+  static String masterCardIcon = "assets/icons/mastercardIcon.svg";
+  static String fedexIcon = "assets/icons/fedexIcon.svg";
+  static String uspsIcon = "assets/icons/uspsIcon.svg";
+  static String dhlIcon = "assets/icons/dhlIcon.svg";
+
 }
