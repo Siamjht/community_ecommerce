@@ -43,6 +43,8 @@ class Controller extends GetxController{
 
   RxBool isChecked = false.obs;
   bool isValided = true;
+  RxBool isGetPromoCode = false.obs;
+  String promoCode = '';
 
 
 }

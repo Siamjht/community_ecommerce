@@ -92,7 +92,10 @@ class BottomSheetListView extends StatelessWidget {
                         SizedBox(height: 12.h,),
                         CustomText(text: items[4], fontSize: Dimensions.fontSizeXSmall, fontWeight: FontWeight.w400, color: AppColors.grayColor,),
                         SizedBox(height: 8.h,),
-                        CustomElevatedButton(onPressed: (){}, titleText: AppTexts.apply.toUpperCase(), buttonWidth: 93.w, buttonHeight: 36.h, titleSize: 14, titleWeight: FontWeight.w500,),
+                        CustomElevatedButton(onPressed: (){
+                          controller.isGetPromoCode.value = true;
+                          controller.promoCodeController.text = items[3];
+                        }, titleText: AppTexts.apply.toUpperCase(), buttonWidth: 93.w, buttonHeight: 36.h, titleSize: 14, titleWeight: FontWeight.w500,),
                       ],
                     )
                 ),

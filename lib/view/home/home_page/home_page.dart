@@ -9,8 +9,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
-import '../../controllers/controller.dart';
-import '../../utils/app_icons.dart';
+import '../../../controllers/controller.dart';
+import '../../../utils/app_icons.dart';
 
 
 class HomePage extends StatelessWidget {

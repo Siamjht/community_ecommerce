@@ -8,11 +8,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
-import '../../utils/app_icons.dart';
-import '../../utils/app_texts.dart';
-import 'inner/my_bag_list_view.dart';
-import 'inner/open_bottom_sheet.dart';
-import 'inner/promo_code_text_field.dart';
+import '../../../utils/app_icons.dart';
+import '../../../utils/app_texts.dart';
+import '../inner/my_bag_list_view.dart';
+import '../inner/open_bottom_sheet.dart';
+import '../inner/promo_code_text_field.dart';
 
 class MyBagPage extends StatelessWidget {
   MyBagPage({super.key});

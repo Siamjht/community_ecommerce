@@ -40,13 +40,18 @@ class OpenBottomSheet extends StatelessWidget {
               height: 14.h,
             ),
             Center(
-              child: Container(
-                width: 60,
-                height: 6,
-                decoration: ShapeDecoration(
-                  color: AppColors.hintTextColor,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(3)),
+              child: GestureDetector(
+                onTap: (){
+                  Navigator.pop(context);
+                },
+                child: Container(
+                  width: 60,
+                  height: 6,
+                  decoration: ShapeDecoration(
+                    color: AppColors.hintTextColor,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(3)),
+                  ),
                 ),
               ),
             ),
@@ -56,7 +61,9 @@ class OpenBottomSheet extends StatelessWidget {
             PromoCodeTextField(
                 textFieldPadding: 0,
                 controller: controller,
-                onTap: (){}),
+                onTap: (){
+
+                }),
             const SizedBox(
               height: 32,
             ),
