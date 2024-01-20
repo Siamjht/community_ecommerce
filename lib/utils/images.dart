@@ -31,6 +31,9 @@ class AppImages{
   static String favoriteLongs= "assets/images/favoritelongs.png";
   static String favoritetshirt= "assets/images/favoritetshirt.png";
 
+///>>>>>>>>>>>>>>>>>>>>>>>>> myprofile\myorderdetailsImages >>>>>>>>>>>>>>>>///
+  static String orderdetailfirstpic= "assets/images/orderdetailfirstpic.png";
+  static String orderdetailssecondpic= "assets/images/orderdetailssecondpic.png";
 
 
 

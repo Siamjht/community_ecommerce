@@ -73,7 +73,7 @@ class AppTexts{
   static const newArrivals = "Newarrivals";
   static const deliveryStatusChanges = "Delivery status changes";
   static const change = "Change";
-  static const passwordChange = "Change";
+  static const passwordChange = "PasswordChange";
   static const oldPassword = "Old Password";
   static const newPassword = "New Password";
   static const repeatNewPassword = "Repeat New Password";
@@ -110,6 +110,44 @@ class AppTexts{
   static const lOSTInk= "LOST Ink";
   static const twelve= "12\$";
   static const topShop= "Topshop";
+  static const sortby= "Sort by";
+  static const popular= "Popular";
+  static const newest= "Newest";
+  static const customerReview= "Customer review";
+  static const priceLowestToHigh= "Price: lowest to high";
+  static const priceHighestLow= "Price: highest to low";
+  static const seventyEight= "\$78";
+  static const oneHundredForetyThree= "\$143";
+  static const colors= "Colors";
+  static const sizes= "Sizes";
+  static const xS= "XS";
+  static const S= "S";
+  static const m= "M";
+  static const xL= "XL";
+  static const l= "L";
+  static const Category= "Category";
+  static const all= "All";
+  static const boys= "Boys";
+  static const girls= "Girls";
+  static const brand= "Brand";
+  static const addIdAsOriginals= "adidas Originals, Jack & Jones, s.Oliver";
+  static const discard= "Discard";
+  static const apply= "Apply";
+  static const search= "Search";
+  static const adidas= "adidas";
+  static const adidasOriginals= "adidas Originals";
+  static const blend= "Blend";
+  static const boutiqueMoschino= "Boutique Moschino";
+  static const champion= "Champion";
+  static const diesel= "Diesel";
+  static const jackJones= "Jack & Jones";
+  static const nafNaf= "Naf Naf";
+  static const redValentino= "Red Valentino";
+  static const oliver= " s.Oliver";
+  static const selectSize= "Select size";
+  static const sizeInfo= "Size info";
+  static const addToCART= "ADD TO CART";
+
 
 ///>>>>>>>>>>>>>>>>>>>>>>>>>FavoriteScreen Texts>>>>>>>>>>>>>>>>///
   static const favorites= "Favorites";
@@ -117,6 +155,44 @@ class AppTexts{
   static const lIME= "LIME";
   static const berries= "&Berries";
   static const colorBlue= "Color: Blue";
+
+  ///>>>>>>>>>>>>>>>>>>>>>>>>>Myprofile\My Order page Texts>>>>>>>>>>>>>>>>///
+  static const delivered= "Delivered";
+  static const processing= "Processing";
+  static const cancelled= "Cancelled";
+  static const Order1947034= "Order №1947034";
+  static const $05122019= "05-12-2019";
+  static const trackingNumber= "Tracking number:";
+  static const iW3475453455= "IW3475453455";
+  static const quantity= "Quantity:";
+  static const three= "3";
+  static const totalAmount= "Total Amount:";
+  static const oneHundredtwelve= "112\$";
+  static const details= "Details";
+  static const orderDetails= "Order Details";
+  static const items= "3 items";
+  static const colorGray= "Color: Gray";
+  static const units1= "Units: 1";
+  static const orderInformation= "Order information";
+  static const shippingAddress= "Shipping Address:";
+  static const threeNewBridge= "3 Newbridge Court ,Chino Hills,CA 91709, United States                                                               ";
+  static const paymentMethod= "Payment method:";
+  static const deliveryMethod= "Delivery method:";
+  static const fedEx= "FedEx, 3 days, 15\$";
+  static const discount= "Discount:";
+  static const tenparsent= "10%, Personal promo code";
+  static const oneHundedThithyThree= "133\$:";
+  static const reorder= "Reorder";
+  static const leaveFeedback= "Leave feedback";
+
+
+///>>>>>>>>>>>>>>>>>>>>>>>>>Settings page Texts>>>>>>>>>>>>>>>>///
+  static const fullname= "Full name";
+  static const dateofBirth= "Date of Birth";
+  static const sales= "Sales";
+  static const deliverystatuschanges= "Delivery status changes";
+  static const sAVEPASSWORD = "SAVE PASSWORD";
+
 
 
 }
