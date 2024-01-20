@@ -8,7 +8,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../utils/app_icons.dart';
 import '../../utils/app_texts.dart';
-import '../auth_pages/forgot_password.dart';
+import '../myprofile_settings.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -23,7 +23,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     CategorieScreen(),
     SignUpPage(),
     LoginPage(),
-    ForgotPassword()
+    MyProfileSetings()
   ];
   int _selectedItem = 0;
 

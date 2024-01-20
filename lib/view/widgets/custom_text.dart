@@ -10,6 +10,8 @@ class CustomText extends StatelessWidget {
     this.fontFamily,
     this.fontWeight
   });
+
+
   final String text;
   TextDecoration? lineThrough;
   Color? color;

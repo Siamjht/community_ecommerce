@@ -12,4 +12,6 @@ class AppColors{
   static Color whiteColor = const Color(0xFFFFFFFF);
   static Color grayColor = const Color(0xFF9B9B9B);
 
+  static Color tabBarIndicatorColor = const Color(0xFFDB3022);
+
 }

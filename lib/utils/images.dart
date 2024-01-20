@@ -8,4 +8,18 @@ class AppImages{
   static String sportDress = "assets/images/sportDress.png";
   static String tShirt = "assets/images/tShirt.png";
 
+
+  ///>>>>>>>>>>>>>>>>>>>>>>>>> CagegoryImages >>>>>>>>>>>>>>>>///
+
+  static String categoryNew = "assets/images/catagoryNew.png";
+  static String categoryAccesories = "assets/images/catagorysAccesories.png";
+  static String categoryShoes= "assets/images/catagoryShoes.png";
+  static String categoryCloths= "assets/images/catagoryCloths.png";
+
+///>>>>>>>>>>>>>>>>>>>>>>>>> MyprofileImages >>>>>>>>>>>>>>>>///
+  static String myProfile= "assets/images/myprofile.png";
+
+
+
+
 }

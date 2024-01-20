@@ -61,4 +61,38 @@ class AppTexts{
   static const skirts = "Skirts";
   static const dresses = "Dresses";
 
+
+
+  ///>>>>>>>>>>>>>>>>>>>>>>>>>MyprofileSettings Texts>>>>>>>>>>>>>>>>///
+
+  static const settings = "Settings";
+  static const personalInformation = "Personal Information";
+  static const fullName = "Full name";
+  static const  passwords = "Password";
+  static const notifications = "Notifications";
+  static const newArrivals = "Newarrivals";
+  static const deliveryStatusChanges = "Delivery status changes";
+  static const change = "Change";
+  static const passwordChange = "Change";
+  static const oldPassword = "Old Password";
+  static const newPassword = "New Password";
+  static const repeatNewPassword = "Repeat New Password";
+  static const myProfile = "My profile";
+  static const matildaBrown = "Matilda Brown";
+  static const matildaBrownCom = "matildabrown@mail.com";
+  static const myOrders = "My orders";
+  static const already = "Already have 12 orders";
+  static const shippingAddresses = "Shipping addresses";
+  static const ddRese = "3 ddresses";
+  static const paymentMethods = "Payment methods";
+  static const promoCodes = "Promocodes";
+  static const youHave= "You have special promocodes";
+  static const myreviews= "My reviews";
+  static const reviews= "Reviews for 4 items";
+  static const Notifications= "Notifications, password";
+  static const Visa= "Visa  **34";
+
+
+
+
 }
