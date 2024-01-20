@@ -8,7 +8,7 @@ import 'widgets/custom_container.dart';
 class WomenScreen extends StatelessWidget {
   WomenScreen({super.key});
 
-  final List posts = [
+  final List categoriesHeaderText = [
     AppTexts.neww,
     AppTexts.clothes,
     AppTexts.shoes,
@@ -38,11 +38,11 @@ class WomenScreen extends StatelessWidget {
         Expanded(
           flex: 1,
           child: ListView.builder(
-              itemCount: posts.length,
+              itemCount: categoriesHeaderText.length,
               itemBuilder: (context, index) {
                 return MyContainer(
                   images: images[index],
-                  child: posts[index],
+                  child: categoriesHeaderText[index],
                 );
               }),
         ),

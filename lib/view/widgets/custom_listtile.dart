@@ -1,6 +1,7 @@
 import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CuastomListTile extends StatelessWidget {
   final String title ;
@@ -15,8 +16,8 @@ class CuastomListTile extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.whiteColor,
         ),
-        height: 72,
-        width: 375,
+        height: 72.h,
+        width: 375.w,
         child: ListTile(
           title: Text(title,style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
           subtitle: Text(subtitle),

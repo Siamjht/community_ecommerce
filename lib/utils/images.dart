@@ -19,6 +19,19 @@ class AppImages{
 ///>>>>>>>>>>>>>>>>>>>>>>>>> MyprofileImages >>>>>>>>>>>>>>>>///
   static String myProfile= "assets/images/myprofile.png";
 
+///>>>>>>>>>>>>>>>>>>>>>>>>> WomenTopImages >>>>>>>>>>>>>>>>///
+  static String pullovers= "assets/images/pullovers.png";
+  static String wblOus= "assets/images/wblous.png";
+  static String wshirt= "assets/images/wshirt.png";
+  static String wshirts= "assets/images/wshirts.png";
+  static String tShirtspanis= "assets/images/tShirt.png";
+
+///>>>>>>>>>>>>>>>>>>>>>>>>> FavoriteImages >>>>>>>>>>>>>>>>///
+  static String favoriteShirt= "assets/images/favoriteshirt.png";
+  static String favoriteLongs= "assets/images/favoritelongs.png";
+  static String favoritetshirt= "assets/images/favoritetshirt.png";
+
+
 
 
 

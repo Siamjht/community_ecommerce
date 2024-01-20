@@ -93,6 +93,30 @@ class AppTexts{
   static const Visa= "Visa  **34";
 
 
+///>>>>>>>>>>>>>>>>>>>>>>>>>WomenTopScreen Texts>>>>>>>>>>>>>>>>///
+  static const womenTops= "Women’s tops";
+  static const tShirts= "T-shirts";
+  static const cropTops= "Crop tops";
+  static const sleeveless= "Sleeveless";
+  static const Shirts= "Shirts";
+  static const shirt= "Shirt";
+  static const filters= "Filters";
+  static const priceLow= "Price: lowest to high";
+  static const pullover= "Pullover";
+  static const mango= "Mango";
+  static const fiftyOne= "51\$";
+  static const blouse= "Blouse";
+  static const thirtyFor= "34\$";
+  static const lOSTInk= "LOST Ink";
+  static const twelve= "12\$";
+  static const topShop= "Topshop";
+
+///>>>>>>>>>>>>>>>>>>>>>>>>>FavoriteScreen Texts>>>>>>>>>>>>>>>>///
+  static const favorites= "Favorites";
+  static const summer= "Summer";
+  static const lIME= "LIME";
+  static const berries= "&Berries";
+  static const colorBlue= "Color: Blue";
 
 
 }
