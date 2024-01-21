@@ -115,7 +115,7 @@ class MyBagListView extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            Spacer(),
+                            const Spacer(),
                             Icon(
                               Icons.more_vert_rounded,
                               color: AppColors.grayColor,
@@ -177,7 +177,7 @@ class MyBagListView extends StatelessWidget {
                                 color: AppColors.grayColor,
                               ),
                             ),
-                            Spacer(),
+                            const Spacer(),
                             CustomText(
                               text: items.price,
                               color: AppColors.blackColor,

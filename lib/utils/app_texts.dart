@@ -80,7 +80,8 @@ class AppTexts{
   static const clientAddress2 = 'Chino Hills, CA 91709, United States';
   static const payment = 'Payment';
   static const cardNumber = '**** **** **** 3947';
-  static const deliveryMethod = 'Deliver Method';
+  static const deliveryMethod = 'Delivery Method';
+  static const deliveryTimes = ' 2-3 days';
   static const order = 'Order:';
   static const delivery = 'Delivery:';
   static const summary = 'Summary:';
@@ -98,7 +99,12 @@ class AppTexts{
   static const daysRemaining23 = '23 days remaining';
   static const apply = 'Apply';
 
-
+  ///<<<--------------------Payment Methods Page ------------------->>>>
+  static const paymentMethods = 'Payment methods';
+  static const yourPaymentCards = 'Your payment cards';
+  static const cardHolderName = 'Card Holder Name';
+  static const expiryDate = 'Expiry Date';
+  static const defaultPaymentMethod = 'Use as default payment method';
 
 
 

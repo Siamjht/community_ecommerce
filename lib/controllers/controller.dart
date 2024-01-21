@@ -2,6 +2,8 @@
 
 import 'package:community_ecommerce/models/product_details.dart';
 import 'package:community_ecommerce/utils/app_colors.dart';
+import 'package:community_ecommerce/utils/app_icons.dart';
+import 'package:community_ecommerce/utils/app_texts.dart';
 import 'package:community_ecommerce/utils/images.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
@@ -40,6 +42,8 @@ class Controller extends GetxController{
     [AppColors.blackColor , '10', "Personal Offer", 'mypromocode2023' , '9 days remaining'],
     [AppColors.errorMarkColor , '13', "Personal Offer", 'mypromocode2024' , '5 days remaining'],
   ];
+
+  List courierList = [AppIcons.fedexIcon, AppIcons.uspsIcon, AppIcons.dhlIcon];
 
   RxBool isChecked = false.obs;
   bool isValided = true;
