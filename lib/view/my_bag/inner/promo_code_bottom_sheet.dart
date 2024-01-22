@@ -24,15 +24,15 @@ class PromoCodeBottomSheet extends StatelessWidget {
       height: 464.h,
       decoration: ShapeDecoration(
         color: AppColors.pagesColor,
-        shape: const RoundedRectangleBorder(
+        shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(34),
-            topRight: Radius.circular(34),
+            topLeft: Radius.circular(34.w),
+            topRight: Radius.circular(34.w),
           ),
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.only(left: 16.0),
+        padding: EdgeInsets.only(left: 16.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -45,12 +45,12 @@ class PromoCodeBottomSheet extends StatelessWidget {
                   Navigator.pop(context);
                 },
                 child: Container(
-                  width: 60,
-                  height: 6,
+                  width: 60.w,
+                  height: 6.h,
                   decoration: ShapeDecoration(
                     color: AppColors.hintTextColor,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(3)),
+                        borderRadius: BorderRadius.circular(3.w)),
                   ),
                 ),
               ),
@@ -64,8 +64,8 @@ class PromoCodeBottomSheet extends StatelessWidget {
                 onTap: (){
 
                 }),
-            const SizedBox(
-              height: 32,
+            SizedBox(
+              height: 32.h,
             ),
             CustomText(
               text: AppTexts.yourPromoCode,

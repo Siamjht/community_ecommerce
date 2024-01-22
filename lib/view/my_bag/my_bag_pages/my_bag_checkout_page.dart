@@ -55,8 +55,13 @@ class MyBagCheckOutPage extends StatelessWidget {
                         CustomText(text: AppTexts.clientName, color: AppColors.blackColor,
                           fontSize: Dimensions.fontSizeDefault, fontWeight: FontWeight.w500,),
                         const Spacer(),
-                        CustomText(text: AppTexts.change, color: AppColors.buttonsColor,
-                          fontSize: Dimensions.fontSizeDefault, fontWeight: FontWeight.w500,),
+                        GestureDetector(
+                          onTap: (){
+                            Get.toNamed(RouteName.shippingAddresses);
+                          },
+                          child: CustomText(text: AppTexts.change, color: AppColors.buttonsColor,
+                            fontSize: Dimensions.fontSizeDefault, fontWeight: FontWeight.w500,),
+                        ),
                       ],
                     ),
                     SizedBox(height: 10.h,),
@@ -108,7 +113,7 @@ class MyBagCheckOutPage extends StatelessWidget {
                 ),
                 SizedBox(width: 18.w,),
                 CustomText(
-                  text: AppTexts.cardNumber,
+                  text: AppTexts.cardNumDigits,
                   color: AppColors.blackColor,
                   fontWeight: FontWeight.w400,
                   fontSize: Dimensions.fontSizeDefault,
@@ -189,7 +194,9 @@ class MyBagCheckOutPage extends StatelessWidget {
             ),
             SizedBox(height: 26.h,),
             CustomElevatedButton(
-                onPressed: (){},
+                onPressed: (){
+                  Get.toNamed(RouteName.successPage);
+                },
                 titleText: AppTexts.submitOrder.toUpperCase(),
               buttonWidth: double.infinity,
             )

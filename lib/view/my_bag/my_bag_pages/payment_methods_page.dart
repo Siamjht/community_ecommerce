@@ -1,12 +1,9 @@
 
-import 'dart:ffi';
-
 import 'package:community_ecommerce/utils/app_icons.dart';
 import 'package:community_ecommerce/utils/app_texts.dart';
 import 'package:community_ecommerce/utils/images.dart';
 import 'package:community_ecommerce/view/my_bag/inner/add_card_bottom_sheet.dart';
 import 'package:community_ecommerce/view/my_bag/inner/custom_container.dart';
-import 'package:community_ecommerce/view/my_bag/inner/promo_code_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -19,6 +16,7 @@ import '../../widgets/custom_text.dart';
 
 class PaymentMethodsPage extends StatelessWidget {
   PaymentMethodsPage({super.key});
+
 
   Controller controller = Get.find<Controller>();
 
@@ -41,7 +39,7 @@ class PaymentMethodsPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: 25.h,
+              height: 20.h,
             ),
             CustomText(
               text: AppTexts.yourPaymentCards,
@@ -86,7 +84,7 @@ class PaymentMethodsPage extends StatelessWidget {
                   top: 85.h,
                     left: 24.w,
                     child: CustomText(
-                      text: AppTexts.cardNumber,
+                      text: AppTexts.cardNumDigits,
                       color: AppColors.whiteColor,
                       fontSize: Dimensions.fontSizeXXLarge,
                       letterSpacing: -0.41,
@@ -150,6 +148,10 @@ class PaymentMethodsPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Obx(() => Checkbox(
+                  visualDensity: VisualDensity(
+                    horizontal: -4,
+                  ),
+                  fillColor: controller.isChecked.value? MaterialStateProperty.all(AppColors.blackColor): null,
                   checkColor: Colors.white,
                   value: controller.isChecked.value,
                   onChanged: (bool? value) {
@@ -160,7 +162,9 @@ class PaymentMethodsPage extends StatelessWidget {
                     text: AppTexts.defaultPaymentMethod,
                     color: AppColors.blackColor,
                     fontSize: Dimensions.fontSizeDefault,
-                    fontWeight: FontWeight.w400),
+                    fontWeight: FontWeight.w400,
+                  letterSpacing: -0.41,
+                ),
               ],
             ),
             SizedBox(height: 30.h,),
@@ -198,7 +202,7 @@ class PaymentMethodsPage extends StatelessWidget {
                   top: 80.h,
                   left: 24.w,
                   child: CustomText(
-                    text: AppTexts.cardNumber,
+                    text: AppTexts.cardNumDigits,
                     color: AppColors.whiteColor,
                     fontSize: Dimensions.fontSizeXXLarge,
                     letterSpacing: -0.41,
@@ -261,17 +265,24 @@ class PaymentMethodsPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Obx(() => Checkbox(
+                  visualDensity: const VisualDensity(
+                    horizontal: -4,
+                  ),
+                  fillColor: controller.isChecked.value? MaterialStateProperty.all(AppColors.blackColor): null,
                   checkColor: Colors.white,
                   value: controller.isChecked.value,
                   onChanged: (bool? value) {
                     controller.isChecked.value = value!;
                   },
                 ),),
+                SizedBox(width: 5.w,),
                 CustomText(
                     text: AppTexts.defaultPaymentMethod,
                     color: AppColors.blackColor,
                     fontSize: Dimensions.fontSizeDefault,
-                    fontWeight: FontWeight.w400),
+                    fontWeight: FontWeight.w400,
+                  letterSpacing: -0.41,
+                ),
               ],
             ),
             Align(
@@ -283,6 +294,7 @@ class PaymentMethodsPage extends StatelessWidget {
                     builder: (context) {
                       return AddCardBottomSheet();
                     },
+                    isScrollControlled: true,
                   );
                 },
                 child: Container(
@@ -312,4 +324,47 @@ class PaymentMethodsPage extends StatelessWidget {
       ),
     );
   }
+  // void _showBottomSheet(BuildContext context) {
+  //   showModalBottomSheet(
+  //     context: context,
+  //     builder: (BuildContext context) {
+  //       return MySheet(key: _sheetKey);
+  //     },
+  //   );
+  // }
 }
+
+
+
+// class MySheet extends StatefulWidget {
+//   const MySheet({Key? key}) : super(key: key);
+//
+//   @override
+//   _MySheetState createState() => _MySheetState();
+// }
+//
+// class _MySheetState extends State<MySheet> {
+//   double _sheetHeight = 200.0; // Initial height of the modal sheet
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return GestureDetector(
+//       onVerticalDragUpdate: (details) {
+//         // Update the height based on the drag details
+//         setState(() {
+//           _sheetHeight += details.primaryDelta!;
+//         });
+//       },
+//       child: Container(
+//         height: _sheetHeight,
+//         color: Colors.white,
+//         child: Center(
+//           child: Text(
+//             'Drag to resize\nCurrent Height: $_sheetHeight',
+//             textAlign: TextAlign.center,
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }

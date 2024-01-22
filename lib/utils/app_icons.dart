@@ -38,5 +38,6 @@ class AppIcons{
   static String cardChipIcon = "assets/icons/cardChipIcon.svg";
   static String mastercardIconWhText = "assets/icons/mastercardIconWhText.svg";
   static String visaCardIcon = "assets/icons/visaCardIcon.svg";
+  static String helpOutlineIcon = "assets/icons/helpOutlineIcon.png";
 
 }

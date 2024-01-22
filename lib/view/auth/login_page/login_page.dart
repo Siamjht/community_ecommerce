@@ -1,7 +1,9 @@
 
+import 'package:community_ecommerce/controllers/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 import '../../../utils/app_colors.dart';
 import '../../../utils/app_icons.dart';
@@ -12,8 +14,9 @@ import '../../widgets/custom_text.dart';
 import '../../widgets/custom_text_field.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+  LoginPage({super.key});
 
+  Controller controller = Get.put(Controller());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,9 +33,9 @@ class LoginPage extends StatelessWidget {
               child: CustomText(text: AppTexts.login, color: Colors.black, fontSize: Dimensions.fontSizeXXXLarge.w, fontWeight: FontWeight.w700,),
             ),
             SizedBox(height: 73.h,),
-            CustomTextField(labelText: AppTexts.email),
+            CustomTextField(textEditingController: controller.emailController,labelText: AppTexts.email),
             SizedBox(height: 8.h,),
-            CustomTextField(labelText: AppTexts.password),
+            CustomTextField(textEditingController: controller.passwordController, labelText: AppTexts.password),
             SizedBox(height: 16.h,),
             Padding(
               padding: EdgeInsets.only(right: 16),

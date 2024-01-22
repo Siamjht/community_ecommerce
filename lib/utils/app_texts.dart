@@ -79,7 +79,7 @@ class AppTexts{
   static const clientAddress1 = '3 Newbridge Court';
   static const clientAddress2 = 'Chino Hills, CA 91709, United States';
   static const payment = 'Payment';
-  static const cardNumber = '**** **** **** 3947';
+  static const cardNumDigits = '**** **** **** 3947';
   static const deliveryMethod = 'Delivery Method';
   static const deliveryTimes = ' 2-3 days';
   static const order = 'Order:';
@@ -110,4 +110,28 @@ class AppTexts{
   static const expiryDateTime = '05/23';
   static const masterCard = 'mastercard';
 
+  ///<<<-----------------Add card bottom sheet----------------------->>>
+  static const addNewCard = 'Add new card';
+  static const nameOfCard = 'Name of card';
+  static const cardNumber = 'Card number';
+  static const cvv = 'CVV';
+  static const defaultPaymentMethodSet = 'Set as default payment method';
+  static const addCard = 'Add Card';
+
+  ///<<<-----------------Shipping Addresses Page------------------------>>>>
+  static const shippingAddresses = 'Shipping Addresses';
+  static const edit = 'Edit';
+
+  ///<<<----------------Adding Shipping Address Page--------------------->>>
+  static const addShippingAddress = 'Adding Shipping Address';
+  static const fullName = 'Full name';
+  static const address = 'Address';
+  static const city = 'City';
+  static const stateProvinceRegion = 'State/Province/Region';
+  static const zipCode = 'Zip Code (Postal Code)';
+  static const country = 'Country';
+  static const saveAddress = 'Save Address';
+
+  ///<<<---------------Success Page---------------------------------->>>
+  static const success = 'Success!';
 }

@@ -1,4 +1,3 @@
-
 import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:community_ecommerce/utils/app_texts.dart';
 import 'package:community_ecommerce/utils/dimentions.dart';
@@ -11,7 +10,6 @@ import 'package:get/get.dart';
 
 import '../../../controllers/controller.dart';
 import '../../../utils/app_icons.dart';
-
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
@@ -40,15 +38,23 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 25.h,),
+            SizedBox(
+              height: 25.h,
+            ),
             Padding(
               padding: const EdgeInsets.only(left: 18.0, right: 14.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  CustomText(text: AppTexts.sale, fontSize: Dimensions.fontSizeXXXLarge, fontWeight: FontWeight.w700),
+                  CustomText(
+                      text: AppTexts.sale,
+                      fontSize: Dimensions.fontSizeXXXLarge,
+                      fontWeight: FontWeight.w700),
                   const Spacer(),
-                  CustomText(text: AppTexts.viewAll, fontSize: Dimensions.fontSizeXSmall, fontWeight: FontWeight.w400)
+                  CustomText(
+                      text: AppTexts.viewAll,
+                      fontSize: Dimensions.fontSizeXSmall,
+                      fontWeight: FontWeight.w400)
                 ],
               ),
             ),
@@ -61,18 +67,31 @@ class HomePage extends StatelessWidget {
                 color: AppColors.grayColor,
               ),
             ),
-            SizedBox(height: 22.h,),
-            HomeListView(controller: controller, containerColor: AppColors.errorMarkColor, containerText: "-20%", ),
-            SizedBox(height: 25.h,),
-
+            SizedBox(
+              height: 22.h,
+            ),
+            HomeListView(
+              controller: controller,
+              containerColor: AppColors.errorMarkColor,
+              containerText: "-20%",
+            ),
+            SizedBox(
+              height: 25.h,
+            ),
             Padding(
               padding: const EdgeInsets.only(left: 18.0, right: 14.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  CustomText(text: AppTexts.newProducts, fontSize: Dimensions.fontSizeXXXLarge, fontWeight: FontWeight.w700),
+                  CustomText(
+                      text: AppTexts.newProducts,
+                      fontSize: Dimensions.fontSizeXXXLarge,
+                      fontWeight: FontWeight.w700),
                   const Spacer(),
-                  CustomText(text: AppTexts.viewAll, fontSize: Dimensions.fontSizeXSmall, fontWeight: FontWeight.w400)
+                  CustomText(
+                      text: AppTexts.viewAll,
+                      fontSize: Dimensions.fontSizeXSmall,
+                      fontWeight: FontWeight.w400)
                 ],
               ),
             ),
@@ -85,8 +104,14 @@ class HomePage extends StatelessWidget {
                 color: AppColors.grayColor,
               ),
             ),
-            SizedBox(height: 2.h,),
-            HomeListView(controller: controller, containerColor: AppColors.blackColor, containerText: AppTexts.newProducts,),
+            SizedBox(
+              height: 2.h,
+            ),
+            HomeListView(
+              controller: controller,
+              containerColor: AppColors.blackColor,
+              containerText: AppTexts.newProducts,
+            ),
           ],
         ),
       ),
@@ -95,17 +120,17 @@ class HomePage extends StatelessWidget {
 }
 
 class HomeListView extends StatelessWidget {
-  const HomeListView({
+  HomeListView({
     super.key,
     required this.controller,
     required this.containerColor,
     required this.containerText,
-
   });
 
   final Controller controller;
   final Color containerColor;
   final String containerText;
+
 
   @override
   Widget build(BuildContext context) {
@@ -128,17 +153,17 @@ class HomeListView extends StatelessWidget {
                     children: [
                       Container(
                         height: 220.h,
-                          width: 150.w,
-                          decoration: ShapeDecoration(
-                            image: DecorationImage(
-                              image: AssetImage(controller.imagesList[index]),
-                              fit: BoxFit.cover,
-                            ),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12),
-                            ),
+                        width: 150.w,
+                        decoration: ShapeDecoration(
+                          image: DecorationImage(
+                            image: AssetImage(controller.imagesList[index]),
+                            fit: BoxFit.cover,
                           ),
-                          // child: Image.asset(controller.imagesList[index], fit: BoxFit.cover,),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                        ),
+                        // child: Image.asset(controller.imagesList[index], fit: BoxFit.cover,),
                       ),
                       Positioned(
                         top: 10,
@@ -148,59 +173,83 @@ class HomeListView extends StatelessWidget {
                           width: 40.w,
                           decoration: BoxDecoration(
                               color: containerColor,
-                              borderRadius: BorderRadius.circular(29)
-                          ),
-                          child: Center(child: CustomText(text: containerText, fontSize: Dimensions.fontSizeXSmall, color: AppColors.whiteColor,)),
+                              borderRadius: BorderRadius.circular(29)),
+                          child: Center(
+                              child: CustomText(
+                            text: containerText,
+                            fontSize: Dimensions.fontSizeXSmall,
+                            color: AppColors.whiteColor,
+                          )),
                         ),
                       ),
                       Positioned(
-                        right: 0,
-                        bottom: -20,
-                          child: Container(
-                            height: 40.h,
-                            width: 40.w,
-                            decoration: ShapeDecoration(
+                          right: 0,
+                          bottom: -20,
+                          child: GestureDetector(
+                            onTap: () {
+                              controller.favItemList.add(index);
+                            },
+                            child: Container(
+                              height: 40.h,
+                              width: 40.w,
+                              decoration: ShapeDecoration(
                                 color: Colors.white,
                                 shape: const CircleBorder(),
-                              shadows: [
-                                BoxShadow(
-                                  color: AppColors.shadowColor,
-                                  blurRadius: 4,
-                                  offset: const Offset(0, 4),
-                                )
-                              ],
-                            ),
-                            child: FittedBox(
-                              fit: BoxFit.contain,
-                              child:  SvgPicture.asset(AppIcons.favoriteIcon,
+                                shadows: [
+                                  BoxShadow(
+                                    color: AppColors.shadowColor,
+                                    blurRadius: 4,
+                                    offset: const Offset(0, 4),
+                                  )
+                                ],
+                              ),
+                              child: Obx(
+                                () => FittedBox(
+                                  fit: BoxFit.contain,
+                                  child:  controller.favItemList.contains(index)?
+                                  Icon(Icons.favorite_sharp, color: AppColors.errorMarkColor,)
+                                      :SvgPicture.asset(AppIcons.favoriteIcon),
+                                ),
                               ),
                             ),
-                          )
-                      ),
+                          )),
                     ],
                   ),
-                  const SizedBox(height: 4,),
+                  const SizedBox(
+                    height: 4,
+                  ),
                   Row(
                     children: [
-                      for(int i = 5; i>0; i--)
+                      for (int i = 5; i > 0; i--)
                         Padding(
                           padding: const EdgeInsets.only(right: 2),
                           child: SvgPicture.asset(AppIcons.starIconSolid),
                         ),
-
-                      CustomText(text: ' (10)', color: AppColors.grayColor, fontSize: Dimensions.fontSizeXXSmall,),
+                      CustomText(
+                        text: ' (10)',
+                        color: AppColors.grayColor,
+                        fontSize: Dimensions.fontSizeXXSmall,
+                      ),
                     ],
                   ),
-                  CustomText(text: AppTexts.dorothyPerkins, color: AppColors.grayColor, fontSize: Dimensions.fontSizeXSmall,),
-                  CustomText(text: AppTexts.eveningDress, fontSize: Dimensions.fontSizeLarge,),
+                  CustomText(
+                    text: AppTexts.dorothyPerkins,
+                    color: AppColors.grayColor,
+                    fontSize: Dimensions.fontSizeXSmall,
+                  ),
+                  CustomText(
+                    text: AppTexts.eveningDress,
+                    fontSize: Dimensions.fontSizeLarge,
+                  ),
                   Row(
                     children: [
-                      CustomText(text: "15\$",
-                        lineThrough: TextDecoration.lineThrough ,
+                      CustomText(
+                        text: "15\$",
+                        lineThrough: TextDecoration.lineThrough,
                         fontSize: Dimensions.fontSizeDefault,
                         color: AppColors.grayColor,
-                        fontWeight: FontWeight.w500,),
-
+                        fontWeight: FontWeight.w500,
+                      ),
                       CustomText(
                         text: " 12\$",
                         fontSize: Dimensions.fontSizeLarge,

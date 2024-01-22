@@ -12,7 +12,20 @@ class Controller extends GetxController{
   TextEditingController nameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+
   TextEditingController promoCodeController = TextEditingController();
+
+  TextEditingController cardNameController = TextEditingController();
+  TextEditingController cardNumberController = TextEditingController();
+  TextEditingController expiryDateController = TextEditingController();
+  TextEditingController cvvController = TextEditingController();
+
+  TextEditingController fullNameController = TextEditingController();
+  TextEditingController addressController = TextEditingController();
+  TextEditingController cityController = TextEditingController();
+  TextEditingController stateProvinceController = TextEditingController();
+  TextEditingController zipCodeController = TextEditingController();
+  TextEditingController countryController = TextEditingController();
 
   List imagesList = [
     AppImages.blouse,
@@ -45,10 +58,26 @@ class Controller extends GetxController{
 
   List courierList = [AppIcons.fedexIcon, AppIcons.uspsIcon, AppIcons.dhlIcon];
 
+  List addShippingTextFieldList = [
+    {"textFieldLabelText" : AppTexts.fullName},
+    {"textFieldLabelText" : AppTexts.address},
+    {"textFieldLabelText" : AppTexts.city},
+    {"textFieldLabelText" : AppTexts.stateProvinceRegion},
+    {"textFieldLabelText" : AppTexts.zipCode},
+    {"textFieldLabelText" : AppTexts.country},
+  ];
+
   RxBool isChecked = false.obs;
   bool isValided = true;
   RxBool isGetPromoCode = false.obs;
   String promoCode = '';
+  List favItemList = [].obs;
+
+  RxDouble _sheetHeight = 0.0.obs;
+  double get sheetHeight => _sheetHeight.value;
+  set sheetHeight(double value) {
+    _sheetHeight.value = value;
+  }
 
 
 }
