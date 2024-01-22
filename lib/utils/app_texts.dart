@@ -134,4 +134,7 @@ class AppTexts{
 
   ///<<<---------------Success Page---------------------------------->>>
   static const success = 'Success!';
+  static const successTexts = 'Your order will be delivered soon.\nThank you for choosing our app!';
+  static const continueShopping = 'Continue shopping';
+
 }
