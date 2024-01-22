@@ -1,5 +1,5 @@
-import 'package:community_ecommerce/view/favorite_screen/favorite_top_custom_container.dart';
-import 'package:community_ecommerce/view/categories_screen/women_top_custom_container.dart';
+import 'package:community_ecommerce/view/favorite_screen/favorite_top_widget.dart';
+import 'package:community_ecommerce/view/categories_screen/women_top_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';

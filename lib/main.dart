@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           theme: light,
-          home:  WomenTopScreen(),
+          home:  BottomNavBar(),
           getPages: AppRoutes.appRoutes(),
 
         );

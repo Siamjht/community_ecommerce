@@ -40,7 +40,7 @@ class WomenScreen extends StatelessWidget {
           child: ListView.builder(
               itemCount: categoriesHeaderText.length,
               itemBuilder: (context, index) {
-                return MyContainer(
+                return WomwnScreenWidget(
                   images: images[index],
                   child: categoriesHeaderText[index],
                 );

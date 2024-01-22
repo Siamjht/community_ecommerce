@@ -2,23 +2,22 @@ import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:community_ecommerce/utils/images.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 
-class WomenCustomContainer extends StatelessWidget {
+
+class WomenTopWidget extends StatelessWidget {
   final String headerText;
-  final String SubtitleText;
+  final String subtitleText;
   final String price;
 
   final String images;
 
   // final IconData icon;
 
-  WomenCustomContainer({
+  WomenTopWidget({
     super.key,
     required this.headerText,
     required this.images,
-    required this.SubtitleText,
+    required this.subtitleText,
     required this.price,
   });
 
@@ -53,9 +52,22 @@ class WomenCustomContainer extends StatelessWidget {
                         bottomLeft: Radius.circular(8),
                         topLeft: Radius.circular(8))),
                 image: DecorationImage(
-                  image: AssetImage(AppImages.pullovers),
+                  image: AssetImage(images),
                   fit: BoxFit.fill,
                 ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(13),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(headerText,style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+                  Text(subtitleText),
+                  Text(price),
+
+
+                ],
               ),
             ),
             Expanded(

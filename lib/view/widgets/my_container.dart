@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class MyContainer extends StatelessWidget {
+class WomwnScreenWidget extends StatelessWidget {
   final String child ;
   final String images;
-  const MyContainer({super.key, required this.child, required this.images});
+  const WomwnScreenWidget({super.key, required this.child, required this.images});
 
   @override
   Widget build(BuildContext context) {
