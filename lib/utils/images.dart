@@ -40,5 +40,6 @@ class AppImages{
   static String circleShapeCard = "assets/images/circleShapeCard.png";
   static String curveShapeCard = "assets/images/curveShapeCard.png";
   static String disableimagefavorite = "assets/images/desableimage.png";
+  static String successImage = "assets/images/successImage.png";
 
 }

@@ -9,6 +9,8 @@ class AppColors{
   static Color successMarkColor = const Color(0xFF2AA952);
   static Color errorMarkColor = const Color(0xFFF01F0E);
   static Color defaultTextColor = const Color(0xFF222222);
+  static Color blackColor = const Color(0xFF222222);
+  static Color fullBlackColor = const Color(0xFF000000);
   static Color whiteColor = const Color(0xFFFFFFFF);
   static Color grayColor = const Color(0xFF9B9B9B);
   static Color blackColor = const Color(0xFF222222);
