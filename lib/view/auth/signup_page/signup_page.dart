@@ -1,4 +1,5 @@
 
+import 'package:community_ecommerce/controllers/controller.dart';
 import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:community_ecommerce/utils/app_icons.dart';
 import 'package:community_ecommerce/utils/app_texts.dart';
@@ -11,12 +12,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
-import '../../routes/routes.dart';
+import '../../../routes/routes.dart';
 
 
 
 class SignUpPage extends StatelessWidget {
-  const SignUpPage({super.key});
+  SignUpPage({super.key});
+
+  Controller controller = Get.put(Controller());
 
   @override
   Widget build(BuildContext context) {
@@ -34,11 +37,11 @@ class SignUpPage extends StatelessWidget {
               child: CustomText(text: AppTexts.signUp, color: Colors.black, fontSize: Dimensions.fontSizeXXXLarge, fontWeight: FontWeight.w700,),
             ),
             SizedBox(height: 73.h,),
-            CustomTextField(labelText: AppTexts.name),
+            CustomTextField(textEditingController: controller.nameController, labelText: AppTexts.name),
             SizedBox(height: 8.h,),
-            CustomTextField(labelText: AppTexts.email),
+            CustomTextField(textEditingController: controller.emailController, labelText: AppTexts.email),
             SizedBox(height: 8.h,),
-            CustomTextField(labelText: AppTexts.password),
+            CustomTextField(textEditingController: controller.passwordController, labelText: AppTexts.password),
             SizedBox(height: 16.h,),
             Padding(
               padding: const EdgeInsets.only(right: 16),

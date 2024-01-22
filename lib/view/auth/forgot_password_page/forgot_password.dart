@@ -1,19 +1,22 @@
 
+import 'package:community_ecommerce/controllers/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
-import '../../utils/app_colors.dart';
-import '../../utils/app_icons.dart';
-import '../../utils/app_texts.dart';
-import '../../utils/dimentions.dart';
-import '../widgets/custom_elevated_button.dart';
-import '../widgets/custom_text.dart';
-import '../widgets/custom_text_field.dart';
+import '../../../utils/app_colors.dart';
+import '../../../utils/app_icons.dart';
+import '../../../utils/app_texts.dart';
+import '../../../utils/dimentions.dart';
+import '../../widgets/custom_elevated_button.dart';
+import '../../widgets/custom_text.dart';
+import '../../widgets/custom_text_field.dart';
 
 class ForgotPassword extends StatelessWidget {
-  const ForgotPassword({super.key});
+  ForgotPassword({super.key});
 
+  Controller controller = Get.put(Controller());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,10 +35,10 @@ class ForgotPassword extends StatelessWidget {
             SizedBox(height: 87.h,),
             Padding(
               padding: const EdgeInsets.only(left: 15.0),
-              child: CustomText(text: AppTexts.pleaseEnterYourMail, fontSize: 14, color: AppColors.defaultTextColor,),
+              child: CustomText(text: AppTexts.pleaseEnterYourMail, fontSize: 14, color: AppColors.blackColor,),
             ),
             SizedBox(height: 16.h,),
-            CustomTextField(labelText: AppTexts.email,),
+            CustomTextField(textEditingController: controller.emailController,labelText: AppTexts.email,),
             SizedBox(height: 4.h,),
             Padding(
               padding: const EdgeInsets.only(left: 36.0),

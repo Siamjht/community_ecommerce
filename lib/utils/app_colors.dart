@@ -14,4 +14,5 @@ class AppColors{
 
   static Color tabBarIndicatorColor = const Color(0xFFDB3022);
 
+  static Color shadowColor = const Color(0x14000000);
 }
