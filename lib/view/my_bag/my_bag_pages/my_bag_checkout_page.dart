@@ -39,7 +39,7 @@ class MyBagCheckOutPage extends StatelessWidget {
 
             ///<<<-------------------------Shipping Address------------------------->>>///
 
-            CustomText(text: AppTexts.shippingAddress, color: AppColors.blackColor,
+            CustomText(text: AppTexts.shippingAddressColon, color: AppColors.blackColor,
               fontSize: Dimensions.fontSizeLarge, fontWeight: FontWeight.w400,),
             SizedBox(height: 21.h,),
             Container(
@@ -126,7 +126,7 @@ class MyBagCheckOutPage extends StatelessWidget {
             ///<<<-------------------------Delivery Method------------------------->>>///
 
             CustomText(
-              text: AppTexts.deliveryMethod,
+              text: AppTexts.deliveryMethodColon,
               color: AppColors.blackColor,
               fontSize: Dimensions.fontSizeLarge,
               fontWeight: FontWeight.w400,),

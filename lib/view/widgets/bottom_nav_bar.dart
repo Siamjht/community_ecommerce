@@ -1,13 +1,13 @@
 import 'package:community_ecommerce/utils/app_colors.dart';
-import 'package:community_ecommerce/view/categorie_screen.dart';
+import 'package:community_ecommerce/view/favorite_screen/favorite_screen.dart';
 import 'package:community_ecommerce/view/home/home_page/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../utils/app_icons.dart';
 import '../../utils/app_texts.dart';
-import '../auth/forgot_password_page/forgot_password.dart';
-import '../auth/login_page/login_page.dart';
+import '../categories_screen/categorie_screen.dart';
+import '../myprofile_screen/myprofile_settings.dart';
 import '../my_bag/my_bag_pages/my_bag_page.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -22,8 +22,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
     HomePage(),
     CategorieScreen(),
     MyBagPage(),
-    LoginPage(),
-    ForgotPassword()
+    FavoriteScreen(),
+    MyProfileSetings()
   ];
   int _selectedItem = 0;
 
