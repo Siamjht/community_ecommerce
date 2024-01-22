@@ -8,7 +8,9 @@ class CustomText extends StatelessWidget {
     this.color,
     this.fontSize,
     this.fontFamily,
-    this.fontWeight
+    this.fontWeight,
+    this.textHeight,
+    this.letterSpacing,
   });
   final String text;
   TextDecoration? lineThrough;
@@ -16,7 +18,8 @@ class CustomText extends StatelessWidget {
   double? fontSize;
   String? fontFamily;
   FontWeight? fontWeight;
-
+  double? textHeight;
+  double? letterSpacing;
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +31,8 @@ class CustomText extends StatelessWidget {
         fontSize: fontSize,
         fontFamily: fontFamily,
         fontWeight: fontWeight,
+        height: textHeight,
+        letterSpacing: letterSpacing,
       ),
     );
   }

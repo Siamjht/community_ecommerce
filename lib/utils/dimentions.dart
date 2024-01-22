@@ -1,5 +1,6 @@
 
 class Dimensions{
+  static const double fontSizeXXXSmall = 8.0;
   static const double fontSizeXXSmall = 10.0;
   static const double fontSizeXSmall = 11.0;
   static const double fontSizeSmall = 12.0;

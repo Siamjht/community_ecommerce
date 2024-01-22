@@ -46,20 +46,20 @@ class CategorieScreen extends StatelessWidget {
           //     ],
           //   ),
           // ),
-          ListView.builder(
-              itemCount: 4,
-
-              itemBuilder: (context,index){
-                return const Card(
-
-                  child: Column(
-                    children: [
-
-                      Text(AppTexts.accesories,style: TextStyle(color: Colors.black),)
-                    ],
-                  ),
-                );
-              })
+          // ListView.builder(
+          //     itemCount: 4,
+          //
+          //     itemBuilder: (context,index){
+          //       return const Card(
+          //
+          //         child: Column(
+          //           children: [
+          //
+          //             Text(AppTexts.accesories,style: TextStyle(color: Colors.black),)
+          //           ],
+          //         ),
+          //       );
+          //     })
 
         ],
       ),
