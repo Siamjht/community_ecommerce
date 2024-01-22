@@ -62,8 +62,9 @@ class WomenTopWidget extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(headerText,style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
                   Text(subtitleText),
+                  Text(headerText,style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+
                   Text(price),
 
 
@@ -82,11 +83,11 @@ class WomenTopWidget extends StatelessWidget {
                           isFavIconTapped = !isFavIconTapped;
                         },
                         child: CircleAvatar(
-                          backgroundColor: AppColors.whiteColor,
+                          backgroundColor: AppColors.favoritePositionIconColor,
                           radius: 20,
                             child: isFavIconTapped?
-                            Icon(Icons.favorite_sharp, color: AppColors.errorMarkColor,)
-                                :Icon(Icons.favorite_border, color: AppColors.grayColor,) ),
+                            Icon(Icons.shopping_bag, color: AppColors.whiteColor,)
+                                :Icon(Icons.favorite_border, color: AppColors.errorMarkColor,) ),
                       )
                   ),
                 ],

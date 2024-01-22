@@ -12,6 +12,7 @@ import '../view/my_bag/my_bag_pages/my_bag_checkout_page.dart';
 import '../view/my_bag/my_bag_pages/payment_methods_page.dart';
 import '../view/my_bag/my_bag_pages/shipping_addresses.dart';
 import '../view/my_bag/my_bag_pages/success_page.dart';
+import '../view/myprofile_screen/myorder_screen.dart';
 
 
 class RouteName {
@@ -27,6 +28,7 @@ class RouteName {
   static const String womenTopScreen = '/womenTopScreen';
   static const String filterScreen = '/filterScreen';
   static const String womenBrandScreen = '/womenBrandScreen';
+  static const String myOrderScreen = '/myOrderScreen';
 
 }
 
@@ -74,6 +76,10 @@ class AppRoutes {
     ),GetPage(
       name: RouteName.womenBrandScreen,
       page: () => WomenBrandScreen(),
+    ),
+    GetPage(
+      name: RouteName.myOrderScreen,
+      page: () => MyOrderScreen(),
     ),
 
   ];

@@ -155,12 +155,15 @@ class AppTexts{
   static const lIME= "LIME";
   static const berries= "&Berries";
   static const colorBlue= "Color: Blue";
+  static const fortySix= "46\$";
+  static const thirtyNine= "39\$";
+  static const longsLeeveVioleta= "Longsleeve Violeta";
 
   ///>>>>>>>>>>>>>>>>>>>>>>>>>Myprofile\My Order page Texts>>>>>>>>>>>>>>>>///
   static const delivered= "Delivered";
   static const processing= "Processing";
   static const cancelled= "Cancelled";
-  static const Order1947034= "Order №1947034";
+  static const order1947034= "Order №1947034";
   static const $05122019= "05-12-2019";
   static const trackingNumber= "Tracking number:";
   static const iW3475453455= "IW3475453455";

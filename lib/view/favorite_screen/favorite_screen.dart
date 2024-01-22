@@ -17,26 +17,26 @@ class FavoriteScreen extends StatelessWidget {
 
   final List womenCartItems = [
     [
-      AppTexts.pullover,
-      AppTexts.mango,
-      AppTexts.fiftyOne,
+      AppTexts.lIME,
+      AppTexts.shirt,
+      AppTexts.thirtyFor,
       AppImages.favoriteShirt,
     ],
     [
-      AppTexts.blouse,
-      AppTexts.dorothyPerkins,
-      AppTexts.thirtyFor,
+      AppTexts.mango,
+      AppTexts.longsLeeveVioleta,
+      AppTexts.fortySix,
       AppImages.favoriteLongs,
     ],
     [
       AppTexts.tShirts,
       AppTexts.lOSTInk,
-      AppTexts.twelve,
+      AppTexts.thirtyNine,
       AppImages.favoritetshirt,
     ],
     [
       AppTexts.shirt,
-      AppTexts.topShop,
+      AppTexts.berries,
       AppTexts.twelve,
       AppImages.wshirts,
     ]
@@ -105,34 +105,21 @@ class FavoriteScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      GestureDetector(
-                        onTap: (){
-                          Get.toNamed(RouteName.filterScreen);
-                        },
-                        child: Row(
-                          children: [
-                            SvgPicture.asset(
-                              AppIcons.womenFilter,
-                            ),
-                            Text(AppTexts.filters),
-                          ],
-                        ),
+                      Row(
+                        children: [
+                          SvgPicture.asset(
+                            AppIcons.womenFilter,
+                          ),
+                          Text(AppTexts.filters),
+                        ],
                       ),
-                      GestureDetector(
-                        onTap: () {
-                          Get.bottomSheet(
-                            WomenBottomShet(bottomsheet: bottomsheet),
-                          );
-                          // Get.toNamed(RouteName.womenLowestTo);
-                        },
-                        child: Row(
-                          children: [
-                            SvgPicture.asset(
-                              AppIcons.womenPriceLowToHigh,
-                            ),
-                            Text(AppTexts.priceLowestToHigh)
-                          ],
-                        ),
+                      Row(
+                        children: [
+                          SvgPicture.asset(
+                            AppIcons.womenPriceLowToHigh,
+                          ),
+                          Text(AppTexts.priceLowestToHigh)
+                        ],
                       ),
                       Row(
                         children: [
@@ -155,9 +142,9 @@ class FavoriteScreen extends StatelessWidget {
                         itemCount: womenCartItems.length,
                         itemBuilder: (context, index) {
                           return WomenTopWidget(
-                            headerText: womenCartItems[index][0],
+                            headerText: womenCartItems[index][1],
                             images: womenCartItems[index][3],
-                            subtitleText: womenCartItems[index][1],
+                            subtitleText: womenCartItems[index][0],
                             price: womenCartItems[index][2],
                           );
                         }),
