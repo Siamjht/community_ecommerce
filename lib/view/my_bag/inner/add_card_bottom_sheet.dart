@@ -39,7 +39,6 @@ class AddCardBottomSheet extends StatelessWidget {
             SizedBox(
               height: 14.h,
             ),
-            CustomTextField(),
           ],
         ),
       ),
