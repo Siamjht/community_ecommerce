@@ -1,7 +1,7 @@
 import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
-import '../utils/app_texts.dart';
+import '../../utils/app_texts.dart';
 import 'women_screen.dart';
 
 class CategorieScreen extends StatelessWidget {

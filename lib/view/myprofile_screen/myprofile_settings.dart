@@ -1,9 +1,7 @@
-import 'package:community_ecommerce/routes/routes.dart';
 import 'package:community_ecommerce/utils/app_texts.dart';
 import 'package:community_ecommerce/utils/images.dart';
 import 'package:community_ecommerce/view/widgets/custom_listtile.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class MyProfileSetings extends StatelessWidget {
   MyProfileSetings({super.key});

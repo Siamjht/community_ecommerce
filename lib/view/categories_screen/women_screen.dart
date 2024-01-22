@@ -1,9 +1,9 @@
 import 'package:community_ecommerce/utils/images.dart';
 import 'package:flutter/material.dart';
 
-import '../utils/app_texts.dart';
-import 'widgets/my_container.dart';
-import 'widgets/custom_container.dart';
+import '../../utils/app_texts.dart';
+import '../widgets/my_container.dart';
+import '../widgets/custom_container.dart';
 
 class WomenScreen extends StatelessWidget {
   WomenScreen({super.key});

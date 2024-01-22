@@ -1,14 +1,14 @@
 import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:community_ecommerce/view/auth_pages/login_page.dart';
 import 'package:community_ecommerce/view/auth_pages/signup_page.dart';
-import 'package:community_ecommerce/view/categorie_screen.dart';
+import 'package:community_ecommerce/view/categories_screen/categorie_screen.dart';
 import 'package:community_ecommerce/view/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../utils/app_icons.dart';
 import '../../utils/app_texts.dart';
-import '../myprofile_settings.dart';
+import '../myprofile_screen/myprofile_settings.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});

@@ -54,12 +54,14 @@ class WomenCustomContainer extends StatelessWidget {
                           style: GoogleFonts.metrophobic(
                               fontSize: 18.sp, fontWeight: FontWeight.bold)),
                       Text(SubtitleText),
-                         Row(
-                           children: [
-                             Text(price),
-                             Spacer(),
-                             CircleAvatar(child: Icon(Icons.favorite_border))
-                           ],
+                         Expanded(
+                           child: Row(
+                             children: [
+                               Text(price),
+                               Spacer(),
+                               CircleAvatar(child: Icon(Icons.favorite_border))
+                             ],
+                           ),
                          )
                     ],
                   ),
