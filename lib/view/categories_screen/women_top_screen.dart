@@ -10,34 +10,40 @@ import '../widgets/my_container.dart';
 class WomenTopScreen extends StatelessWidget {
    WomenTopScreen({super.key});
 
-  final List womenHeaderText = [
-    AppTexts.pullover,
-    AppTexts.blouse,
-    AppTexts.tShirts,
-    AppTexts.shirt,
+   final List womenCartItems = [
+     [AppTexts.pullover,  AppTexts.mango, AppTexts.fiftyOne, AppImages.pullovers,],
+     [AppTexts.blouse, AppTexts.dorothyPerkins,  AppTexts.thirtyFor,  AppImages.wblOus,],
+     [AppTexts.tShirts, AppTexts.lOSTInk, AppTexts.twelve,  AppImages.wblOus,],
+     [ AppTexts.shirt, AppTexts.topShop,  AppTexts.twelve,  AppImages.wshirts,]
+   ];
 
-  ];
-  final List womenSubtitleText = [
-    AppTexts.mango,
-    AppTexts.dorothyPerkins,
-    AppTexts.lOSTInk,
-    AppTexts.topShop,
-
-  ];
-  final List womenPriceText = [
-    AppTexts.fiftyOne,
-    AppTexts.thirtyFor,
-    AppTexts.twelve,
-    AppTexts.fiftyOne,
-
-  ];
-
-  final List images = [
-    AppImages.pullovers,
-    AppImages.wblOus,
-    AppImages.wshirt,
-    AppImages.wshirts,
-  ];
+  // final List womenHeaderText = [
+  //   AppTexts.pullover,
+  //   AppTexts.blouse,
+  //   AppTexts.tShirts,
+  //   AppTexts.shirt,
+  //
+  // ];
+  // final List womenSubtitleText = [
+  //   AppTexts.mango,
+  //   AppTexts.dorothyPerkins,
+  //   AppTexts.lOSTInk,
+  //   AppTexts.topShop,
+  //
+  // ];
+  // final List womenPriceText = [
+  //   AppTexts.fiftyOne,
+  //   AppTexts.thirtyFor,
+  //   AppTexts.twelve,
+  //   AppTexts.fiftyOne,
+  //
+  // ];
+  // final List images = [
+  //   AppImages.pullovers,
+  //   AppImages.wblOus,
+  //   AppImages.wshirt,
+  //   AppImages.wshirts,
+  // ];
 
    final List<String> filters = const [AppTexts.tShirts,AppTexts.cropTops,AppTexts.sleeveless,AppTexts.apply];
   @override
@@ -110,11 +116,11 @@ class WomenTopScreen extends StatelessWidget {
                   Expanded(
                     flex: 5,
                     child: ListView.builder(
-                        itemCount: womenHeaderText.length,
+                        itemCount: womenCartItems.length,
                         itemBuilder: (context, index) {
                           return WomenCustomContainer(
-                            headerText: womenHeaderText[index],
-                            images: images[index], SubtitleText: womenSubtitleText[index], price: womenPriceText[index],
+                            headerText: womenCartItems[index][0],
+                            images: womenCartItems[index][3], SubtitleText: womenCartItems[index][1], price: womenCartItems[index][2],
 
                           );
                         }),
