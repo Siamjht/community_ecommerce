@@ -174,10 +174,10 @@ class AppTexts{
   static const colorGray= "Color: Gray";
   static const units1= "Units: 1";
   static const orderInformation= "Order information";
-  static const shippingAddress= "Shipping Address:";
+  static const shippingAddressColon= "Shipping Address:";
   static const threeNewBridge= "3 Newbridge Court ,Chino Hills,CA 91709, United States                                                               ";
   static const paymentMethod= "Payment method:";
-  static const deliveryMethod= "Delivery method:";
+  static const deliveryMethodColon= "Delivery method:";
   static const fedEx= "FedEx, 3 days, 15\$";
   static const discount= "Discount:";
   static const tenparsent= "10%, Personal promo code";
@@ -202,13 +202,11 @@ class AppTexts{
   static const sizeItem = "Size";
   static const enterPromoCode = 'Enter your promo code';
   static const checkOut = "Check Out";
-  static const totalAmount = 'Total amount:';
   static const totalPrice = '124\$';
   //-----------------------------------------
 
   static const checkoutAppbar  = 'Checkout';
   static const shippingAddress  = 'Shipping Address';
-  static const change = 'change';
   static const clientName = 'John Doe';
   static const clientAddress1 = '3 Newbridge Court';
   static const clientAddress2 = 'Chino Hills, CA 91709, United States';
@@ -231,10 +229,8 @@ class AppTexts{
   static const summerSale = 'Summer Sale';
   static const summer2020 = 'summer2020';
   static const daysRemaining23 = '23 days remaining';
-  static const apply = 'Apply';
 
   ///<<<--------------------Payment Methods Page ------------------->>>>
-  static const paymentMethods = 'Payment methods';
   static const yourPaymentCards = 'Your payment cards';
   static const cardHolderName = 'Card Holder Name';
   static const expiryDate = 'Expiry Date';
@@ -253,12 +249,10 @@ class AppTexts{
   static const addCard = 'Add Card';
 
   ///<<<-----------------Shipping Addresses Page------------------------>>>>
-  static const shippingAddresses = 'Shipping Addresses';
   static const edit = 'Edit';
 
   ///<<<----------------Adding Shipping Address Page--------------------->>>
   static const addShippingAddress = 'Adding Shipping Address';
-  static const fullName = 'Full name';
   static const address = 'Address';
   static const city = 'City';
   static const stateProvinceRegion = 'State/Province/Region';
