@@ -8,10 +8,34 @@ class AppImages{
   static String sportDress = "assets/images/sportDress.png";
   static String tShirt = "assets/images/tShirt.png";
 
-  static String categoryCloths = "assets/images/catagoryCloths.png";
+
+  ///>>>>>>>>>>>>>>>>>>>>>>>>> CagegoryImages >>>>>>>>>>>>>>>>///
+
   static String categoryNew = "assets/images/catagoryNew.png";
+  static String categoryAccesories = "assets/images/catagorysAccesories.png";
+  static String categoryShoes= "assets/images/catagoryShoes.png";
+  static String categoryCloths= "assets/images/catagoryCloths.png";
+
+///>>>>>>>>>>>>>>>>>>>>>>>>> MyprofileImages >>>>>>>>>>>>>>>>///
+  static String myProfile= "assets/images/myprofile.png";
+
+///>>>>>>>>>>>>>>>>>>>>>>>>> WomenTopImages >>>>>>>>>>>>>>>>///
+  static String pullovers= "assets/images/pullovers.png";
+  static String wblOus= "assets/images/wblous.png";
+  static String wshirt= "assets/images/wshirt.png";
+  static String wshirts= "assets/images/wshirts.png";
+  static String tShirtspanis= "assets/images/tShirt.png";
+
+///>>>>>>>>>>>>>>>>>>>>>>>>> FavoriteImages >>>>>>>>>>>>>>>>///
+  static String favoriteShirt= "assets/images/favoriteshirt.png";
+  static String favoriteLongs= "assets/images/favoritelongs.png";
+  static String favoritetshirt= "assets/images/favoritetshirt.png";
+
+///>>>>>>>>>>>>>>>>>>>>>>>>> myprofile\myorderdetailsImages >>>>>>>>>>>>>>>>///
+  static String orderdetailfirstpic= "assets/images/orderdetailfirstpic.png";
+  static String orderdetailssecondpic= "assets/images/orderdetailssecondpic.png";
+
   static String categoryAccessories = "assets/images/catagorysAccesories.png";
-  static String categoryShoes = "assets/images/catagoryShoes.png";
 
   static String circleShapeCard = "assets/images/circleShapeCard.png";
   static String curveShapeCard = "assets/images/curveShapeCard.png";

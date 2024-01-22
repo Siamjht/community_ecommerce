@@ -26,6 +26,11 @@ class AppIcons{
   static String facebookIcon = "assets/icons/facebookIcon.svg";
 
   static String favoriteIcon = "assets/icons/favoriteIcon.svg";
+  static String womenGriedIcon = "assets/icons/womengriedicon.svg";
+  static String womenPriceLowToHigh = "assets/icons/wonenpricelowtohigh.svg";
+  static String womenFilter= "assets/icons/womenfilter.svg";
+
+
 
   ///<<<<<-------------my bag checkout page icons------------------->>>>>>>>>
 

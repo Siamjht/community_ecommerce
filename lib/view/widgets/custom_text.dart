@@ -12,6 +12,8 @@ class CustomText extends StatelessWidget {
     this.textHeight,
     this.letterSpacing,
   });
+
+
   final String text;
   TextDecoration? lineThrough;
   Color? color;
