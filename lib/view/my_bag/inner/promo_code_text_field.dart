@@ -1,5 +1,5 @@
 
-import 'package:community_ecommerce/view/my_bag/inner/open_bottom_sheet.dart';
+import 'package:community_ecommerce/view/my_bag/inner/promo_code_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -46,7 +46,7 @@ class PromoCodeTextField extends StatelessWidget {
                       showModalBottomSheet(
                         context: context,
                         builder: (context) {
-                          return OpenBottomSheet();
+                          return PromoCodeBottomSheet();
                         },
                       );
                     },

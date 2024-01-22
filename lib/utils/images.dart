@@ -13,4 +13,7 @@ class AppImages{
   static String categoryAccessories = "assets/images/catagorysAccesories.png";
   static String categoryShoes = "assets/images/catagoryShoes.png";
 
+  static String circleShapeCard = "assets/images/circleShapeCard.png";
+  static String curveShapeCard = "assets/images/curveShapeCard.png";
+
 }

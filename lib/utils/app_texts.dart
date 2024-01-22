@@ -105,7 +105,9 @@ class AppTexts{
   static const cardHolderName = 'Card Holder Name';
   static const expiryDate = 'Expiry Date';
   static const defaultPaymentMethod = 'Use as default payment method';
-
-
+  static const masterCardNumber = '* * * *  * * * *  * * * * 3947';
+  static const clientName2 = 'Jennyfer Doe';
+  static const expiryDateTime = '05/23';
+  static const masterCard = 'mastercard';
 
 }

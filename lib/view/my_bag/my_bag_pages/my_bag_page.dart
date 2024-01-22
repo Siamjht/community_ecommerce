@@ -12,7 +12,7 @@ import 'package:get/get.dart';
 import '../../../utils/app_icons.dart';
 import '../../../utils/app_texts.dart';
 import '../inner/my_bag_list_view.dart';
-import '../inner/open_bottom_sheet.dart';
+import '../inner/promo_code_bottom_sheet.dart';
 import '../inner/promo_code_text_field.dart';
 
 class MyBagPage extends StatelessWidget {
@@ -36,7 +36,7 @@ class MyBagPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 14.0),
+              padding:  EdgeInsets.only(left: 14.w),
               child: CustomText(
                   text: AppTexts.myBag,
                   fontSize: 34.w,
@@ -57,7 +57,7 @@ class MyBagPage extends StatelessWidget {
                   showModalBottomSheet(
                     context: context,
                     builder: (context) {
-                      return OpenBottomSheet();
+                      return PromoCodeBottomSheet();
                     },
                   );
                 }),

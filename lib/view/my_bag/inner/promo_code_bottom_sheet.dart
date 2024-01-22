@@ -11,8 +11,8 @@ import '../../../utils/app_texts.dart';
 import '../../../utils/dimentions.dart';
 import '../../widgets/custom_text.dart';
 
-class OpenBottomSheet extends StatelessWidget {
-  OpenBottomSheet({
+class PromoCodeBottomSheet extends StatelessWidget {
+  PromoCodeBottomSheet({
     super.key,
   });
   Controller controller = Get.put(Controller());

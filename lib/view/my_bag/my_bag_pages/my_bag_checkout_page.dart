@@ -84,8 +84,11 @@ class MyBagCheckOutPage extends StatelessWidget {
                     onTap: (){
                       Get.toNamed(RouteName.paymentMethodsPage);
                     },
-                    child: CustomText(text: AppTexts.change, color: AppColors.buttonsColor,
-                      fontSize: Dimensions.fontSizeDefault, fontWeight: FontWeight.w500,),
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 25.0),
+                      child: CustomText(text: AppTexts.change, color: AppColors.buttonsColor,
+                        fontSize: Dimensions.fontSizeDefault, fontWeight: FontWeight.w500,),
+                    ),
                   ),
                 ],
             ),
@@ -97,7 +100,7 @@ class MyBagCheckOutPage extends StatelessWidget {
                     containerHeight: 40.h,
                     containerWidth: 64.w,
                     borderRadius: 8,
-                  imagePath: AppIcons.masterCardIcon,
+                  imagePath: AppIcons.masterCardIconBlkText,
                   isImage: true,
                   blurRadius: 25,
                   isText: false,

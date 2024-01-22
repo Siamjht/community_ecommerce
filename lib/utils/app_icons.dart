@@ -29,9 +29,14 @@ class AppIcons{
 
   ///<<<<<-------------my bag checkout page icons------------------->>>>>>>>>
 
-  static String masterCardIcon = "assets/icons/mastercardIcon.svg";
+  static String masterCardIconBlkText = "assets/icons/mastercardIconBlkText.svg";
   static String fedexIcon = "assets/icons/fedexIcon.svg";
   static String uspsIcon = "assets/icons/uspsIcon.svg";
   static String dhlIcon = "assets/icons/dhlIcon.svg";
+
+  ///<<<--------------Payment Methods Page--------------------------->>>>>
+  static String cardChipIcon = "assets/icons/cardChipIcon.svg";
+  static String mastercardIconWhText = "assets/icons/mastercardIconWhText.svg";
+  static String visaCardIcon = "assets/icons/visaCardIcon.svg";
 
 }

@@ -24,7 +24,7 @@ class BottomSheetListView extends StatelessWidget {
         var items = controller.promoCodesList[index];
         print("${items[0]}");
         return Padding(
-          padding: const EdgeInsets.only(top: 12, bottom: 12, right: 16),
+          padding: EdgeInsets.only(top: 12.h, bottom: 12.h, right: 16.w),
           child: Container(
             height: 80.h,
             width: double.infinity,

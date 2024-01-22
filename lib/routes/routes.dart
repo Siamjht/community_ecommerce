@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 import '../view/auth/forgot_password_page/forgot_password.dart';
 import '../view/auth/login_page/login_page.dart';
 import '../view/auth/signup_page/signup_page.dart';
-import '../view/my_bag/my_bag_page/my_bag_checkout_page.dart';
-import '../view/my_bag/my_bag_page/payment_methods_page.dart';
+import '../view/my_bag/my_bag_pages/my_bag_checkout_page.dart';
+import '../view/my_bag/my_bag_pages/payment_methods_page.dart';
 
 
 class RouteName {
