@@ -38,6 +38,7 @@ dependencies:
   flutter_svg: ^2.0.9
   flutter_screenutil: ^5.9.0
   get: ^4.6.6
+  google_fonts:
   shared_preferences: ^2.2.2
 
 
