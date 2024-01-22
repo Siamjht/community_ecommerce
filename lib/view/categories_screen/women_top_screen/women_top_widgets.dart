@@ -95,46 +95,6 @@ class WomenTopWidget extends StatelessWidget {
           ],
         ),
       ),
-      // child: Card(
-      //   child: Row(
-      //     children: [
-      //       Expanded(
-      //         flex: 1,
-      //         child: Container(
-      //           height: 104.h,
-      //           width: 104.w,
-      //           child: Image.asset(images, fit: BoxFit.cover,),
-      //         ),
-      //       ),
-      //       Expanded(
-      //         flex: 3,
-      //         child: Container(
-      //           height: 104.h,
-      //           width: 171.w,
-      //           decoration: BoxDecoration(
-      //             borderRadius: BorderRadius.circular(8.0),
-      //             color: AppColors.whiteColor,
-      //           ),
-      //           child: Padding(
-      //             padding: const EdgeInsets.all(11),
-      //             child: Column(
-      //               crossAxisAlignment: CrossAxisAlignment.start,
-      //               children: [
-      //                 Text(headerText,
-      //                     style: GoogleFonts.metrophobic(
-      //                         fontSize: 18.sp, fontWeight: FontWeight.bold)),
-      //                 Text(SubtitleText),
-      //                 Text(price),
-      //                 Spacer(),
-      //                 CircleAvatar(child: Icon(Icons.favorite_border))
-      //               ],
-      //             ),
-      //           ),
-      //         ),
-      //       )
-      //     ],
-      //   ),
-      // ),
     );
   }
 }

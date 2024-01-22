@@ -1,4 +1,7 @@
 
+import 'package:community_ecommerce/view/categories_screen/women_top_screen/women_brand_screen.dart';
+import 'package:community_ecommerce/view/categories_screen/women_top_screen/women_filter_screen.dart';
+import 'package:community_ecommerce/view/categories_screen/women_top_screen/women_top_screen.dart';
 import 'package:get/get.dart';
 
 import '../view/auth/forgot_password_page/forgot_password.dart';
@@ -21,6 +24,9 @@ class RouteName {
   static const String shippingAddresses = '/shippingAddresses';
   static const String addShippingAddress = '/addShippingAddress';
   static const String successPage = '/successPage';
+  static const String womenTopScreen = '/womenTopScreen';
+  static const String filterScreen = '/filterScreen';
+  static const String womenBrandScreen = '/womenBrandScreen';
 
 }
 
@@ -59,5 +65,16 @@ class AppRoutes {
       name: RouteName.successPage,
       page: () => SuccessPage(),
     ),
+    GetPage(
+      name: RouteName.womenTopScreen,
+      page: () => WomenTopScreen(),
+    ),GetPage(
+      name: RouteName.filterScreen,
+      page: () => WomenFilterScreen(),
+    ),GetPage(
+      name: RouteName.womenBrandScreen,
+      page: () => WomenBrandScreen(),
+    ),
+
   ];
 }
