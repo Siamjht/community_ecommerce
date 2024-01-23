@@ -55,6 +55,13 @@ class WomenTopScreen extends StatelessWidget {
     AppTexts.priceLowestToHigh,
     AppTexts.priceHighestLow
   ];
+  final List<String> settingChangeBottomSheet = const [
+    AppTexts.popular,
+    AppTexts.newest,
+    AppTexts.customerReview,
+    AppTexts.priceLowestToHigh,
+    AppTexts.priceHighestLow
+  ];
 
   @override
   Widget build(BuildContext context) {

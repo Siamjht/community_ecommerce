@@ -35,6 +35,9 @@ class Controller extends GetxController{
   TextEditingController settingFullNameController = TextEditingController();
   TextEditingController settingDateOfBirthController = TextEditingController();
   TextEditingController settingPassword = TextEditingController();
+  TextEditingController settingChangeOldPassword = TextEditingController();
+  TextEditingController settingChangeNewPassword = TextEditingController();
+  TextEditingController settingChangeRepeatPassword = TextEditingController();
 
   List imagesList = [
     AppImages.blouse,

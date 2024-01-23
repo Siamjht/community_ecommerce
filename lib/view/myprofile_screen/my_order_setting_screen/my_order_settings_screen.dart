@@ -1,9 +1,10 @@
 import 'package:community_ecommerce/utils/app_texts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../controllers/controller.dart';
-import '../widgets/custom_text_field.dart';
+import '../../../controllers/controller.dart';
+import '../../widgets/custom_text.dart';
+import '../../widgets/custom_text_field.dart';
+import 'my_order_setting_change_bottom_sheet.dart';
 
 class MyOrderSettingScreen extends StatelessWidget {
   MyOrderSettingScreen({super.key});
@@ -21,22 +22,18 @@ class MyOrderSettingScreen extends StatelessWidget {
             SizedBox(
               height: 15,
             ),
-            Text(
-              AppTexts.settings,
-              style: TextStyle(
-                  fontSize: 34,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold),
+            CustomText(
+              text: AppTexts.settings,
+              fontSize:34 ,
+              fontWeight: FontWeight.bold,
             ),
             SizedBox(
               height: 10,
             ),
-            Text(
-              AppTexts.personalInformation,
-              style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold),
+            CustomText(
+              text: AppTexts.personalInformation,
+              fontSize:16 ,
+              fontWeight: FontWeight.bold,
             ),
             SizedBox(
               height: 16,
@@ -59,11 +56,23 @@ class MyOrderSettingScreen extends StatelessWidget {
             ),
             Row(
               children: [
-                Text(AppTexts.password,style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 16),),
+                CustomText(
+                  text: AppTexts.password,
+                  fontSize:16 ,
+                  fontWeight: FontWeight.bold,
+                ),
                 Spacer(),
                 GestureDetector(
-                    onTap: (){},
-                    child: Text(AppTexts.change,style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold,fontSize: 16),))
+                    onTap: () {
+                      Get.bottomSheet(
+                          SettingChangeBottomSheet(controller: controller));
+                    },
+                    child:
+                    CustomText(
+                      text: AppTexts.change,
+                      fontSize:14 ,
+                    )
+                )
               ],
             ),
             CustomTextField(
@@ -71,10 +80,18 @@ class MyOrderSettingScreen extends StatelessWidget {
               labelText: AppTexts.password,
               isIcon: false,
             ),
+            SizedBox(
+              height: 10,
+            ),
+
+            CustomText(
+              text: AppTexts.notifications,
+            fontSize:16 ,
+              fontWeight: FontWeight.bold,
+            )
           ],
         ),
       ),
     );
-
   }
 }

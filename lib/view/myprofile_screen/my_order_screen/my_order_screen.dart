@@ -1,6 +1,4 @@
-import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../utils/app_texts.dart';
 import '../../widgets/my_order_custom_button.dart';
@@ -34,7 +32,10 @@ class MyOrderScreen extends StatelessWidget {
                     itemCount: myOrderTopText.length,
                     itemBuilder: (context, index) {
                       ///>>>>>>>>>>>>>>>>>>>>>>>>>This is a order Custom Button>>>>>>>>>>>>>>>>///
-                      return OrderCustomButton(label: myOrderTopText[index], text: 'g',);
+                      return OrderCustomButton(
+                        label: myOrderTopText[index],
+                        text: 'g',
+                      );
                     }),
               ),
             ),

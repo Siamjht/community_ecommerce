@@ -2,6 +2,7 @@ import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 import '../../utils/app_texts.dart';
+import '../widgets/custom_text.dart';
 import 'categori_tab_screen.dart';
 
 class CategorieScreen extends StatelessWidget {
@@ -13,9 +14,10 @@ class CategorieScreen extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text(
-            AppTexts.categories,
-            style: TextStyle(fontSize: 18),
+          title:   CustomText(
+            text: AppTexts.categories,
+            fontSize:18 ,
+            fontWeight: FontWeight.bold,
           ),
           centerTitle: true,
           actions: const [

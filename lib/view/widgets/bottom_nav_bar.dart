@@ -1,7 +1,7 @@
 import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:community_ecommerce/view/favorite_screen/favorite_screen.dart';
 import 'package:community_ecommerce/view/home/home_page/home_page.dart';
-import 'package:community_ecommerce/view/myprofile_screen/my_order_settings_screen.dart';
+import 'package:community_ecommerce/view/myprofile_screen/my_order_setting_screen/my_order_settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
