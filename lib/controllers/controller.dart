@@ -27,6 +27,15 @@ class Controller extends GetxController{
   TextEditingController zipCodeController = TextEditingController();
   TextEditingController countryController = TextEditingController();
 
+
+
+
+  ///>>>>>>>>>>>>>>>>>>>>>>>>>Myprofile\Mysettings>>>>>>>>>>>>>>>>///
+
+  TextEditingController settingFullNameController = TextEditingController();
+  TextEditingController settingDateOfBirthController = TextEditingController();
+  TextEditingController settingPassword = TextEditingController();
+
   List imagesList = [
     AppImages.blouse,
     AppImages.eveningDress,
