@@ -19,7 +19,10 @@ class SuccessPage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Image.asset(AppImages.successImage, fit: BoxFit.fill,),
+          Container(
+            height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              child: Image.asset(AppImages.successImage, fit: BoxFit.fill,)),
           Positioned(
             top: 120.h,
               left: 120.w,
@@ -43,7 +46,7 @@ class SuccessPage extends StatelessWidget {
 
           Positioned(
             top: 235.h,
-              left: 110,
+              left: 100,
               child: CustomElevatedButton(
                   onPressed: (){
                     Get.toNamed(RouteName.homePage);

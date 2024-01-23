@@ -1,7 +1,4 @@
 
-import 'package:community_ecommerce/view/categories_screen/women_top_screen/women_brand_screen.dart';
-import 'package:community_ecommerce/view/categories_screen/women_top_screen/women_filter_screen.dart';
-import 'package:community_ecommerce/view/categories_screen/women_top_screen/women_top_screen.dart';
 import 'package:get/get.dart';
 
 import '../view/auth/forgot_password_page/forgot_password.dart';
@@ -14,6 +11,7 @@ import '../view/my_bag/my_bag_pages/payment_methods_page.dart';
 import '../view/my_bag/my_bag_pages/shipping_addresses.dart';
 import '../view/my_bag/my_bag_pages/success_page.dart';
 import '../view/myprofile_screen/myorder_screen.dart';
+import '../view/myprofile_screen/my_order_details.dart';
 
 
 class RouteName {
@@ -30,6 +28,7 @@ class RouteName {
   static const String filterScreen = '/filterScreen';
   static const String womenBrandScreen = '/womenBrandScreen';
   static const String myOrderScreen = '/myOrderScreen';
+  static const String myOrderDetails = '/myOrderDetails';
 
 }
 
@@ -87,5 +86,9 @@ class AppRoutes {
       page: () => MyOrderScreen(),
     ),
 
+    GetPage(
+      name: RouteName.myOrderDetails,
+      page: () => MyOrderDetails(),
+    ),
   ];
 }
