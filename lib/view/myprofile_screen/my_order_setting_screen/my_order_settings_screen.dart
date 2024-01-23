@@ -88,7 +88,7 @@ class MyOrderSettingScreen extends StatelessWidget {
               text: AppTexts.notifications,
             fontSize:16 ,
               fontWeight: FontWeight.bold,
-            )
+            ),
           ],
         ),
       ),

@@ -81,6 +81,15 @@ class Controller extends GetxController{
     {"textFieldLabelText" : AppTexts.country},
   ];
 
+  List ratingsList = [
+    {"totalRatings" : 23},
+    {"5Star" : 12},
+    {"4Star" : 5},
+    {"3Star" : 4},
+    {"2Star" : 2},
+    {"1Star" : 0}
+  ];
+
   RxBool isChecked = false.obs;
   bool isValided = true;
   RxBool isGetPromoCode = false.obs;

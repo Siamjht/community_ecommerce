@@ -1,5 +1,6 @@
 import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:community_ecommerce/utils/images.dart';
+import 'package:community_ecommerce/view/widgets/custom_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -63,9 +64,13 @@ class WomenTopWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(subtitleText),
-                  Text(headerText,style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+                  CustomText(
+                      text: headerText,
+                  fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
 
-                  Text(price),
+                  CustomText( text: 'price',),
 
 
                 ],

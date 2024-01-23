@@ -5,6 +5,8 @@ import 'package:community_ecommerce/view/widgets/custom_listtile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../widgets/custom_text.dart';
+
 class MyProfile extends StatelessWidget {
   MyProfile({super.key});
 
@@ -37,10 +39,13 @@ class MyProfile extends StatelessWidget {
             padding: EdgeInsets.all(14.0),
             child: Align(
                 alignment: Alignment.bottomLeft,
-                child: Text(
-                  AppTexts.myProfile,
-                  style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
-                )),
+                child:
+              CustomText(
+                text:AppTexts.myProfile,
+                fontSize: 34,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
           Row(
             children: [
@@ -58,15 +63,15 @@ class MyProfile extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    AppTexts.matildaBrown,
-                    style:
-                        TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  CustomText(
+                    text:AppTexts.matildaBrown,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ), CustomText(
+                    text:AppTexts.matildaBrownCom,
+                    fontSize: 14,
                   ),
-                  Text(
-                    AppTexts.matildaBrownCom,
-                    style: TextStyle(fontSize: 14),
-                  )
+
                 ],
               )
             ],

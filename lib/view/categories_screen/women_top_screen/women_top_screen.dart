@@ -9,6 +9,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../routes/routes.dart';
 import '../../../utils/app_texts.dart';
 import '../../../utils/images.dart';
+import '../../widgets/custom_text.dart';
 import '../../widgets/my_container.dart';
 import 'women_top_bottomshet_widget.dart';
 
@@ -79,9 +80,12 @@ class WomenTopScreen extends StatelessWidget {
               SafeArea(
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text(AppTexts.womenTops,
-                      style: GoogleFonts.metrophobic(
-                          fontSize: 34.sp, fontWeight: FontWeight.bold)),
+                  child:
+                  CustomText(
+                    text:AppTexts.womenTops,
+                  fontSize: 34,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               Expanded(
@@ -96,9 +100,10 @@ class WomenTopScreen extends StatelessWidget {
                         child:
                         Chip(
                           backgroundColor: Colors.black,
-                          label: Text(
-                            filter,
-                            style: TextStyle(color: Colors.white),
+                          label:
+                          CustomText(
+                            text:filter,
+                            color: Colors.white,
                           ),
                           padding: EdgeInsets.symmetric(
                             horizontal: 20,
@@ -122,7 +127,7 @@ class WomenTopScreen extends StatelessWidget {
                         SvgPicture.asset(
                           AppIcons.womenFilter,
                         ),
-                        Text(AppTexts.filters),
+                        CustomText(text: AppTexts.filters,),
                       ],
                     ),
                   ),
@@ -138,7 +143,8 @@ class WomenTopScreen extends StatelessWidget {
                         SvgPicture.asset(
                           AppIcons.womenPriceLowToHigh,
                         ),
-                        Text(AppTexts.priceLowestToHigh)
+                        CustomText(
+                          text:   AppTexts.priceLowestToHigh,)
                       ],
                     ),
                   ),

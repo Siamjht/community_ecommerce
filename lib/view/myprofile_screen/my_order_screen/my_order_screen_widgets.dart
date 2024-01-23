@@ -1,9 +1,11 @@
-
+import 'package:community_ecommerce/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 import '../../../utils/app_colors.dart';
 import '../../../utils/app_texts.dart';
+import '../../widgets/custom_text.dart';
 
 class MyorderScreenWidget extends StatelessWidget {
   const MyorderScreenWidget({
@@ -25,81 +27,88 @@ class MyorderScreenWidget extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text(
-                      AppTexts.order1947034,
-                      style: TextStyle(
-                          fontSize: 16, fontWeight: FontWeight.bold),
+                    CustomText(
+                      text: AppTexts.order1947034,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
                     ),
                     Spacer(),
-                    Text(
-                      AppTexts.$05122019,
-                      style: TextStyle(
-                          fontSize: 14,color: Colors.grey),
+                    CustomText(
+                      text: AppTexts.$05122019,
+                      fontSize: 14,
+                      color: AppColors.grayColor,
                     ),
                   ],
                 ),
                 Row(
                   children: [
-                    Text(
-                      AppTexts.trackingNumber,
-                      style: TextStyle(fontSize: 16),
+                    CustomText(
+                      text: AppTexts.trackingNumber,
+                      fontSize: 16,
                     ),
-                    Text(
-                      AppTexts.iW3475453455,
-                      style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                    CustomText(
+                      text: AppTexts.iW3475453455,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
                     ),
                   ],
                 ),
                 Row(
                   children: [
                     Expanded(
-                        flex: 2,
-                        child: Text(
-                          AppTexts.quantity,
-                          style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
-                        )),
+                      flex: 2,
+                      child: CustomText(
+                        text: AppTexts.quantity,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                     Expanded(
-                        child: Text(
-                          AppTexts.totalAmount,
-                          style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
-                        )),
+                      child: CustomText(
+                        text: AppTexts.totalAmount,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ],
                 ),
                 SizedBox(
-                   height: 38,
+                  height: 10,
                 ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      height: 36.h,
-                      width: 98.w,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(40),
-                          color: Colors.white,
-                          border:
-                          Border.all(color: Colors.black)),
-                      child: Center(
-                          child: Text(
-                            AppTexts.details,
-                            style: TextStyle(color: Colors.black),
-                          )),
+                    GestureDetector(
+                      onTap: () {
+                        Get.toNamed(RouteName.myOrderDetails);
+                      },
+                      child: Container(
+                        height: 36.h,
+                        width: 98.w,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(40),
+                            color: Colors.white,
+                            border: Border.all(color: Colors.black)),
+                        child: Center(
+                          child: CustomText(
+                            text: AppTexts.details,
+                            fontSize: 16,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
                     ),
                     Spacer(),
                     Container(
                       height: 15.h,
                       width: 77.w,
                       child: Center(
-                          child: Text(
-                            AppTexts.delivered,
-                            style: TextStyle(
-                                color: AppColors.successMarkColor,
-                                fontWeight: FontWeight.bold),
-                          )),
+                        child: CustomText(
+                          text: AppTexts.delivered,
+                          fontWeight: FontWeight.bold,
+                          color: AppColors.successMarkColor,
+                        ),
+                      ),
                     ),
                   ],
                 )

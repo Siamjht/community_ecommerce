@@ -1,4 +1,4 @@
-
+import 'package:community_ecommerce/view/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -21,14 +21,17 @@ class SettingChangeBottomSheet extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(34),
-              topRight: Radius.circular(34))
-      ),
+              topLeft: Radius.circular(34), topRight: Radius.circular(34))),
       child: Column(
         children: [
           Padding(
             padding: const EdgeInsets.all(15),
-            child: Text(AppTexts.passwordChange,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
+            child:
+            CustomText(
+              text: AppTexts.passwordChange,
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+            )
           ),
           Container(
             margin: EdgeInsets.all(15),
@@ -44,7 +47,11 @@ class SettingChangeBottomSheet extends StatelessWidget {
                 ),
                 Align(
                     alignment: Alignment.centerRight,
-                    child: TextButton(onPressed: (){}, child: Text(AppTexts.forgotPassword))),
+                    child: TextButton(
+                        onPressed: () {},
+                        child: CustomText(
+                          text: AppTexts.forgotPassword,
+                        ))),
                 SizedBox(
                   height: 8,
                 ),

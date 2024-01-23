@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../utils/app_texts.dart';
+import '../../widgets/custom_text.dart';
 
 class WomenBottomShet extends StatelessWidget {
   const WomenBottomShet({
@@ -23,13 +24,13 @@ class WomenBottomShet extends StatelessWidget {
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              AppTexts.sortby,
-              style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold),
-            ),
+            padding:  EdgeInsets.all(8.0),
+            child:
+            CustomText(
+              text: AppTexts.sortby,
+            fontSize: 18,
+              fontWeight: FontWeight.bold,
+            )
           ),
           Expanded(
             child: Container(
@@ -40,10 +41,11 @@ class WomenBottomShet extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return Container(
                       height: 50.h,
-                      child: Text(
-                        bottomsheet[index],
-                        style: TextStyle(fontSize: 16),
-                      ),
+                      child:
+                      CustomText(
+                        text: bottomsheet[index],
+                      fontSize: 16,
+                      )
                     );
                   }),
             ),

@@ -1,11 +1,9 @@
 import 'package:community_ecommerce/routes/routes.dart';
 import 'package:community_ecommerce/utils/app_texts.dart';
+import 'package:community_ecommerce/view/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-
-
-
 
 class WomenFilterScreen extends StatelessWidget {
   const WomenFilterScreen({super.key});
@@ -16,7 +14,7 @@ class WomenFilterScreen extends StatelessWidget {
       body: Column(
         children: [
           GestureDetector(
-            onTap: (){
+            onTap: () {
               Get.toNamed(RouteName.womenBrandScreen);
             },
             child: Container(
@@ -26,14 +24,20 @@ class WomenFilterScreen extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Text(AppTexts.brand,style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
-                      Spacer(),
-                      Icon(Icons.arrow_forward_ios_sharp,size: 25,)
 
+                      CustomText(
+                          text:AppTexts.brand,
+                          color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      Spacer(),
+                      Icon(
+                        Icons.arrow_forward_ios_sharp,
+                        size: 25,
+                      )
                     ],
                   ),
-                  Text(AppTexts.addIdAsOriginals),
-
+                  CustomText(text: AppTexts.addIdAsOriginals,),
                 ],
               ),
             ),

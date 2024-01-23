@@ -1,8 +1,7 @@
 import 'package:community_ecommerce/utils/app_colors.dart';
-import 'package:community_ecommerce/utils/images.dart';
+import 'package:community_ecommerce/view/widgets/custom_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 
 class FavoriteTopWidget extends StatelessWidget {
   final String headerText;
@@ -10,9 +9,6 @@ class FavoriteTopWidget extends StatelessWidget {
   final String price;
 
   final String images;
-
-  // final IconData icon;
-
   FavoriteTopWidget({
     super.key,
     required this.headerText,
@@ -62,11 +58,17 @@ class FavoriteTopWidget extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(headerText,style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
-                  Text(subtitleText),
-                  Text(price),
-
-
+                  CustomText(
+                    text: headerText,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  CustomText(
+                    text: subtitleText,
+                  ),
+                  CustomText(
+                    text: price,
+                  ),
                 ],
               ),
             ),
@@ -78,17 +80,22 @@ class FavoriteTopWidget extends StatelessWidget {
                       bottom: -10,
                       right: 0,
                       child: GestureDetector(
-                        onTap: (){
+                        onTap: () {
                           isFavIconTapped = !isFavIconTapped;
                         },
                         child: CircleAvatar(
                             backgroundColor: AppColors.whiteColor,
                             radius: 20,
-                            child: isFavIconTapped?
-                            Icon(Icons.favorite_sharp, color: AppColors.errorMarkColor,)
-                                :Icon(Icons.favorite_border, color: AppColors.grayColor,) ),
-                      )
-                  ),
+                            child: isFavIconTapped
+                                ? Icon(
+                                    Icons.favorite_sharp,
+                                    color: AppColors.errorMarkColor,
+                                  )
+                                : Icon(
+                                    Icons.favorite_border,
+                                    color: AppColors.grayColor,
+                                  )),
+                      )),
                 ],
               ),
             )

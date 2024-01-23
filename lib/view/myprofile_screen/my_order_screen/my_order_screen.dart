@@ -41,7 +41,7 @@ class MyOrderScreen extends StatelessWidget {
             ),
           ),
           Expanded(
-            flex: 9,
+            flex: 6,
             child: ListView.builder(
                 itemCount: 3,
                 itemBuilder: (context, index) {
