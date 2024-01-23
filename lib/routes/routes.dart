@@ -16,6 +16,7 @@ import '../view/my_bag/my_bag_pages/shipping_addresses.dart';
 import '../view/my_bag/my_bag_pages/success_page.dart';
 import '../view/myprofile_screen/my_order_screen/my_order_screen.dart';
 import '../view/myprofile_screen/my_order_details.dart';
+import '../view/myprofile_screen/my_order_setting_screen/my_order_settings_screen.dart';
 
 
 class RouteName {
@@ -34,6 +35,7 @@ class RouteName {
   static const String myOrderScreen = '/myOrderScreen';
   static const String myOrderDetails = '/myOrderDetails';
   static const String ratingsReviewsPage = '/ratingsReviewsPage';
+  static const String myOrderSettingScreen = '/myOrderSettingScreen';
 
 }
 
@@ -103,6 +105,10 @@ class AppRoutes {
     GetPage(
       name: RouteName.myOrderDetails,
       page: () => MyOrderDetails(),
+    ),
+    GetPage(
+      name: RouteName.myOrderSettingScreen,
+      page: () => MyOrderSettingScreen(),
     ),
 
   ];

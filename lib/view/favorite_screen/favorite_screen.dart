@@ -87,8 +87,11 @@ class FavoriteScreen extends StatelessWidget {
                         child: Chip(
                           backgroundColor: Colors.black,
                           label:
-                          CustomText(text: filter,
-                          color: Colors.white,
+                          CustomText(
+                            text: filter,
+
+                            color: Colors.white,
+
                           ),
                           padding: EdgeInsets.symmetric(
                             horizontal: 20,
@@ -135,7 +138,7 @@ class FavoriteScreen extends StatelessWidget {
                 ],
               ),
               Expanded(
-                flex: 5,
+                flex: 9,
                 child: ListView.builder(
                     itemCount: womenCartItems.length,
                     itemBuilder: (context, index) {

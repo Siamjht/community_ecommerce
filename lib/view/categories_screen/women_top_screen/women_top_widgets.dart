@@ -26,7 +26,7 @@ class WomenTopWidget extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
       child: Container(
         width: 343.w,
-        height: 104.h,
+        height: 120.h,
         decoration: ShapeDecoration(
           color: Colors.white,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),

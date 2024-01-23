@@ -47,7 +47,6 @@ class MyOrderScreen extends StatelessWidget {
                 itemCount: 3,
                 itemBuilder: (context, index) {
                   ///>>>>>>>>>>>>>>>>>>>>>>>>>Myorder Screen All widgets>>>>>>>>>>>>>>>>///
-
                   return MyorderScreenWidget();
                 }),
           )

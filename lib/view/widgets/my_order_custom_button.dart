@@ -20,7 +20,7 @@ class OrderCustomButton extends StatelessWidget {
         Expanded(
           child: Container(
               margin: EdgeInsets.all(10),
-              width: 110.w,
+              width: 115.w,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(34), color: Colors.black),
               child: Center(

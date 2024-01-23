@@ -25,8 +25,6 @@ class FavoriteTopWidget extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
       child: Container(
-        width: 343.w,
-        height: 104.h,
         decoration: ShapeDecoration(
           color: Colors.white,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
@@ -41,8 +39,8 @@ class FavoriteTopWidget extends StatelessWidget {
         child: Row(
           children: [
             Container(
-              width: 119.w,
-              height: 157.h,
+              // width: 119,
+              // height: 157,
               decoration: ShapeDecoration(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
@@ -54,51 +52,45 @@ class FavoriteTopWidget extends StatelessWidget {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(13),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  CustomText(
-                    text: headerText,
-                    fontSize: 16.sp,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  CustomText(
-                    text: subtitleText,
-                  ),
-                  CustomText(
-                    text: price,
-                  ),
-                ],
-              ),
+            Column(
+
+              children: [
+
+                CustomText(
+                  text: headerText,
+                  fontSize: 10,
+                  fontWeight: FontWeight.bold,
+                ),
+                Text(headerText,),
+                Text(subtitleText),
+                Text(price)
+
+              ],
             ),
-            Expanded(
-              child: Stack(
-                clipBehavior: Clip.none,
-                children: [
-                  Positioned(
-                      bottom: -10,
-                      right: 0,
-                      child: GestureDetector(
-                        onTap: () {
-                          isFavIconTapped = !isFavIconTapped;
-                        },
-                        child: CircleAvatar(
-                            backgroundColor: AppColors.whiteColor,
-                            radius: 20,
-                            child: isFavIconTapped
-                                ? Icon(
-                                    Icons.favorite_sharp,
-                                    color: AppColors.errorMarkColor,
-                                  )
-                                : Icon(
-                                    Icons.favorite_border,
-                                    color: AppColors.grayColor,
-                                  )),
-                      )),
-                ],
-              ),
+            Stack(
+              clipBehavior: Clip.none,
+              children: [
+                Positioned(
+                    bottom: -10,
+                    right: 0,
+                    child: GestureDetector(
+                      onTap: () {
+                        isFavIconTapped = !isFavIconTapped;
+                      },
+                      child: CircleAvatar(
+                          backgroundColor: AppColors.whiteColor,
+                          radius: 20,
+                          child: isFavIconTapped
+                              ? Icon(
+                                  Icons.favorite_sharp,
+                                  color: AppColors.errorMarkColor,
+                                )
+                              : Icon(
+                                  Icons.favorite_border,
+                                  color: AppColors.grayColor,
+                                )),
+                    )),
+              ],
             )
           ],
         ),

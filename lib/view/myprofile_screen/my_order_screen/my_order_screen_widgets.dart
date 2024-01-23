@@ -19,7 +19,6 @@ class MyorderScreenWidget extends StatelessWidget {
       child: Card(
         color: AppColors.whiteColor,
         child: Container(
-          height: 164.h,
           child: Padding(
             padding: const EdgeInsets.all(15),
             child: Column(
@@ -29,13 +28,13 @@ class MyorderScreenWidget extends StatelessWidget {
                   children: [
                     CustomText(
                       text: AppTexts.order1947034,
-                      fontSize: 16.sp,
+                      fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
                     Spacer(),
                     CustomText(
                       text: AppTexts.$05122019,
-                      fontSize: 14.sp,
+                      fontSize: 14,
                       color: AppColors.grayColor,
                     ),
                   ],
@@ -44,11 +43,11 @@ class MyorderScreenWidget extends StatelessWidget {
                   children: [
                     CustomText(
                       text: AppTexts.trackingNumber,
-                      fontSize: 16.sp,
+                      fontSize: 16,
                     ),
                     CustomText(
                       text: AppTexts.iW3475453455,
-                      fontSize: 16.sp,
+                      fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
                   ],
@@ -59,14 +58,14 @@ class MyorderScreenWidget extends StatelessWidget {
                       flex: 2,
                       child: CustomText(
                         text: AppTexts.quantity,
-                        fontSize: 16.sp,
+                        fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     Expanded(
                       child: CustomText(
                         text: AppTexts.totalAmount,
-                        fontSize: 16.sp,
+                        fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -83,8 +82,7 @@ class MyorderScreenWidget extends StatelessWidget {
                         Get.toNamed(RouteName.myOrderDetails);
                       },
                       child: Container(
-                        height: 36.h,
-                        width: 98.w,
+                        padding: EdgeInsets.symmetric(vertical: 8,horizontal: 12),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(40),
                             color: Colors.white,
@@ -99,19 +97,13 @@ class MyorderScreenWidget extends StatelessWidget {
                       ),
                     ),
                     Spacer(),
-                    Container(
-                      height: 15.h,
-                      width: 77.w,
-                      child: Center(
-                        child: CustomText(
-                          text: AppTexts.delivered,
-                          fontWeight: FontWeight.bold,
-                          color: AppColors.successMarkColor,
-                        ),
-                      ),
+                    CustomText(
+                      text: AppTexts.delivered,
+                      fontWeight: FontWeight.bold,
+                      color: AppColors.successMarkColor,
                     ),
                   ],
-                )
+                ),
               ],
             ),
           ),

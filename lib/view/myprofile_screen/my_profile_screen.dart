@@ -78,19 +78,36 @@ class MyProfile extends StatelessWidget {
             ],
           ),
           Expanded(
-            child: GestureDetector(
-              onTap: (){
-                Get.toNamed(RouteName.myOrderScreen);
-              },
-              child: ListView.builder(
-                  itemCount: myProfileHeaderText.length,
-                  itemBuilder: (context, index) {
-                    return CuastomListTile(
-                      title: myProfileHeaderText[index],
-                      subtitle: myProfileSubTileText[index],
+            child: ListView.builder(
+                itemCount: myProfileHeaderText.length,
+                itemBuilder: (context, index) {
+                  if(index == 0){
+                    return GestureDetector(
+                      onTap: (){
+                        Get.toNamed(RouteName.myOrderScreen);
+                      },
+                      child: CuastomListTile(
+                        title: myProfileHeaderText[index],
+                        subtitle: myProfileSubTileText[index],
+                      ),
                     );
-                  }),
-            ),
+                  }
+                  else if(index == 5){
+                    return GestureDetector(
+                      onTap: (){
+                        Get.toNamed(RouteName.myOrderSettingScreen);
+                      },
+                      child: CuastomListTile(
+                        title: myProfileHeaderText[index],
+                        subtitle: myProfileSubTileText[index],
+                      ),
+                    );
+                  }
+                  return CuastomListTile(
+                    title: myProfileHeaderText[index],
+                    subtitle: myProfileSubTileText[index],
+                  );
+                }),
           ),
         ],
       ),
