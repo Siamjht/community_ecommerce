@@ -27,6 +27,8 @@ class Controller extends GetxController{
   TextEditingController zipCodeController = TextEditingController();
   TextEditingController countryController = TextEditingController();
 
+  ///<<<---------------Settings Page Controller----------------
+
   List imagesList = [
     AppImages.blouse,
     AppImages.eveningDress,
@@ -39,14 +41,14 @@ class Controller extends GetxController{
   ];
 
   List<ProductDetails> products = [
-    ProductDetails(image: AppImages.blouse, name: "Blouse", color: "Red", size: 'L', price: "15\$", quantity: 10),
-    ProductDetails(image: AppImages.eveningDress, name: "Evening Dress", color: "Yellow", size: 'M', price: "25\$", quantity: 8),
-    ProductDetails(image: AppImages.sportDress, name: "Sport Dress", color: "Black", size: 'XL', price: "10\$", quantity: 2),
-    ProductDetails(image: AppImages.tShirt, name: "t-Shirt", color: "Red", size: 'L', price: "18\$", quantity: 4),
-    ProductDetails(image: AppImages.categoryAccessories, name: "Locket", color: "Golden", size: 'Thin', price: "12\$", quantity: 5),
-    ProductDetails(image: AppImages.categoryCloths, name: "Jens Pants", color: "Blue", size: '38', price: "10\$", quantity: 7),
-    ProductDetails(image: AppImages.categoryNew, name: "Jens Jacket", color: "Violet", size: 'XXL',price: "15\$", quantity: 10),
-    ProductDetails(image: AppImages.categoryShoes, name: "Shoes", color: "Black", size: '41', price: "10\$", quantity: 20),
+    ProductDetails(image: AppImages.blouse, name: "Blouse", color: "Red", size: 'L', price: "15\$", quantity: 10, type: AppTexts.mango, units: '3'),
+    ProductDetails(image: AppImages.eveningDress, name: "Evening Dress", color: "Yellow", size: 'M', price: "25\$", quantity: 8, type: AppTexts.lemon, units: '7'),
+    ProductDetails(image: AppImages.sportDress, name: "Sport Dress", color: "Black", size: 'XL', price: "10\$", quantity: 2, type: AppTexts.orange, units: '9'),
+    ProductDetails(image: AppImages.tShirt, name: "t-Shirt", color: "Red", size: 'L', price: "18\$", quantity: 4, type: AppTexts.mango, units: '5'),
+    ProductDetails(image: AppImages.categoryAccessories, name: "Locket", color: "Golden", size: 'Thin', price: "12\$", quantity: 5, type: AppTexts.mango, units: '3'),
+    ProductDetails(image: AppImages.categoryCloths, name: "Jens Pants", color: "Blue", size: '38', price: "10\$", quantity: 7, type: AppTexts.lemon, units: '5'),
+    ProductDetails(image: AppImages.categoryNew, name: "Jens Jacket", color: "Violet", size: 'XXL',price: "15\$", quantity: 10, type: AppTexts.orange, units: '4'),
+    ProductDetails(image: AppImages.categoryShoes, name: "Shoes", color: "Black", size: '41', price: "10\$", quantity: 20, type: AppTexts.mango, units: '3'),
   ];
 
   List promoCodesList = [
@@ -65,6 +67,14 @@ class Controller extends GetxController{
     {"textFieldLabelText" : AppTexts.stateProvinceRegion},
     {"textFieldLabelText" : AppTexts.zipCode},
     {"textFieldLabelText" : AppTexts.country},
+  ];
+  List ratingsList = [
+    {"totalRatings" : 23},
+    {"5Star" : 12},
+    {"4Star" : 5},
+    {"3Star" : 4},
+    {"2Star" : 2},
+    {"1Star" : 0}
   ];
 
   RxBool isChecked = false.obs;

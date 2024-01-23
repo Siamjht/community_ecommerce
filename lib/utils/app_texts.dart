@@ -188,6 +188,27 @@ class AppTexts{
   static const reorder= "Reorder";
   static const leaveFeedback= "Leave feedback";
 
+  ///<<<----------------My Order Details Page-------------------->>>>
+  static const orderDate = "05-12-2019";
+  static const trackingDigits = "IW3475453455";
+  static const itemString = "items";
+  static const lemon = "lemon";
+  static const orange = "orange";
+  static const units = "Units:";
+  static const shippingAddressLead = "Shipping Address:";
+  static const shippingAddressTrail = '3 Newbridge Court ,Chino Hills, \nCA 91709, United States';
+  static const  paymentMethodLead = 'Payment method:';
+
+  static const  deliveryMethodLead = 'Delivery method:';
+  static const  deliveryMethodTrail = 'FedEx, 3 days, 15\$';
+  static const  discountLead = 'Discount:';
+  static const  discountTrail = '10%, Personal promo code';
+  static const  totalAmountLead = 'Total Amount:';
+  static const  totalAmountTrail = '133\$';
+  static const  reorderBtn = 'Reorder';
+  static const  leaveFeedbackBtn = 'Leave feedback';
+
+
 
 ///>>>>>>>>>>>>>>>>>>>>>>>>>Settings page Texts>>>>>>>>>>>>>>>>///
   static const fullname= "Full name";
@@ -254,7 +275,7 @@ class AppTexts{
   ///<<<-----------------Shipping Addresses Page------------------------>>>>
   static const edit = 'Edit';
 
-  ///<<<----------------Adding Shipping Address Page--------------------->>>
+  ///<<<---------------------Adding Shipping Address Page--------------------->>>
   static const addShippingAddress = 'Adding Shipping Address';
   static const address = 'Address';
   static const city = 'City';
@@ -263,9 +284,19 @@ class AppTexts{
   static const country = 'Country';
   static const saveAddress = 'Save Address';
 
-  ///<<<---------------Success Page---------------------------------->>>
+  ///<<<-------------------Success Page---------------------------------->>>
   static const success = 'Success!';
   static const successTexts = 'Your order will be delivered soon.\nThank you for choosing our app!';
   static const continueShopping = 'Continue shopping';
 
+  ///<<<<----------------------'Rating & Reviews Pages'------------------>>>>
+  static const ratingNReviews = 'Rating & Reviews';
+  static const ratingRatio = '4.3';
+  static const ratings = 'ratings';
+  static const review = 'reviews';
+  static const withPhoto = 'With photo';
+  static const reviewer = 'Helene Moore';
+  static const reviewDescription =  "The dress is great! Very classy and comfortable. It fit perfectly! I'm 5feet 7inch and 130 pounds. I am a 34B chest. This dress would be too long for those who are shorter but could be hemmed. I wouldn't recommend it for those big chested as I am smaller chested and it fit me perfectly. The underarms were not too wide and the dress was made well.";
+  static const reviewBtn =  "Write a review";
+  static const helpful =  'Helpful';
 }
