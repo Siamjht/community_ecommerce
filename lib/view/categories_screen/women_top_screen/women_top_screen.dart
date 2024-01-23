@@ -86,7 +86,8 @@ class WomenTopScreen extends StatelessWidget {
                       final filter = filters[index];
                       return Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Chip(
+                        child:
+                        Chip(
                           backgroundColor: Colors.black,
                           label: Text(
                             filter,

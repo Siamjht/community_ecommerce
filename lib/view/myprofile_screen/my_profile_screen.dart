@@ -5,8 +5,8 @@ import 'package:community_ecommerce/view/widgets/custom_listtile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class MyProfileSetings extends StatelessWidget {
-  MyProfileSetings({super.key});
+class MyProfile extends StatelessWidget {
+  MyProfile({super.key});
 
   final List myProfileHeaderText = [
     AppTexts.myOrders,
