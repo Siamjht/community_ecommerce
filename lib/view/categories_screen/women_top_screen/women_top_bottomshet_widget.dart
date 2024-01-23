@@ -28,7 +28,7 @@ class WomenBottomShet extends StatelessWidget {
             child:
             CustomText(
               text: AppTexts.sortby,
-            fontSize: 18,
+            fontSize: 18.sp,
               fontWeight: FontWeight.bold,
             )
           ),
@@ -44,7 +44,7 @@ class WomenBottomShet extends StatelessWidget {
                       child:
                       CustomText(
                         text: bottomsheet[index],
-                      fontSize: 16,
+                      fontSize: 16.sp,
                       )
                     );
                   }),

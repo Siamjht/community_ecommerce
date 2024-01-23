@@ -3,13 +3,9 @@ import 'package:community_ecommerce/view/categories_screen/women_top_screen/wome
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../../../routes/routes.dart';
 import '../../../utils/app_texts.dart';
 import '../../../utils/images.dart';
-import '../categories_screen/women_top_screen/women_top_bottomshet_widget.dart';
 import '../widgets/custom_text.dart';
 
 class FavoriteScreen extends StatelessWidget {
@@ -48,7 +44,7 @@ class FavoriteScreen extends StatelessWidget {
     AppTexts.shirt,
     AppTexts.apply
   ];
-  final List<String> bottomsheet = const [
+  final List<String> bottomSheet = const [
     AppTexts.popular,
     AppTexts.newest,
     AppTexts.customerReview,
@@ -61,8 +57,8 @@ class FavoriteScreen extends StatelessWidget {
     return Scaffold(
         body: Column(
       children: [
-        const SizedBox(
-          height: 20,
+         SizedBox(
+          height: 20.h,
         ),
         Expanded(
           flex: 1,
@@ -73,6 +69,7 @@ class FavoriteScreen extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child:
+                      ///>>>>>>>>>>>>>>>>>>>Googlefont Use>>>>>>>>>>>>>>>>>///
                   Text(AppTexts.favorites,
                       style: GoogleFonts.metrophobic(
                           fontSize: 34.sp, fontWeight: FontWeight.bold)),

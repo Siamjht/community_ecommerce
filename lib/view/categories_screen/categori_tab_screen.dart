@@ -1,6 +1,7 @@
 import 'package:community_ecommerce/routes/routes.dart';
 import 'package:community_ecommerce/utils/images.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../../utils/app_texts.dart';
@@ -30,12 +31,12 @@ class CategoreTabScreen extends StatelessWidget {
     return Scaffold(
         body: Column(
       children: [
-        const SizedBox(
-          height: 20,
+         SizedBox(
+          height: 20.h,
         ),
         const CustomContainer(),
-        const SizedBox(
-          height: 10,
+         SizedBox(
+          height: 10.h,
         ),
         Expanded(
           flex: 1,

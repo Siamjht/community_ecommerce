@@ -29,13 +29,13 @@ class MyorderScreenWidget extends StatelessWidget {
                   children: [
                     CustomText(
                       text: AppTexts.order1947034,
-                      fontSize: 16,
+                      fontSize: 16.sp,
                       fontWeight: FontWeight.bold,
                     ),
                     Spacer(),
                     CustomText(
                       text: AppTexts.$05122019,
-                      fontSize: 14,
+                      fontSize: 14.sp,
                       color: AppColors.grayColor,
                     ),
                   ],
@@ -44,11 +44,11 @@ class MyorderScreenWidget extends StatelessWidget {
                   children: [
                     CustomText(
                       text: AppTexts.trackingNumber,
-                      fontSize: 16,
+                      fontSize: 16.sp,
                     ),
                     CustomText(
                       text: AppTexts.iW3475453455,
-                      fontSize: 16,
+                      fontSize: 16.sp,
                       fontWeight: FontWeight.bold,
                     ),
                   ],
@@ -59,21 +59,21 @@ class MyorderScreenWidget extends StatelessWidget {
                       flex: 2,
                       child: CustomText(
                         text: AppTexts.quantity,
-                        fontSize: 16,
+                        fontSize: 16.sp,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     Expanded(
                       child: CustomText(
                         text: AppTexts.totalAmount,
-                        fontSize: 16,
+                        fontSize: 16.sp,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ],
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 10.h,
                 ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -92,7 +92,7 @@ class MyorderScreenWidget extends StatelessWidget {
                         child: Center(
                           child: CustomText(
                             text: AppTexts.details,
-                            fontSize: 16,
+                            fontSize: 16.sp,
                             color: Colors.black,
                           ),
                         ),

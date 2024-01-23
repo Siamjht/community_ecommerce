@@ -1,19 +1,15 @@
 import 'package:community_ecommerce/utils/app_colors.dart';
-import 'package:community_ecommerce/utils/images.dart';
 import 'package:community_ecommerce/view/widgets/custom_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 class WomenTopWidget extends StatelessWidget {
   final String headerText;
   final String subtitleText;
   final String price;
-
   final String images;
-
-  // final IconData icon;
-
   WomenTopWidget({
     super.key,
     required this.headerText,
@@ -29,8 +25,8 @@ class WomenTopWidget extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
       child: Container(
-        width: 343,
-        height: 104,
+        width: 343.w,
+        height: 104.h,
         decoration: ShapeDecoration(
           color: Colors.white,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
@@ -45,8 +41,8 @@ class WomenTopWidget extends StatelessWidget {
         child: Row(
           children: [
             Container(
-              width: 119,
-              height: 157,
+              width: 119.w,
+              height: 157.h,
               decoration: ShapeDecoration(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
@@ -66,7 +62,7 @@ class WomenTopWidget extends StatelessWidget {
                   Text(subtitleText),
                   CustomText(
                       text: headerText,
-                  fontSize: 16,
+                  fontSize: 16.sp,
                     fontWeight: FontWeight.bold,
                   ),
 

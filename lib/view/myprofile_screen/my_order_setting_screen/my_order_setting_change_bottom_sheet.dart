@@ -30,7 +30,7 @@ class SettingChangeBottomSheet extends StatelessWidget {
             CustomText(
               text: AppTexts.passwordChange,
               fontWeight: FontWeight.bold,
-              fontSize: 18,
+              fontSize: 18.sp,
             )
           ),
           Container(
@@ -43,7 +43,7 @@ class SettingChangeBottomSheet extends StatelessWidget {
                   isIcon: false,
                 ),
                 SizedBox(
-                  height: 8,
+                  height: 8.h,
                 ),
                 Align(
                     alignment: Alignment.centerRight,
@@ -53,7 +53,7 @@ class SettingChangeBottomSheet extends StatelessWidget {
                           text: AppTexts.forgotPassword,
                         ))),
                 SizedBox(
-                  height: 8,
+                  height: 8.h,
                 ),
                 CustomTextField(
                   textEditingController: controller.settingChangeNewPassword,
@@ -61,7 +61,7 @@ class SettingChangeBottomSheet extends StatelessWidget {
                   isIcon: false,
                 ),
                 SizedBox(
-                  height: 8,
+                  height: 8.h,
                 ),
                 CustomTextField(
                   textEditingController: controller.settingChangeRepeatPassword,

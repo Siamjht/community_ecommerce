@@ -3,6 +3,7 @@ import 'package:community_ecommerce/utils/app_texts.dart';
 import 'package:community_ecommerce/utils/images.dart';
 import 'package:community_ecommerce/view/widgets/custom_listtile.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../widgets/custom_text.dart';
@@ -33,7 +34,7 @@ class MyProfile extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(
-            height: 44,
+            height: 44.h,
           ),
           Padding(
             padding: EdgeInsets.all(14.0),
@@ -42,7 +43,7 @@ class MyProfile extends StatelessWidget {
                 child:
               CustomText(
                 text:AppTexts.myProfile,
-                fontSize: 34,
+                fontSize: 34.sp,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -65,11 +66,11 @@ class MyProfile extends StatelessWidget {
                 children: [
                   CustomText(
                     text:AppTexts.matildaBrown,
-                    fontSize: 18,
+                    fontSize: 18.sp,
                     fontWeight: FontWeight.bold,
                   ), CustomText(
                     text:AppTexts.matildaBrownCom,
-                    fontSize: 14,
+                    fontSize: 14.sp,
                   ),
 
                 ],

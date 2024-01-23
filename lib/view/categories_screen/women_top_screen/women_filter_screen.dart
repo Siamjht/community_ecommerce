@@ -33,7 +33,7 @@ class WomenFilterScreen extends StatelessWidget {
                       Spacer(),
                       Icon(
                         Icons.arrow_forward_ios_sharp,
-                        size: 25,
+                        size: 25.sp,
                       )
                     ],
                   ),

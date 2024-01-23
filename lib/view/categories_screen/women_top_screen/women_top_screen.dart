@@ -4,13 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
-
 import '../../../routes/routes.dart';
 import '../../../utils/app_texts.dart';
 import '../../../utils/images.dart';
 import '../../widgets/custom_text.dart';
-import '../../widgets/my_container.dart';
 import 'women_top_bottomshet_widget.dart';
 
 class WomenTopScreen extends StatelessWidget {
@@ -69,8 +66,8 @@ class WomenTopScreen extends StatelessWidget {
     return Scaffold(
         body: Column(
       children: [
-        const SizedBox(
-          height: 20,
+         SizedBox(
+          height: 20.h,
         ),
         Expanded(
           flex: 1,
@@ -83,7 +80,7 @@ class WomenTopScreen extends StatelessWidget {
                   child:
                   CustomText(
                     text:AppTexts.womenTops,
-                  fontSize: 34,
+                  fontSize: 34.sp,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

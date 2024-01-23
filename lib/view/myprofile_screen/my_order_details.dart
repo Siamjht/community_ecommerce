@@ -99,7 +99,7 @@ class MyOrderDetails extends StatelessWidget {
                 height: 410.h,
                   width: double.infinity,
                   child: MyOrderListView(controller: controller)),
-              SizedBox(height: 20,),
+              SizedBox(height: 20.h,),
 
               CustomText(
                 text: AppTexts.orderInformation,
@@ -107,7 +107,7 @@ class MyOrderDetails extends StatelessWidget {
                 fontSize: Dimensions.fontSizeDefault,
                 fontWeight: FontWeight.w500,
               ),
-              SizedBox(height: 10,),
+              SizedBox(height: 10.h,),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -200,7 +200,7 @@ class MyOrderDetails extends StatelessWidget {
                 ],
               ),
 
-              SizedBox(height: 35,),
+              SizedBox(height: 35.h,),
 
               Row(
                 children: [
@@ -211,7 +211,7 @@ class MyOrderDetails extends StatelessWidget {
                     titleSize: Dimensions.fontSizeDefault,
                     titleWeight: FontWeight.w500,
                     buttonHeight: 36.h,
-                    buttonWidth: 160,
+                    buttonWidth: 160.w,
                     borderColor: AppColors.buttonsColor,
                     buttonColor: AppColors.whiteColor,
                   ),
@@ -224,7 +224,7 @@ class MyOrderDetails extends StatelessWidget {
                     titleSize: Dimensions.fontSizeDefault,
                     titleWeight: FontWeight.w500,
                     buttonHeight: 36.h,
-                    buttonWidth: 160,
+                    buttonWidth: 160.w,
                   ),
                 ],
               ),
