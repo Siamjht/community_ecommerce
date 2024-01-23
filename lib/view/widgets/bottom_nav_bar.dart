@@ -36,11 +36,12 @@ class _BottomNavBarState extends State<BottomNavBar> {
       bottomNavigationBar: SizedBox(
         height: 83,
         child: ClipRRect(
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(12.0),
             topRight: Radius.circular(12.0),
           ),
           child: BottomNavigationBar(
+
             type: BottomNavigationBarType.fixed,
             items: <BottomNavigationBarItem>[
               BottomNavigationBarItem(
