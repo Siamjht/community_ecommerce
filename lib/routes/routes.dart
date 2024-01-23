@@ -8,12 +8,14 @@ import '../view/categories_screen/women_top_screen/women_brand_screen.dart';
 import '../view/categories_screen/women_top_screen/women_filter_screen.dart';
 import '../view/categories_screen/women_top_screen/women_top_screen.dart';
 import '../view/home/home_page/home_page.dart';
+import '../view/home/reviews_ratings/ratings_reviews_page.dart';
 import '../view/my_bag/my_bag_pages/add_shipping_address_page.dart';
 import '../view/my_bag/my_bag_pages/my_bag_checkout_page.dart';
 import '../view/my_bag/my_bag_pages/payment_methods_page.dart';
 import '../view/my_bag/my_bag_pages/shipping_addresses.dart';
 import '../view/my_bag/my_bag_pages/success_page.dart';
 import '../view/myprofile_screen/my_order_screen/my_order_screen.dart';
+import '../view/myprofile_screen/myorder_screen.dart';
 import '../view/myprofile_screen/my_order_details.dart';
 
 
@@ -32,6 +34,7 @@ class RouteName {
   static const String womenBrandScreen = '/womenBrandScreen';
   static const String myOrderScreen = '/myOrderScreen';
   static const String myOrderDetails = '/myOrderDetails';
+  static const String ratingsReviewsPage = '/ratingsReviewsPage';
 
 }
 
@@ -75,12 +78,18 @@ class AppRoutes {
       page: () => SuccessPage(),
     ),
     GetPage(
+      name: RouteName.myOrderDetails,
+      page: () => MyOrderDetails(),
+    ),
+    GetPage(
       name: RouteName.womenTopScreen,
       page: () => WomenTopScreen(),
-    ),GetPage(
+    ),
+    GetPage(
       name: RouteName.filterScreen,
       page: () => WomenFilterScreen(),
-    ),GetPage(
+    ),
+    GetPage(
       name: RouteName.womenBrandScreen,
       page: () => WomenBrandScreen(),
     ),
@@ -88,10 +97,14 @@ class AppRoutes {
       name: RouteName.myOrderScreen,
       page: () => MyOrderScreen(),
     ),
+    GetPage(
+      name: RouteName.ratingsReviewsPage,
+      page: () => RatingsReviewsPage(),
 
     GetPage(
       name: RouteName.myOrderDetails,
       page: () => MyOrderDetails(),
     ),
+
   ];
 }

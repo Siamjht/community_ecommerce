@@ -25,6 +25,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     MyBagPage(),
     FavoriteScreen(),
     MyOrderSettingScreen()
+    MyProfileSetings()
   ];
   int _selectedItem = 0;
 
@@ -42,6 +43,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             topRight: Radius.circular(12.0),
           ),
           child: BottomNavigationBar(
+
             type: BottomNavigationBarType.fixed,
             items: <BottomNavigationBarItem>[
               BottomNavigationBarItem(
