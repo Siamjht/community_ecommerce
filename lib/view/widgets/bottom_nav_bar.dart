@@ -25,7 +25,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     CategorieScreen(),
     MyBagPage(),
     FavoriteScreen(),
-    MyProfileSetings()
+    MyOrderDetails()
   ];
   int _selectedItem = 0;
 
