@@ -6,6 +6,8 @@ class ProductDetails{
   final String size;
   final int quantity;
   final String price;
+  final String type;
+  final String units;
 
   ProductDetails({
     required this.image,
@@ -13,7 +15,9 @@ class ProductDetails{
     required this.color,
     required this.size,
     required this.price,
-    required this.quantity
+    required this.quantity,
+    required this.type,
+    required this.units
   });
 
   Map<String, dynamic> toMap() {
@@ -24,6 +28,8 @@ class ProductDetails{
       'size' : size,
       'quantity': quantity,
       'price': price,
+      'type' : type,
+      'units' : units,
     };
   }
 }

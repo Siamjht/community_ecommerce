@@ -1,15 +1,14 @@
 import 'package:community_ecommerce/utils/app_icons.dart';
-import 'package:community_ecommerce/view/categories_screen/women_top_widgets.dart';
+import 'package:community_ecommerce/view/categories_screen/women_top_screen/women_top_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
-
-import '../../routes/routes.dart';
-import '../../utils/app_texts.dart';
-import '../../utils/images.dart';
-import '../widgets/my_container.dart';
+import '../../../routes/routes.dart';
+import '../../../utils/app_texts.dart';
+import '../../../utils/images.dart';
+import '../../widgets/custom_text.dart';
+import 'women_top_bottomshet_widget.dart';
 
 class WomenTopScreen extends StatelessWidget {
   WomenTopScreen({super.key});
@@ -41,12 +40,25 @@ class WomenTopScreen extends StatelessWidget {
     ]
   ];
 
-
   final List<String> filters = const [
     AppTexts.tShirts,
     AppTexts.cropTops,
     AppTexts.sleeveless,
     AppTexts.apply
+  ];
+  final List<String> bottomsheet = const [
+    AppTexts.popular,
+    AppTexts.newest,
+    AppTexts.customerReview,
+    AppTexts.priceLowestToHigh,
+    AppTexts.priceHighestLow
+  ];
+  final List<String> settingChangeBottomSheet = const [
+    AppTexts.popular,
+    AppTexts.newest,
+    AppTexts.customerReview,
+    AppTexts.priceLowestToHigh,
+    AppTexts.priceHighestLow
   ];
 
   @override
@@ -54,8 +66,8 @@ class WomenTopScreen extends StatelessWidget {
     return Scaffold(
         body: Column(
       children: [
-        const SizedBox(
-          height: 20,
+         SizedBox(
+          height: 20.h,
         ),
         Expanded(
           flex: 1,
@@ -65,9 +77,12 @@ class WomenTopScreen extends StatelessWidget {
               SafeArea(
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text(AppTexts.womenTops,
-                      style: GoogleFonts.metrophobic(
-                          fontSize: 34.sp, fontWeight: FontWeight.bold)),
+                  child:
+                  CustomText(
+                    text:AppTexts.womenTops,
+                  fontSize: 34.sp,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               Expanded(
@@ -79,11 +94,13 @@ class WomenTopScreen extends StatelessWidget {
                       final filter = filters[index];
                       return Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Chip(
+                        child:
+                        Chip(
                           backgroundColor: Colors.black,
-                          label: Text(
-                            filter,
-                            style: TextStyle(color: Colors.white),
+                          label:
+                          CustomText(
+                            text:filter,
+                            color: Colors.white,
                           ),
                           padding: EdgeInsets.symmetric(
                             horizontal: 20,
@@ -98,21 +115,23 @@ class WomenTopScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
-                    children: [
-                      SvgPicture.asset(
-                        AppIcons.womenFilter,
-                      ),
-                      Text(AppTexts.filters),
-                    ],
-                  ),
                   GestureDetector(
                     onTap: (){
+                      Get.toNamed(RouteName.filterScreen);
+                    },
+                    child: Row(
+                      children: [
+                        SvgPicture.asset(
+                          AppIcons.womenFilter,
+                        ),
+                        CustomText(text: AppTexts.filters,),
+                      ],
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
                       Get.bottomSheet(
-                            Container(
-                              height: 150,
-                              color: Colors.red,
-                            )
+                        WomenBottomShet(bottomsheet: bottomsheet),
                       );
                       // Get.toNamed(RouteName.womenLowestTo);
                     },
@@ -121,7 +140,8 @@ class WomenTopScreen extends StatelessWidget {
                         SvgPicture.asset(
                           AppIcons.womenPriceLowToHigh,
                         ),
-                        Text(AppTexts.priceLowestToHigh)
+                        CustomText(
+                          text:   AppTexts.priceLowestToHigh,)
                       ],
                     ),
                   ),

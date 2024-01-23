@@ -9,7 +9,7 @@ class CustomElevatedButton extends StatelessWidget {
   final String titleText;
   final Color titleColor;
   final Color buttonColor;
-  final Color? borderColor;
+  final Color borderColor;
   final double titleSize;
   final FontWeight titleWeight;
   final double buttonRadius;
@@ -26,7 +26,7 @@ class CustomElevatedButton extends StatelessWidget {
         this.titleWeight = FontWeight.w600,
         this.buttonHeight = 48,
         this.buttonWidth,
-        this.borderColor,
+        this.borderColor = const Color(0xFFDB3022),
         super.key});
 
   @override
@@ -37,6 +37,9 @@ class CustomElevatedButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ButtonStyle(
+          side: MaterialStateProperty.all(BorderSide(
+            color: borderColor,
+          )),
             backgroundColor: MaterialStateProperty.all(buttonColor),
             shape: MaterialStateProperty.all(
               RoundedRectangleBorder(

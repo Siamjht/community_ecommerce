@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../utils/app_texts.dart';
-
+import 'custom_text.dart';
 class CustomContainer extends StatelessWidget {
   const CustomContainer({
     super.key,
@@ -21,10 +21,17 @@ class CustomContainer extends StatelessWidget {
             AppTexts.summerSales,
             style: TextStyle(color: Colors.white, fontSize: 24),
           ),
+
           Text(
             AppTexts.upTo,
             style: TextStyle(fontSize: 14, color: Colors.white),
           ),
+          ///>>>>>>>>>>>>>>>>>>>>>>>>>>>.....This is Problem<<<<<<<<<<<<<<<<<<///
+          // CustomText(
+          //   text: AppTexts.upTo,
+          // fontSize: 14,
+          //   color: Colors.white,
+          // )
         ],
       ),
     );

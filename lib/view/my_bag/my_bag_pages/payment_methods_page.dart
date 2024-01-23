@@ -66,13 +66,13 @@ class PaymentMethodsPage extends StatelessWidget {
                     isText: false,
                 ),
                 Positioned(
-                  top: 0,
-                  right: 0,
+                  top: 0.h,
+                  right: 0.w,
                   child: Image.asset(AppImages.circleShapeCard),
                 ),
                 Positioned(
-                  bottom: 0,
-                  left: -5,
+                  bottom: 0.h,
+                  left: -5.w,
                   child: Image.asset(AppImages.curveShapeCard),
                 ),
                 Positioned(
@@ -184,13 +184,13 @@ class PaymentMethodsPage extends StatelessWidget {
                   isText: false,
                 ),
                 Positioned(
-                  top: 0,
-                  right: 0,
+                  top: 0.h,
+                  right: 0.w,
                   child: Image.asset(AppImages.circleShapeCard),
                 ),
                 Positioned(
-                  bottom: 0,
-                  left: -5,
+                  bottom: 0.h,
+                  left: -5.w,
                   child: Image.asset(AppImages.curveShapeCard),
                 ),
                 Positioned(

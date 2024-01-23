@@ -1,8 +1,10 @@
 import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../utils/app_texts.dart';
-import 'women_screen.dart';
+import '../widgets/custom_text.dart';
+import 'categori_tab_screen.dart';
 
 class CategorieScreen extends StatelessWidget {
   const CategorieScreen({super.key});
@@ -13,18 +15,19 @@ class CategorieScreen extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text(
-            AppTexts.categories,
-            style: TextStyle(fontSize: 18),
+          title:   CustomText(
+            text: AppTexts.categories,
+            fontSize:18.sp,
+            fontWeight: FontWeight.bold,
           ),
           centerTitle: true,
-          actions: const [
+          actions:  [
             Icon(
               Icons.search,
               size: 24,
             ),
             SizedBox(
-              width: 10,
+              width: 10.w,
             )
           ],
           bottom: TabBar(
@@ -46,7 +49,7 @@ class CategorieScreen extends StatelessWidget {
         ),
         body: TabBarView(
           children: [
-            WomenScreen(),  WomenScreen(),  WomenScreen(),
+            CategoreTabScreen(),  CategoreTabScreen(),  CategoreTabScreen(),
 
           ],
         ),

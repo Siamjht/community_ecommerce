@@ -1,10 +1,15 @@
+import 'package:community_ecommerce/routes/routes.dart';
 import 'package:community_ecommerce/utils/app_texts.dart';
 import 'package:community_ecommerce/utils/images.dart';
 import 'package:community_ecommerce/view/widgets/custom_listtile.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
-class MyProfileSetings extends StatelessWidget {
-  MyProfileSetings({super.key});
+import '../widgets/custom_text.dart';
+
+class MyProfile extends StatelessWidget {
+  MyProfile({super.key});
 
   final List myProfileHeaderText = [
     AppTexts.myOrders,
@@ -29,16 +34,19 @@ class MyProfileSetings extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(
-            height: 44,
+            height: 44.h,
           ),
           Padding(
             padding: EdgeInsets.all(14.0),
             child: Align(
                 alignment: Alignment.bottomLeft,
-                child: Text(
-                  AppTexts.myProfile,
-                  style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
-                )),
+                child:
+              CustomText(
+                text:AppTexts.myProfile,
+                fontSize: 34.sp,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
           Row(
             children: [
@@ -54,16 +62,17 @@ class MyProfileSetings extends StatelessWidget {
                 ),
               ),
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    AppTexts.matildaBrown,
-                    style:
-                        TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  CustomText(
+                    text:AppTexts.matildaBrown,
+                    fontSize: 18.sp,
+                    fontWeight: FontWeight.bold,
+                  ), CustomText(
+                    text:AppTexts.matildaBrownCom,
+                    fontSize: 14.sp,
                   ),
-                  Text(
-                    AppTexts.matildaBrownCom,
-                    style: TextStyle(fontSize: 14),
-                  )
+
                 ],
               )
             ],
@@ -72,6 +81,28 @@ class MyProfileSetings extends StatelessWidget {
             child: ListView.builder(
                 itemCount: myProfileHeaderText.length,
                 itemBuilder: (context, index) {
+                  if(index == 0){
+                    return GestureDetector(
+                      onTap: (){
+                        Get.toNamed(RouteName.myOrderScreen);
+                      },
+                      child: CuastomListTile(
+                        title: myProfileHeaderText[index],
+                        subtitle: myProfileSubTileText[index],
+                      ),
+                    );
+                  }
+                  else if(index == 5){
+                    return GestureDetector(
+                      onTap: (){
+                        Get.toNamed(RouteName.myOrderSettingScreen);
+                      },
+                      child: CuastomListTile(
+                        title: myProfileHeaderText[index],
+                        subtitle: myProfileSubTileText[index],
+                      ),
+                    );
+                  }
                   return CuastomListTile(
                     title: myProfileHeaderText[index],
                     subtitle: myProfileSubTileText[index],
