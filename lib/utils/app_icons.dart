@@ -21,6 +21,7 @@ class AppIcons{
   static String searchIcon = "assets/icons/searchIcon.svg";
   static String starIconSolid = "assets/icons/starIconSolid.svg";
   static String starIconOutline = "assets/icons/starIconOutline.svg";
+  static String starOutline = "assets/icons/star_outline.svg";
 
   static String googleIcon = "assets/icons/googleIcon.svg";
   static String facebookIcon = "assets/icons/facebookIcon.svg";

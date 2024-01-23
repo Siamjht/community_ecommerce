@@ -13,8 +13,7 @@ class AppColors{
   static Color fullBlackColor = const Color(0xFF000000);
   static Color whiteColor = const Color(0xFFFFFFFF);
   static Color grayColor = const Color(0xFF9B9B9B);
-  static Color blackColor = const Color(0xFF222222);
-
+  static Color goldColor = const Color(0xFFFFBA49);
   static Color tabBarIndicatorColor = const Color(0xFFDB3022);
 
   static Color shadowColor = const Color(0x14000000);
