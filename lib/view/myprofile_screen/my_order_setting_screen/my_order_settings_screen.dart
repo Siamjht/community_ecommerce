@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../../controllers/controller.dart';
+import '../../widgets/custom_elevated_button.dart';
 import '../../widgets/custom_text.dart';
 import '../../widgets/custom_text_field.dart';
 import 'my_order_setting_change_bottom_sheet.dart';
@@ -90,6 +91,28 @@ class MyOrderSettingScreen extends StatelessWidget {
             fontSize:16.sp ,
               fontWeight: FontWeight.bold,
             ),
+
+            // SizedBox(
+            //   height: 10.h,
+            // ),
+            // CustomText(
+            //   text: AppTexts.sales,
+            //   fontSize:14.sp ,
+            // ),
+            // SizedBox(
+            //   height: 24.h,
+            // ),
+            // CustomText(
+            //   text: AppTexts.newArrivals,
+            //   fontSize:14.sp ,
+            // ),
+            // SizedBox(
+            //   height: 24.h,
+            // ),
+            // CustomText(
+            //   text: AppTexts.deliverystatuschanges,
+            //   fontSize:14.sp ,
+            // ),
           ],
         ),
       ),

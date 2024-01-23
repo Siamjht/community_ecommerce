@@ -8,7 +8,6 @@ import '../../utils/app_icons.dart';
 import '../../utils/app_texts.dart';
 import '../my_bag/my_bag_pages/my_bag_page.dart';
 import '../myprofile_screen/my_profile_screen.dart';
-
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
 

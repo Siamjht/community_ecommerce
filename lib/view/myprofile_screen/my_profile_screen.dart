@@ -68,7 +68,8 @@ class MyProfile extends StatelessWidget {
                     text:AppTexts.matildaBrown,
                     fontSize: 18.sp,
                     fontWeight: FontWeight.bold,
-                  ), CustomText(
+                  ),
+                  CustomText(
                     text:AppTexts.matildaBrownCom,
                     fontSize: 14.sp,
                   ),
