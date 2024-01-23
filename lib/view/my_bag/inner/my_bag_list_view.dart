@@ -23,10 +23,10 @@ class MyBagListView extends StatelessWidget {
       itemBuilder: (context, index) {
         var items = controller.products[index];
         return Padding(
-          padding: const EdgeInsets.symmetric(
-              horizontal: 16.0, vertical: 12),
+          padding: EdgeInsets.symmetric(
+              horizontal: 16.0.w, vertical: 12.h),
           child: Container(
-            height: 104.h,
+            height: 104.w,
             width: double.infinity,
             decoration: ShapeDecoration(
               color: AppColors.whiteColor,

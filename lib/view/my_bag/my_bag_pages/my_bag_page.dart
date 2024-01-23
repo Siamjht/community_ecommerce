@@ -92,7 +92,7 @@ class MyBagPage extends StatelessWidget {
                       Get.toNamed(RouteName.myBagCheckoutPage);
                     },
                     titleText: AppTexts.checkOut.toUpperCase(),
-                    buttonWidth: 343.w),
+                    buttonWidth: double.infinity.w),
             ),
           ],
         ),
