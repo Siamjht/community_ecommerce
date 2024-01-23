@@ -15,7 +15,6 @@ import '../view/my_bag/my_bag_pages/payment_methods_page.dart';
 import '../view/my_bag/my_bag_pages/shipping_addresses.dart';
 import '../view/my_bag/my_bag_pages/success_page.dart';
 import '../view/myprofile_screen/my_order_screen/my_order_screen.dart';
-import '../view/myprofile_screen/myorder_screen.dart';
 import '../view/myprofile_screen/my_order_details.dart';
 
 
@@ -100,7 +99,7 @@ class AppRoutes {
     GetPage(
       name: RouteName.ratingsReviewsPage,
       page: () => RatingsReviewsPage(),
-
+    ),
     GetPage(
       name: RouteName.myOrderDetails,
       page: () => MyOrderDetails(),

@@ -9,7 +9,6 @@ import '../../utils/app_icons.dart';
 import '../../utils/app_texts.dart';
 import '../categories_screen/categorie_screen.dart';
 import '../my_bag/my_bag_pages/my_bag_page.dart';
-import '../myprofile_screen/my_profile_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -25,7 +24,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
     MyBagPage(),
     FavoriteScreen(),
     MyOrderSettingScreen()
-    MyProfileSetings()
   ];
   int _selectedItem = 0;
 
