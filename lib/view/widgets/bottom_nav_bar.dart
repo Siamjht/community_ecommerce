@@ -7,6 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../utils/app_icons.dart';
 import '../../utils/app_texts.dart';
 import '../categories_screen/categorie_screen.dart';
+import '../myprofile_screen/my_order_details.dart';
 import '../myprofile_screen/myprofile_settings.dart';
 import '../my_bag/my_bag_pages/my_bag_page.dart';
 
@@ -23,7 +24,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     CategorieScreen(),
     MyBagPage(),
     FavoriteScreen(),
-    MyProfileSetings()
+    MyOrderDetails()
   ];
   int _selectedItem = 0;
 

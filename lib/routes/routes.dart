@@ -10,6 +10,7 @@ import '../view/my_bag/my_bag_pages/my_bag_checkout_page.dart';
 import '../view/my_bag/my_bag_pages/payment_methods_page.dart';
 import '../view/my_bag/my_bag_pages/shipping_addresses.dart';
 import '../view/my_bag/my_bag_pages/success_page.dart';
+import '../view/myprofile_screen/my_order_details.dart';
 
 
 class RouteName {
@@ -22,6 +23,7 @@ class RouteName {
   static const String shippingAddresses = '/shippingAddresses';
   static const String addShippingAddress = '/addShippingAddress';
   static const String successPage = '/successPage';
+  static const String myOrderDetails = '/myOrderDetails';
 
 }
 
@@ -63,6 +65,10 @@ class AppRoutes {
     GetPage(
       name: RouteName.successPage,
       page: () => SuccessPage(),
+    ),
+    GetPage(
+      name: RouteName.myOrderDetails,
+      page: () => MyOrderDetails(),
     ),
   ];
 }
