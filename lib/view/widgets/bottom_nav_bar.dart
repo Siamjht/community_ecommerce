@@ -1,14 +1,13 @@
 import 'package:community_ecommerce/utils/app_colors.dart';
-import 'package:community_ecommerce/view/categories_screen/women_top_screen/women_top_screen.dart';
 import 'package:community_ecommerce/view/favorite_screen/favorite_screen.dart';
 import 'package:community_ecommerce/view/home/home_page/home_page.dart';
+import 'package:community_ecommerce/view/myprofile_screen/myprofile_settings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../utils/app_icons.dart';
 import '../../utils/app_texts.dart';
 import '../categories_screen/categorie_screen.dart';
-import '../myprofile_screen/myprofile_settings.dart';
 import '../my_bag/my_bag_pages/my_bag_page.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -24,7 +23,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     CategorieScreen(),
     MyBagPage(),
     FavoriteScreen(),
-    MyProfileSetings()
+    MyProfileSetings(),
   ];
   int _selectedItem = 0;
 
@@ -37,11 +36,12 @@ class _BottomNavBarState extends State<BottomNavBar> {
       bottomNavigationBar: SizedBox(
         height: 83,
         child: ClipRRect(
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(12.0),
             topRight: Radius.circular(12.0),
           ),
           child: BottomNavigationBar(
+
             type: BottomNavigationBarType.fixed,
             items: <BottomNavigationBarItem>[
               BottomNavigationBarItem(
