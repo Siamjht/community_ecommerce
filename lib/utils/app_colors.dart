@@ -8,12 +8,16 @@ class AppColors{
   static Color hintTextColor = const Color(0xFF9B9B9B);
   static Color successMarkColor = const Color(0xFF2AA952);
   static Color errorMarkColor = const Color(0xFFF01F0E);
+  static Color defaultTextColor = const Color(0xFF222222);
   static Color blackColor = const Color(0xFF222222);
   static Color fullBlackColor = const Color(0xFF000000);
   static Color defaultTextColor = const Color(0xFF222222);
   static Color whiteColor = const Color(0xFFFFFFFF);
   static Color grayColor = const Color(0xFF9B9B9B);
+  static Color blackColor = const Color(0xFF222222);
 
   static Color tabBarIndicatorColor = const Color(0xFFDB3022);
+
   static Color shadowColor = const Color(0x14000000);
+  static Color favoritePositionIconColor = const Color(0xFFDB3022);
 }

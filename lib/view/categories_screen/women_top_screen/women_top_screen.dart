@@ -1,15 +1,16 @@
 import 'package:community_ecommerce/utils/app_icons.dart';
-import 'package:community_ecommerce/view/categories_screen/women_top_widgets.dart';
+import 'package:community_ecommerce/view/categories_screen/women_top_screen/women_top_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../routes/routes.dart';
-import '../../utils/app_texts.dart';
-import '../../utils/images.dart';
-import '../widgets/my_container.dart';
+import '../../../routes/routes.dart';
+import '../../../utils/app_texts.dart';
+import '../../../utils/images.dart';
+import '../../widgets/my_container.dart';
+import 'women_top_bottomshet_widget.dart';
 
 class WomenTopScreen extends StatelessWidget {
   WomenTopScreen({super.key});
@@ -41,12 +42,18 @@ class WomenTopScreen extends StatelessWidget {
     ]
   ];
 
-
   final List<String> filters = const [
     AppTexts.tShirts,
     AppTexts.cropTops,
     AppTexts.sleeveless,
     AppTexts.apply
+  ];
+  final List<String> bottomsheet = const [
+    AppTexts.popular,
+    AppTexts.newest,
+    AppTexts.customerReview,
+    AppTexts.priceLowestToHigh,
+    AppTexts.priceHighestLow
   ];
 
   @override
@@ -98,21 +105,23 @@ class WomenTopScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
-                    children: [
-                      SvgPicture.asset(
-                        AppIcons.womenFilter,
-                      ),
-                      Text(AppTexts.filters),
-                    ],
-                  ),
                   GestureDetector(
                     onTap: (){
+                      Get.toNamed(RouteName.filterScreen);
+                    },
+                    child: Row(
+                      children: [
+                        SvgPicture.asset(
+                          AppIcons.womenFilter,
+                        ),
+                        Text(AppTexts.filters),
+                      ],
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
                       Get.bottomSheet(
-                            Container(
-                              height: 150,
-                              color: Colors.red,
-                            )
+                        WomenBottomShet(bottomsheet: bottomsheet),
                       );
                       // Get.toNamed(RouteName.womenLowestTo);
                     },

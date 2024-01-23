@@ -62,8 +62,9 @@ class WomenTopWidget extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(headerText,style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
                   Text(subtitleText),
+                  Text(headerText,style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+
                   Text(price),
 
 
@@ -82,11 +83,11 @@ class WomenTopWidget extends StatelessWidget {
                           isFavIconTapped = !isFavIconTapped;
                         },
                         child: CircleAvatar(
-                          backgroundColor: AppColors.whiteColor,
+                          backgroundColor: AppColors.favoritePositionIconColor,
                           radius: 20,
                             child: isFavIconTapped?
-                            Icon(Icons.favorite_sharp, color: AppColors.errorMarkColor,)
-                                :Icon(Icons.favorite_border, color: AppColors.grayColor,) ),
+                            Icon(Icons.shopping_bag, color: AppColors.whiteColor,)
+                                :Icon(Icons.favorite_border, color: AppColors.errorMarkColor,) ),
                       )
                   ),
                 ],
@@ -95,46 +96,6 @@ class WomenTopWidget extends StatelessWidget {
           ],
         ),
       ),
-      // child: Card(
-      //   child: Row(
-      //     children: [
-      //       Expanded(
-      //         flex: 1,
-      //         child: Container(
-      //           height: 104.h,
-      //           width: 104.w,
-      //           child: Image.asset(images, fit: BoxFit.cover,),
-      //         ),
-      //       ),
-      //       Expanded(
-      //         flex: 3,
-      //         child: Container(
-      //           height: 104.h,
-      //           width: 171.w,
-      //           decoration: BoxDecoration(
-      //             borderRadius: BorderRadius.circular(8.0),
-      //             color: AppColors.whiteColor,
-      //           ),
-      //           child: Padding(
-      //             padding: const EdgeInsets.all(11),
-      //             child: Column(
-      //               crossAxisAlignment: CrossAxisAlignment.start,
-      //               children: [
-      //                 Text(headerText,
-      //                     style: GoogleFonts.metrophobic(
-      //                         fontSize: 18.sp, fontWeight: FontWeight.bold)),
-      //                 Text(SubtitleText),
-      //                 Text(price),
-      //                 Spacer(),
-      //                 CircleAvatar(child: Icon(Icons.favorite_border))
-      //               ],
-      //             ),
-      //           ),
-      //         ),
-      //       )
-      //     ],
-      //   ),
-      // ),
     );
   }
 }

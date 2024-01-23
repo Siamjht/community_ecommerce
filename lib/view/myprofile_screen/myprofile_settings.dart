@@ -1,7 +1,9 @@
+import 'package:community_ecommerce/routes/routes.dart';
 import 'package:community_ecommerce/utils/app_texts.dart';
 import 'package:community_ecommerce/utils/images.dart';
 import 'package:community_ecommerce/view/widgets/custom_listtile.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class MyProfileSetings extends StatelessWidget {
   MyProfileSetings({super.key});
@@ -54,6 +56,7 @@ class MyProfileSetings extends StatelessWidget {
                 ),
               ),
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     AppTexts.matildaBrown,
@@ -69,14 +72,19 @@ class MyProfileSetings extends StatelessWidget {
             ],
           ),
           Expanded(
-            child: ListView.builder(
-                itemCount: myProfileHeaderText.length,
-                itemBuilder: (context, index) {
-                  return CuastomListTile(
-                    title: myProfileHeaderText[index],
-                    subtitle: myProfileSubTileText[index],
-                  );
-                }),
+            child: GestureDetector(
+              onTap: (){
+                Get.toNamed(RouteName.myOrderScreen);
+              },
+              child: ListView.builder(
+                  itemCount: myProfileHeaderText.length,
+                  itemBuilder: (context, index) {
+                    return CuastomListTile(
+                      title: myProfileHeaderText[index],
+                      subtitle: myProfileSubTileText[index],
+                    );
+                  }),
+            ),
           ),
         ],
       ),

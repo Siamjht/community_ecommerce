@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class WomenLowest extends StatelessWidget {
-  const WomenLowest({super.key});
+class WomenBrandScreen extends StatelessWidget {
+  const WomenBrandScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("masum"),),
+      body: Text("masum"),
     );
   }
 }
