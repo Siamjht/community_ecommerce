@@ -5,12 +5,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'custom_text.dart';
 
-class CuastomListTile extends StatelessWidget {
+class ListTileWidget extends StatelessWidget {
   final String title;
 
   final String subtitle;
 
-  const CuastomListTile(
+  const ListTileWidget(
       {super.key, required this.title, required this.subtitle});
 
   @override

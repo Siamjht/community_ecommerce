@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../utils/app_texts.dart';
-import 'custom_text.dart';
 class CustomContainers extends StatelessWidget {
   const CustomContainers({
     super.key,

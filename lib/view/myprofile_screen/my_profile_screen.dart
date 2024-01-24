@@ -87,7 +87,7 @@ class MyProfile extends StatelessWidget {
                       onTap: (){
                         Get.toNamed(RouteName.myOrderScreen);
                       },
-                      child: CuastomListTile(
+                      child: ListTileWidget(
                         title: myProfileHeaderText[index],
                         subtitle: myProfileSubTileText[index],
                       ),
@@ -98,13 +98,13 @@ class MyProfile extends StatelessWidget {
                       onTap: (){
                         Get.toNamed(RouteName.myOrderSettingScreen);
                       },
-                      child: CuastomListTile(
+                      child: ListTileWidget(
                         title: myProfileHeaderText[index],
                         subtitle: myProfileSubTileText[index],
                       ),
                     );
                   }
-                  return CuastomListTile(
+                  return ListTileWidget(
                     title: myProfileHeaderText[index],
                     subtitle: myProfileSubTileText[index],
                   );

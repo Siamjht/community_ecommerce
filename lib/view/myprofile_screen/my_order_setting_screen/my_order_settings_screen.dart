@@ -7,10 +7,22 @@ import '../../widgets/custom_text.dart';
 import '../../widgets/custom_text_field.dart';
 import 'my_order_setting_change_bottom_sheet.dart';
 
-class MyOrderSettingScreen extends StatelessWidget {
+class MyOrderSettingScreen extends StatefulWidget {
   MyOrderSettingScreen({super.key});
 
+  @override
+  State<MyOrderSettingScreen> createState() => _MyOrderSettingScreenState();
+}
+
+class _MyOrderSettingScreenState extends State<MyOrderSettingScreen> {
   Controller controller = Get.put(Controller());
+
+  final List sales = [
+    AppTexts.sales,
+    AppTexts.newArrivals,
+    AppTexts.deliverystatuschanges
+  ];
+  bool isSwitch = false;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +37,7 @@ class MyOrderSettingScreen extends StatelessWidget {
             ),
             CustomText(
               text: AppTexts.settings,
-              fontSize:34.sp ,
+              fontSize: 34.sp,
               fontWeight: FontWeight.bold,
             ),
             SizedBox(
@@ -33,7 +45,7 @@ class MyOrderSettingScreen extends StatelessWidget {
             ),
             CustomText(
               text: AppTexts.personalInformation,
-              fontSize:16.sp ,
+              fontSize: 16.sp,
               fontWeight: FontWeight.bold,
             ),
             SizedBox(
@@ -59,7 +71,7 @@ class MyOrderSettingScreen extends StatelessWidget {
               children: [
                 CustomText(
                   text: AppTexts.password,
-                  fontSize:16.sp ,
+                  fontSize: 16.sp,
                   fontWeight: FontWeight.bold,
                 ),
                 Spacer(),
@@ -68,12 +80,10 @@ class MyOrderSettingScreen extends StatelessWidget {
                       Get.bottomSheet(
                           SettingChangeBottomSheet(controller: controller));
                     },
-                    child:
-                    CustomText(
+                    child: CustomText(
                       text: AppTexts.change,
-                      fontSize:14.sp ,
-                    )
-                )
+                      fontSize: 14.sp,
+                    ))
               ],
             ),
             CustomTextField(
@@ -84,34 +94,39 @@ class MyOrderSettingScreen extends StatelessWidget {
             SizedBox(
               height: 10.h,
             ),
-
             CustomText(
               text: AppTexts.notifications,
-            fontSize:16.sp ,
+              fontSize: 16.sp,
               fontWeight: FontWeight.bold,
             ),
-
             SizedBox(
               height: 10.h,
             ),
-            CustomText(
-              text: AppTexts.sales,
-              fontSize:14.sp ,
-            ),
-            SizedBox(
-              height: 24.h,
-            ),
-            CustomText(
-              text: AppTexts.newArrivals,
-              fontSize:14.sp ,
-            ),
-            SizedBox(
-              height: 24.h,
-            ),
-            CustomText(
-              text: AppTexts.deliverystatuschanges,
-              fontSize:14.sp ,
-            ),
+            Expanded(
+              child: ListView.builder(
+                  itemCount: sales.length,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                        padding: const EdgeInsets.all(12),
+                        child: Row(
+                          children: [
+                            CustomText(
+                              text: sales[index],
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            Spacer(),
+                            Switch(
+                                value: isSwitch,
+                                onChanged: (value) {
+                                  setState(() {
+                                    isSwitch = value;
+                                  });
+                                })
+                          ],
+                        ));
+                  }),
+            )
           ],
         ),
       ),

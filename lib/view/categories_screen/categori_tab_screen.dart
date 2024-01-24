@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../../utils/app_texts.dart';
-import '../widgets/my_container.dart';
+import '../widgets/women_screen_container.dart';
 import '../widgets/container_widgets.dart';
 
 class CategoreTabScreen extends StatelessWidget {
@@ -47,7 +47,7 @@ class CategoreTabScreen extends StatelessWidget {
             child: ListView.builder(
                 itemCount: categoriesHeaderText.length,
                 itemBuilder: (context, index) {
-                  return WomwnScreenWidget(
+                  return WomenScreenContainer(
                     images: images[index],
                     child: categoriesHeaderText[index],
                   );

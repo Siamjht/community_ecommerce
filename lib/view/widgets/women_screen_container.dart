@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class WomwnScreenWidget extends StatelessWidget {
+class WomenScreenContainer extends StatelessWidget {
   final String child;
 
   final String images;
 
-  const WomwnScreenWidget(
+  const WomenScreenContainer(
       {super.key, required this.child, required this.images});
 
   @override

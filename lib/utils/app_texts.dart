@@ -121,7 +121,7 @@ class AppTexts{
   static const colors= "Colors";
   static const sizes= "Sizes";
   static const xS= "XS";
-  static const S= "S";
+  static const s= "S";
   static const m= "M";
   static const xL= "XL";
   static const l= "L";
