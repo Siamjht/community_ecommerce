@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 
 import '../../utils/app_texts.dart';
 import '../widgets/my_container.dart';
-import '../widgets/custom_container.dart';
+import '../widgets/container_widgets.dart';
 
 class CategoreTabScreen extends StatelessWidget {
   CategoreTabScreen({super.key});
@@ -34,7 +34,7 @@ class CategoreTabScreen extends StatelessWidget {
          SizedBox(
           height: 20.h,
         ),
-        const CustomContainer(),
+        const CustomContainers(),
          SizedBox(
           height: 10.h,
         ),

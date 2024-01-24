@@ -2,7 +2,6 @@ import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:community_ecommerce/view/widgets/custom_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class FavoriteTopWidget extends StatelessWidget {
   final String headerText;

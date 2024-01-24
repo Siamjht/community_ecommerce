@@ -90,7 +90,7 @@ class MyorderScreenWidget extends StatelessWidget {
                         child: Center(
                           child: CustomText(
                             text: AppTexts.details,
-                            fontSize: 16.sp,
+                            fontSize: 14.sp,
                             color: Colors.black,
                           ),
                         ),
@@ -100,6 +100,8 @@ class MyorderScreenWidget extends StatelessWidget {
                     CustomText(
                       text: AppTexts.delivered,
                       fontWeight: FontWeight.bold,
+                      fontSize: 12.sp,
+
                       color: AppColors.successMarkColor,
                     ),
                   ],

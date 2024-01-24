@@ -147,6 +147,7 @@ class AppTexts{
   static const selectSize= "Select size";
   static const sizeInfo= "Size info";
   static const addToCART= "ADD TO CART";
+  static const priceRange= "Price range";
 
 
 ///>>>>>>>>>>>>>>>>>>>>>>>>>FavoriteScreen Texts>>>>>>>>>>>>>>>>///
