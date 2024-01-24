@@ -168,7 +168,8 @@ class AppTexts{
   static const $05122019= "05-12-2019";
   static const trackingNumber= "Tracking number:";
   static const iW3475453455= "IW3475453455";
-  static const quantity= "Quantity:  3";
+  static const quantity= "Quantity:  ";
+  static const three= "3";
   static const totalAmount= "Total Amount:112\$";
   static const oneHundredtwelve= "112\$";
   static const details= "Details";
