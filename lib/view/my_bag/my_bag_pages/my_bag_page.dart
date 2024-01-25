@@ -86,13 +86,17 @@ class MyBagPage extends StatelessWidget {
             SizedBox(
               height: 26.h,
             ),
-            Center(
-                child: CustomElevatedButton(
-                    onPressed: () {
-                      Get.toNamed(RouteName.myBagCheckoutPage);
-                    },
-                    titleText: AppTexts.checkOut.toUpperCase(),
-                    buttonWidth: double.infinity.w),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              child: Center(
+                  child: CustomElevatedButton(
+                      onPressed: () {
+                        Get.toNamed(RouteName.myBagCheckoutPage);
+                      },
+                      titleText: AppTexts.checkOut.toUpperCase(),
+                      buttonWidth: double.infinity.w,
+                  ),
+              ),
             ),
           ],
         ),

@@ -18,6 +18,9 @@ class AppImages{
 
 ///>>>>>>>>>>>>>>>>>>>>>>>>> MyprofileImages >>>>>>>>>>>>>>>>///
   static String myProfile= "assets/images/myprofile.png";
+  static String reviewerPhoto1 = "assets/images/myprofile.png";
+  static String reviewerPhoto2 = "assets/images/orderdetailfirstpic.png";
+  static String reviewerPhoto3 = "assets/images/orderdetailssecond.png";
 
 ///>>>>>>>>>>>>>>>>>>>>>>>>> WomenTopImages >>>>>>>>>>>>>>>>///
   static String pullovers= "assets/images/pullovers.png";

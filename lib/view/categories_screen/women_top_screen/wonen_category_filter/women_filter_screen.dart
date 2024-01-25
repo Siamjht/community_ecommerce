@@ -1,6 +1,4 @@
-import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:community_ecommerce/utils/app_texts.dart';
-import 'package:community_ecommerce/utils/dimentions.dart';
 import 'package:community_ecommerce/view/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -20,7 +18,7 @@ class WomenFilterScreen extends StatefulWidget {
 
 class _WomenFilterScreenState extends State<WomenFilterScreen> {
   ///<<<<<<<<<<<<<<<<<<<<<<<<<This is Categorylist item >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
-  final List cateGoryList = [
+  final List catagoryList = [
     AppTexts.all,
     AppTexts.women,
     AppTexts.men,
@@ -59,24 +57,22 @@ class _WomenFilterScreenState extends State<WomenFilterScreen> {
           children: [
             ///<<<<<<<<<<<<<<<<<<<<<<<<<This is priceRange item >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
             Padding(
-              padding: EdgeInsets.all(8.0.w),
+              padding: const EdgeInsets.all(8.0),
               child: CustomText(
                 text: AppTexts.priceRange,
                 fontSize: 16.sp,
                 fontWeight: FontWeight.bold,
+                fontSize: 16.sp,
+                fontWeight: FontWeight.w400,
               ),
             ),
             Row(
               children: [
                 CustomText(
-                    text: "\$${_currentRangeValues.start.round().toString()}",
-                fontWeight: FontWeight.bold,
-                ),
-                const Spacer(),
+                    text: "\$${_currentRangeValues.start.round().toString()}"),
+                Spacer(),
                 CustomText(
-                    text: "\$${_currentRangeValues.end.round().toString()}",
-                fontWeight: FontWeight.bold,
-                ),
+                    text: "\$${_currentRangeValues.end.round().toString()}"),
               ],
             ),
             RangeSlider(
@@ -93,17 +89,19 @@ class _WomenFilterScreenState extends State<WomenFilterScreen> {
               onChanged: (RangeValues values) {
                 setState(() {
                   _currentRangeValues = values;
-                  // print(_currentRangeValues);
+                  print(_currentRangeValues);
                 });
               },
             ),
             ///<<<<<<<<<<<<<<<<<<<<<<<<<This is Colors item >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
             Padding(
-              padding: EdgeInsets.all(8.0.w),
+              padding: const EdgeInsets.all(8.0),
               child: CustomText(
                 text: AppTexts.colors,
                 fontSize: 16.sp,
                 fontWeight:FontWeight.bold,
+                fontSize: 16.sp,
+                fontWeight: FontWeight.w400,
               ),
             ),
             Expanded(
@@ -150,6 +148,59 @@ class _WomenFilterScreenState extends State<WomenFilterScreen> {
                     );
                   }),
             ),
+           Expanded(
+             child: ListView.builder(
+               itemCount: 5,
+                 scrollDirection: Axis.horizontal,
+                 itemBuilder: (context,index){
+               return  Padding(
+                 padding: EdgeInsets.all(8.0.w),
+                 child: SizedBox(
+                   width: 44.w,
+                   height: 44.h,
+                   child: Stack(
+                     children: [
+                       Positioned(
+                         left: 4.w,
+                         top: 4.h,
+                         child: Container(
+                           width: 36.w,
+                           height: 36.h,
+                           decoration: const ShapeDecoration(
+                             color: Color(0xFF020202),
+                             shape: OvalBorder(),
+                           ),
+                         ),
+                       ),
+                       Positioned(
+                         left: 0,
+                         top: 0,
+                         child: Container(
+                           width: 44.w,
+                           height: 44.h,
+                           decoration: const ShapeDecoration(
+                             shape: OvalBorder(
+                               side: BorderSide(width: 1, color: Color(0xFFDB3022)),
+                             ),
+                           ),
+                         ),
+                       ),
+                     ],
+                   ),
+                 )
+                 // CircleAvatar(
+                 //     child: Container(
+                 //       decoration: BoxDecoration(
+                 //           borderRadius: BorderRadius.circular(30),
+                 //           color: Colors.black,
+                 //           border: Border.all(color: Colors.red,width: 2)
+                 //
+                 //       ),
+                 //     )
+                 // ),
+               );
+             }),
+           ),
             ///<<<<<<<<<<<<<<<<<<<<<<<<<>This is Sizes item <>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
             Padding(
               padding: EdgeInsets.all(8.0.w),
@@ -157,6 +208,8 @@ class _WomenFilterScreenState extends State<WomenFilterScreen> {
                 text: AppTexts.sizes,
                 fontSize: 16.sp,
                 fontWeight: FontWeight.bold,
+                fontSize: 16.sp,
+                fontWeight: FontWeight.w400,
               ),
             ),
             ///<<<<<<<<<<<<<<<<<<<<<<<<<This is SizeGridview item >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
@@ -198,6 +251,33 @@ class _WomenFilterScreenState extends State<WomenFilterScreen> {
                         textColor: AppColors.blackColor,
                         containerColor: selectedSizeList.contains(index)? AppColors.buttonsColor : AppColors.whiteColor,
                       ),
+                    return GestureDetector(
+                      onTap: (){
+                        isTapped = !isTapped;
+                        if(isTapped){
+                          selectedSizeList.add(index);
+                        }
+                        setState(() {
+
+                        });
+                      },
+                      onDoubleTap: (){
+                        selectedSizeList.remove(index);
+                        setState(() {
+
+                        });
+                      },
+                      child: CustomContainer(
+                        containerHeight: 40.h,
+                        containerWidth: 40.w,
+                        borderRadius: 20.w,
+                        imagePath: '',
+                        isImage: false,
+                        text: sizeList[index],
+                        isText: true,
+                        textColor: Colors.black,
+                        containerColor: selectedSizeList.contains(index)? AppColors.buttonsColor : AppColors.whiteColor,
+                      ),
                     );
                   }),
             ),
@@ -208,11 +288,64 @@ class _WomenFilterScreenState extends State<WomenFilterScreen> {
                 text: AppTexts.categories,
                 fontSize: 16.sp,
                 fontWeight: FontWeight.bold,
+                fontSize: 16.sp,
+                fontWeight: FontWeight.w400,
               ),
             ),
             ///<<<<<<<<<<<<<<<<<<<<<<<<<This is CategoryGriedview item >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..///
             CategoryFilter(cateGoryList: cateGoryList),
 
+            Expanded(
+              flex: 2,
+              child: GridView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: catagoryList.length,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 8,
+                    mainAxisSpacing: 10,
+                  ),
+                  itemBuilder: (context, index) {
+                    return CustomContainer(
+                      containerHeight: 20.h,
+                      containerWidth: 100.w,
+                      borderRadius: 10.w,
+                      imagePath: '',
+                      isImage: false,
+                      text: catagoryList[index],
+                      isText: true,
+                      textColor: Colors.black,
+                      containerColor: Colors.red,
+                    );
+                  }),
+            ),
+            Center(
+              child: Padding(
+                padding: EdgeInsets.all(10.w),
+                child: Row(
+                  children: [
+                    CustomElevatedButton(
+                        onPressed: (){},
+                        buttonHeight: 40,
+                        buttonWidth: 150,
+                        buttonColor: AppColors.whiteColor,
+                        borderColor: AppColors.blackColor,
+                        titleSize: Dimensions.fontSizeDefault,
+                        titleColor: AppColors.blackColor,
+                        titleText: AppTexts.discard),
+                    SizedBox(
+                      width: 20.w,
+                    ),
+                    CustomElevatedButton(
+                        onPressed: (){},
+                        buttonHeight: 40,
+                        buttonWidth: 150,
+                        titleSize: Dimensions.fontSizeDefault,
+                        titleText: AppTexts.apply)
+                  ],
+                ),
+              ),
+            ),
             Expanded(
               flex: 1,
               child: GestureDetector(

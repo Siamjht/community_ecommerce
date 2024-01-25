@@ -22,9 +22,9 @@ class MyOrderListView extends StatelessWidget {
       itemBuilder: (context, index) {
         var items = controller.products[index];
         return Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10),
+          padding: EdgeInsets.symmetric(vertical: 10.h),
           child: Container(
-            height: 105.w,
+            height: 120.w,
             width: double.infinity,
             decoration: ShapeDecoration(
               color: AppColors.whiteColor,
@@ -60,7 +60,7 @@ class MyOrderListView extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(top: 8.0),
+                        padding: EdgeInsets.only(top: 8.0.h),
                         child: Row(
                           crossAxisAlignment:
                           CrossAxisAlignment.start,
@@ -72,27 +72,27 @@ class MyOrderListView extends StatelessWidget {
                               children: [
                                 CustomText(
                                   text: items.name,
-                                  fontSize: Dimensions.fontSizeLarge,
+                                  fontSize: Dimensions.fontSizeLarge.sp,
                                   fontWeight: FontWeight.w400,
                                 ),
                                 CustomText(
                                   text: items.type,
                                   color: AppColors.grayColor,
-                                  fontSize: Dimensions.fontSizeXSmall,
+                                  fontSize: Dimensions.fontSizeXSmall.sp,
                                   fontWeight: FontWeight.w400,
                                 ),
-                                SizedBox(height: 10,),
+                                SizedBox(height: 10.h),
                                 Row(
                                   children: [
                                     CustomText(
                                       text: "${AppTexts.colorItem}: ",
                                       color: AppColors.grayColor,
-                                      fontSize: Dimensions.fontSizeXSmall,
+                                      fontSize: Dimensions.fontSizeXSmall.sp,
                                       fontWeight: FontWeight.w400,
                                     ),
                                     CustomText(
                                       text: items.color,
-                                      fontSize: Dimensions.fontSizeXSmall,
+                                      fontSize: Dimensions.fontSizeXSmall.sp,
                                       fontWeight: FontWeight.w400,
                                     ),
                                     SizedBox(
@@ -101,12 +101,12 @@ class MyOrderListView extends StatelessWidget {
                                     CustomText(
                                       text: "${AppTexts.sizeItem}: ",
                                       color: AppColors.grayColor,
-                                      fontSize: Dimensions.fontSizeXSmall,
+                                      fontSize: Dimensions.fontSizeXSmall.sp,
                                       fontWeight: FontWeight.w400,
                                     ),
                                     CustomText(
                                       text: items.size,
-                                      fontSize: Dimensions.fontSizeXSmall,
+                                      fontSize: Dimensions.fontSizeXSmall.sp,
                                       fontWeight: FontWeight.w400,
                                     ),
                                   ],
@@ -120,25 +120,25 @@ class MyOrderListView extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right: 12.0),
+                        padding: EdgeInsets.only(right: 12.0.w),
                         child: Row(
                           children: [
                             CustomText(
                               text: AppTexts.units,
-                              fontSize: Dimensions.fontSizeXSmall,
+                              fontSize: Dimensions.fontSizeXSmall.sp,
                               color: AppColors.grayColor,
                               fontWeight: FontWeight.w400,
                             ),
                             CustomText(
                               text: " ${items.units}",
-                              fontSize: Dimensions.fontSizeXSmall,
+                              fontSize: Dimensions.fontSizeXSmall.sp,
                               fontWeight: FontWeight.w400,
                             ),
                             const Spacer(),
                             CustomText(
                               text: items.price,
                               color: AppColors.blackColor,
-                              fontSize: Dimensions.fontSizeDefault,
+                              fontSize: Dimensions.fontSizeDefault.sp,
                               fontWeight: FontWeight.w500,
                             )
                           ],

@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import '../../utils/app_texts.dart';
 import '../widgets/women_screen_container.dart';
 import '../widgets/container_widgets.dart';
+import 'women_top_screen/women_top_screen.dart';
 
 class CategoreTabScreen extends StatelessWidget {
   CategoreTabScreen({super.key});
@@ -18,7 +19,6 @@ class CategoreTabScreen extends StatelessWidget {
     AppTexts.accesories,
 
   ];
-  ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>categoriesImages List >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
 
   final List images = [
     AppImages.categoryNew,
@@ -46,6 +46,13 @@ class CategoreTabScreen extends StatelessWidget {
               ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>womenTopScreen>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
 
               Get.toNamed(RouteName.womenTopScreen);
+              PersistentNavBarNavigator.pushNewScreenWithRouteSettings(
+                context,
+                settings: RouteSettings(name: RouteName.womenTopScreen),
+                screen: WomenTopScreen(),
+                withNavBar: true,
+                pageTransitionAnimation: PageTransitionAnimation.cupertino,
+              );
             },
             child: ListView.builder(
                 itemCount: categoriesHeaderText.length,

@@ -302,4 +302,13 @@ class AppTexts{
   static const reviewDescription =  "The dress is great! Very classy and comfortable. It fit perfectly! I'm 5feet 7inch and 130 pounds. I am a 34B chest. This dress would be too long for those who are shorter but could be hemmed. I wouldn't recommend it for those big chested as I am smaller chested and it fit me perfectly. The underarms were not too wide and the dress was made well.";
   static const reviewBtn =  "Write a review";
   static const helpful =  'Helpful';
+
+  ///<<<<----------------------'Rating & Reviews Pages'------------------>>>>
+  static const yourRate =  'What is you rate?';
+  static const shareReview =  'Please share your opinion';
+  static const aboutProduct =  'about the product';
+  static const yourReview =  'Your review';
+  static const addPhotos =  'Add your photos';
+  static const sendReview =  'SEND REVIEW';
+
 }

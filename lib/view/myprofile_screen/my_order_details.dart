@@ -25,7 +25,7 @@ class MyOrderDetail extends StatelessWidget {
           leading: const Icon(Icons.arrow_back_ios),
           title: CustomText(
             text: AppTexts.orderDetails,
-            fontSize: Dimensions.fontSizeXLarge,
+            fontSize: Dimensions.fontSizeXLarge.sp,
             fontWeight: FontWeight.w400,
             color: AppColors.blackColor,),
           centerTitle: true,
@@ -39,6 +39,7 @@ class MyOrderDetail extends StatelessWidget {
 
       body: SingleChildScrollView(
         child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16.w),
             padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,7 +55,7 @@ class MyOrderDetail extends StatelessWidget {
                     fontSize: Dimensions.fontSizeLarge,
                     fontWeight: FontWeight.w400,
                   ),
-                  const Spacer(),
+                  Spacer(),
                   CustomText(
                     text: AppTexts.orderDate,
                     color: AppColors.grayColor,
@@ -63,6 +64,7 @@ class MyOrderDetail extends StatelessWidget {
                   ),
                 ],
               ),
+              SizedBox(height: 15.h,),
               const SizedBox(height: 15,),
               Row(
                 children: [
@@ -78,7 +80,7 @@ class MyOrderDetail extends StatelessWidget {
                     fontSize: Dimensions.fontSizeDefault,
                     fontWeight: FontWeight.w500,
                   ),
-                  const Spacer(),
+                  Spacer(),
                   CustomText(
                     text: AppTexts.delivered,
                     color: AppColors.successMarkColor,

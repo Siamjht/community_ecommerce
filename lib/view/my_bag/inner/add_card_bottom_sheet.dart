@@ -2,8 +2,6 @@
 import 'package:community_ecommerce/controllers/controller.dart';
 import 'package:community_ecommerce/utils/app_texts.dart';
 import 'package:community_ecommerce/utils/dimentions.dart';
-import 'package:community_ecommerce/view/my_bag/inner/bottom_sheet_list_view.dart';
-import 'package:community_ecommerce/view/my_bag/inner/promo_code_text_field.dart';
 import 'package:community_ecommerce/view/widgets/custom_elevated_button.dart';
 import 'package:community_ecommerce/view/widgets/custom_text.dart';
 import 'package:community_ecommerce/view/widgets/custom_text_field.dart';
@@ -47,7 +45,7 @@ class AddCardBottomSheet extends StatelessWidget {
               Center(
                 child: GestureDetector(
                   onTap: (){
-                    Navigator.pop(context);
+                    Get.back();
                   },
                   child: Container(
                     width: 60.w,
