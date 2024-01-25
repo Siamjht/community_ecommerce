@@ -6,14 +6,24 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../utils/app_texts.dart';
 import '../../widgets/custom_text.dart';
 
-class WomenBottomSheet extends StatelessWidget {
-  const WomenBottomSheet({
+class WomenBottomSheet extends StatefulWidget {
+   WomenBottomSheet({
     super.key,
     required this.bottomsheet,
   });
 
   final List<String> bottomsheet;
- ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>_Lowest to height press and open bottom sheet>>>>>>>>>>>>>>///
+
+  @override
+  State<WomenBottomSheet> createState() => _WomenBottomSheetState();
+}
+
+class _WomenBottomSheetState extends State<WomenBottomSheet> {
+  bool isButtonRed = false;
+  List selected = [];
+
+
+  ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>_Lowest to height press and open bottom sheet>>>>>>>>>>>>>>///
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -39,15 +49,35 @@ class WomenBottomSheet extends StatelessWidget {
               margin: const EdgeInsets.all(15),
               height: 300.h,
               child: ListView.builder(
-                  itemCount: bottomsheet.length,
+                  itemCount: widget.bottomsheet.length,
                   itemBuilder: (context, index) {
-                    return SizedBox(
-                      height: 50.h,
-                      child:
-                      CustomText(
-                        text: bottomsheet[index],
-                      fontSize: 16.sp,
-                      )
+                    return GestureDetector(
+                     onTap: (){
+                      isButtonRed = !isButtonRed;
+                      if(isButtonRed){
+                        selected.add(index);
+                      }
+                      if(!isButtonRed){
+                        selected.remove(index);
+                      }
+                      // if(isButtonRed){
+                      //   selected.add(index);
+                      // }
+                      setState(() {
+                        // Toggle the color state
+                      });
+                    },
+                      child: SizedBox(
+                        height: 50.h,
+                        child:
+                        CustomText(
+                          text: widget.bottomsheet[index],
+                        fontSize: 16.sp,
+                          fontWeight: FontWeight.bold,
+                          color: selected.contains(index)? AppColors.errorMarkColor : AppColors.blackColor,
+                          // color:isButtonRed ? Colors.red : null,
+                        )
+                      ),
                     );
                   }),
             ),
