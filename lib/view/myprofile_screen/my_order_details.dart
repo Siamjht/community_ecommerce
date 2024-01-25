@@ -26,7 +26,7 @@ class MyOrderDetails extends StatelessWidget {
           leading: const Icon(Icons.arrow_back_ios),
           title: CustomText(
             text: AppTexts.orderDetails,
-            fontSize: Dimensions.fontSizeXLarge,
+            fontSize: Dimensions.fontSizeXLarge.sp,
             fontWeight: FontWeight.w400,
             color: AppColors.blackColor,),
           centerTitle: true,
@@ -40,7 +40,7 @@ class MyOrderDetails extends StatelessWidget {
 
       body: SingleChildScrollView(
         child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16),
+            padding: EdgeInsets.symmetric(horizontal: 16.w),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -52,38 +52,38 @@ class MyOrderDetails extends StatelessWidget {
                   CustomText(
                     text: AppTexts.order1947034,
                     color: AppColors.blackColor,
-                    fontSize: Dimensions.fontSizeLarge,
+                    fontSize: Dimensions.fontSizeLarge.sp,
                     fontWeight: FontWeight.w400,
                   ),
                   Spacer(),
                   CustomText(
                     text: AppTexts.orderDate,
                     color: AppColors.grayColor,
-                    fontSize: Dimensions.fontSizeDefault,
+                    fontSize: Dimensions.fontSizeDefault.sp,
                     fontWeight: FontWeight.w400,
                   ),
                 ],
               ),
-              SizedBox(height: 15,),
+              SizedBox(height: 15.h,),
               Row(
                 children: [
                   CustomText(
                     text: AppTexts.trackingNumber,
                     color: AppColors.grayColor,
-                    fontSize: Dimensions.fontSizeDefault,
+                    fontSize: Dimensions.fontSizeDefault.sp,
                     fontWeight: FontWeight.w400,
                   ),
                   CustomText(
                     text: " ${AppTexts.trackingDigits}",
                     color: AppColors.blackColor,
-                    fontSize: Dimensions.fontSizeDefault,
+                    fontSize: Dimensions.fontSizeDefault.sp,
                     fontWeight: FontWeight.w500,
                   ),
                   Spacer(),
                   CustomText(
                     text: AppTexts.delivered,
                     color: AppColors.successMarkColor,
-                    fontSize: Dimensions.fontSizeDefault,
+                    fontSize: Dimensions.fontSizeDefault.sp,
                     fontWeight: FontWeight.w500,
                   ),
                 ],
@@ -92,7 +92,7 @@ class MyOrderDetails extends StatelessWidget {
               CustomText(
                 text: "${controller.products.length} ${AppTexts.itemString}",
                 color: AppColors.blackColor,
-                fontSize: Dimensions.fontSizeDefault,
+                fontSize: Dimensions.fontSizeDefault.sp,
                 fontWeight: FontWeight.w500,
               ),
               SizedBox(
@@ -104,7 +104,7 @@ class MyOrderDetails extends StatelessWidget {
               CustomText(
                 text: AppTexts.orderInformation,
                 color: AppColors.blackColor,
-                fontSize: Dimensions.fontSizeDefault,
+                fontSize: Dimensions.fontSizeDefault.sp,
                 fontWeight: FontWeight.w500,
               ),
               SizedBox(height: 10.h,),
@@ -118,35 +118,35 @@ class MyOrderDetails extends StatelessWidget {
                         text: AppTexts.shippingAddressLead,
                         color: AppColors.grayColor,
                         fontWeight: FontWeight.w400,
-                        fontSize: Dimensions.fontSizeDefault,
+                        fontSize: Dimensions.fontSizeSmall.sp,
                       ),
                       SizedBox(height: 25.h,),
                       CustomText(
                         text: AppTexts.paymentMethodLead,
                         color: AppColors.grayColor,
                         fontWeight: FontWeight.w400,
-                        fontSize: Dimensions.fontSizeDefault,
+                        fontSize: Dimensions.fontSizeSmall.sp,
                       ),
                       SizedBox(height: 8.h,),
                       CustomText(
                         text: AppTexts.deliveryMethodLead,
                         color: AppColors.grayColor,
                         fontWeight: FontWeight.w400,
-                        fontSize: Dimensions.fontSizeDefault,
+                        fontSize: Dimensions.fontSizeSmall.sp,
                       ),
                       SizedBox(height: 5.h,),
                       CustomText(
                         text: AppTexts.discountLead,
                         color: AppColors.grayColor,
                         fontWeight: FontWeight.w400,
-                        fontSize: Dimensions.fontSizeDefault,
+                        fontSize: Dimensions.fontSizeSmall.sp,
                       ),
                       SizedBox(height: 5.h,),
                       CustomText(
                         text: AppTexts.totalAmount,
                         color: AppColors.grayColor,
                         fontWeight: FontWeight.w400,
-                        fontSize: Dimensions.fontSizeDefault,
+                        fontSize: Dimensions.fontSizeSmall.sp,
                       ),
                     ],
                   ),
@@ -159,7 +159,7 @@ class MyOrderDetails extends StatelessWidget {
                       CustomText(
                         text: AppTexts.shippingAddressTrail,
                         color: AppColors.blackColor,
-                        fontSize: Dimensions.fontSizeDefault,
+                        fontSize: Dimensions.fontSizeSmall.sp,
                         fontWeight: FontWeight.w500,
                       ),
                       SizedBox(height: 5.h,),
@@ -169,7 +169,7 @@ class MyOrderDetails extends StatelessWidget {
                           CustomText(
                             text: AppTexts.masterCardNumber,
                             color: AppColors.blackColor,
-                            fontSize: Dimensions.fontSizeDefault,
+                            fontSize: Dimensions.fontSizeSmall.sp,
                             fontWeight: FontWeight.w500,
                           ),
                         ],
@@ -178,21 +178,21 @@ class MyOrderDetails extends StatelessWidget {
                       CustomText(
                         text: AppTexts.deliveryMethodTrail,
                         color: AppColors.blackColor,
-                        fontSize: Dimensions.fontSizeDefault,
+                        fontSize: Dimensions.fontSizeSmall.sp,
                         fontWeight: FontWeight.w500,
                       ),
                       SizedBox(height: 5.h,),
                       CustomText(
                         text: AppTexts.discountTrail,
                         color: AppColors.blackColor,
-                        fontSize: Dimensions.fontSizeDefault,
+                        fontSize: Dimensions.fontSizeSmall.sp,
                         fontWeight: FontWeight.w500,
                       ),
                       SizedBox(height: 5.h,),
                       CustomText(
                         text: AppTexts.totalAmountTrail,
                         color: AppColors.blackColor,
-                        fontSize: Dimensions.fontSizeDefault,
+                        fontSize: Dimensions.fontSizeSmall.sp,
                         fontWeight: FontWeight.w500,
                       ),
                     ],
@@ -203,6 +203,7 @@ class MyOrderDetails extends StatelessWidget {
               SizedBox(height: 35.h,),
 
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   CustomElevatedButton(
                     onPressed: (){},
@@ -210,12 +211,12 @@ class MyOrderDetails extends StatelessWidget {
                     titleColor: AppColors.blackColor,
                     titleSize: Dimensions.fontSizeDefault,
                     titleWeight: FontWeight.w500,
-                    buttonHeight: 36.h,
-                    buttonWidth: 160.w,
+                    buttonHeight: 36,
+                    buttonWidth: 150,
                     borderColor: AppColors.buttonsColor,
                     buttonColor: AppColors.whiteColor,
                   ),
-                  SizedBox(width: 20.w,),
+                  SizedBox(width: 15.w,),
                   CustomElevatedButton(
                     onPressed: (){
                       Get.toNamed(RouteName.ratingsReviewsPage);
@@ -223,8 +224,7 @@ class MyOrderDetails extends StatelessWidget {
                     titleText: AppTexts.leaveFeedbackBtn,
                     titleSize: Dimensions.fontSizeDefault,
                     titleWeight: FontWeight.w500,
-                    buttonHeight: 36.h,
-                    buttonWidth: 160.w,
+                    buttonHeight: 36,
                   ),
                 ],
               ),

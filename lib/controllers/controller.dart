@@ -8,6 +8,7 @@ import 'package:community_ecommerce/utils/images.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
+
 class Controller extends GetxController{
   TextEditingController nameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
@@ -26,6 +27,7 @@ class Controller extends GetxController{
   TextEditingController stateProvinceController = TextEditingController();
   TextEditingController zipCodeController = TextEditingController();
   TextEditingController countryController = TextEditingController();
+  TextEditingController reviewController = TextEditingController();
 
 
 
@@ -83,24 +85,27 @@ class Controller extends GetxController{
 
   List ratingsList = [
     {"totalRatings" : 23},
-    {"5Star" : 12},
+    {"5Star" : 11},
     {"4Star" : 5},
     {"3Star" : 4},
     {"2Star" : 2},
-    {"1Star" : 0}
+    {"1Star" : 1}
   ];
+
+  List reviewProgressList =[0.50, 0.22, 0.17, 0.09, 0.02];
+  List reviewerList =[11, 5, 4, 2, 1];
+  List reviewerPhotoList = [AppImages.reviewerPhoto1, AppImages.reviewerPhoto2, AppImages.reviewerPhoto3];
 
   RxBool isChecked = false.obs;
   bool isValided = true;
   RxBool isGetPromoCode = false.obs;
   String promoCode = '';
   List favItemList = [].obs;
+  RxBool isStarTapped = false.obs;
 
   RxDouble _sheetHeight = 0.0.obs;
   double get sheetHeight => _sheetHeight.value;
   set sheetHeight(double value) {
     _sheetHeight.value = value;
   }
-
-
 }

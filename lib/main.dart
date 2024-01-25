@@ -1,7 +1,6 @@
 
 import 'package:community_ecommerce/themes/light_themes.dart';
-import 'package:community_ecommerce/view/favorite_screen/favorite_screen.dart';
-import 'package:community_ecommerce/view/categories_screen/women_top_screen/women_top_screen.dart';
+import 'package:community_ecommerce/view/bottom_navigation_bar/persistent_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -27,9 +26,8 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           theme: light,
-          home:  BottomNavBar(),
+          home:  PersistentNavigationBar(),
           getPages: AppRoutes.appRoutes(),
-
         );
       },
     );

@@ -47,7 +47,7 @@ class CustomElevatedButton extends StatelessWidget {
               ),
             ),
             elevation: MaterialStateProperty.all(0)),
-        child: CustomText(text: titleText, color: titleColor, fontWeight: titleWeight, fontSize: titleSize,),
+        child: CustomText(text: titleText, color: titleColor, fontWeight: titleWeight, fontSize: titleSize.sp,),
       ),
     );
   }

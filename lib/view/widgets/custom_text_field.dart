@@ -44,7 +44,9 @@ class CustomTextField extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Expanded(
-                child: TextField(
+                child: TextFormField(
+                  maxLines: 4,
+                  keyboardType: TextInputType.multiline,
                   controller: textEditingController,
                   onTap: (){
 
@@ -57,6 +59,7 @@ class CustomTextField extends StatelessWidget {
                       color: AppColors.grayColor,
                     ),
                     labelText: labelText,
+
                     border: OutlineInputBorder(
                       borderSide: BorderSide.none,
                       borderRadius: BorderRadius.circular(4),

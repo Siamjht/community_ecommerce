@@ -285,6 +285,9 @@ class PaymentMethodsPage extends StatelessWidget {
                 ),
               ],
             ),
+
+            ///<<<-----------------BottomSheet Open----------------------------->>>>
+
             Align(
               alignment: Alignment.topRight,
               child: GestureDetector(
