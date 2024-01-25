@@ -5,8 +5,10 @@ import 'package:community_ecommerce/view/widgets/custom_listtile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 import '../widgets/custom_text.dart';
+import 'my_order_screen/my_order_screen.dart';
 
 class MyProfile extends StatelessWidget {
   MyProfile({super.key});
@@ -85,7 +87,13 @@ class MyProfile extends StatelessWidget {
                   if(index == 0){
                     return GestureDetector(
                       onTap: (){
-                        Get.toNamed(RouteName.myOrderScreen);
+                        PersistentNavBarNavigator.pushNewScreenWithRouteSettings(
+                          context,
+                          settings: RouteSettings(name: RouteName.myOrderScreen),
+                          screen: MyOrderScreen(),
+                          withNavBar: true,
+                          pageTransitionAnimation: PageTransitionAnimation.cupertino,
+                        );
                       },
                       child: ListTileWidget(
                         title: myProfileHeaderText[index],
