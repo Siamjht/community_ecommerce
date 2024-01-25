@@ -2,11 +2,13 @@ import 'package:community_ecommerce/routes/routes.dart';
 import 'package:community_ecommerce/utils/images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
+
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 import '../../utils/app_texts.dart';
 import '../widgets/women_screen_container.dart';
 import '../widgets/container_widgets.dart';
+import 'women_top_screen/women_top_screen.dart';
 
 class CategoreTabScreen extends StatelessWidget {
   CategoreTabScreen({super.key});
@@ -42,7 +44,13 @@ class CategoreTabScreen extends StatelessWidget {
           flex: 1,
           child: GestureDetector(
             onTap: (){
-              Get.toNamed(RouteName.womenTopScreen);
+              PersistentNavBarNavigator.pushNewScreenWithRouteSettings(
+                context,
+                settings: RouteSettings(name: RouteName.womenTopScreen),
+                screen: WomenTopScreen(),
+                withNavBar: true,
+                pageTransitionAnimation: PageTransitionAnimation.cupertino,
+              );
             },
             child: ListView.builder(
                 itemCount: categoriesHeaderText.length,

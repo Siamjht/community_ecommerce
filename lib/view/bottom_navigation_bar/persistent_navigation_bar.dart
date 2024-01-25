@@ -2,6 +2,7 @@
 
 import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:community_ecommerce/utils/app_icons.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
@@ -48,27 +49,27 @@ class _PersistentNavigationBarState extends State<PersistentNavigationBar> {
         ],
       items: [
         PersistentBottomNavBarItem(
-            icon: SvgPicture.asset(AppIcons.homeIconSolid),
+            icon: Icon(Icons.home),
             title: "Home",
             activeColorPrimary: AppColors.buttonsColor,
             inactiveColorPrimary: AppColors.grayColor),
         PersistentBottomNavBarItem(
-            icon: SvgPicture.asset(AppIcons.shopIconSolid),
+            icon: Icon(Icons.shopping_cart),
             title: "Shop",
             activeColorPrimary: AppColors.buttonsColor,
             inactiveColorPrimary: AppColors.grayColor),
         PersistentBottomNavBarItem(
-            icon: SvgPicture.asset(AppIcons.bagIconSolid),
+            icon: Icon(Icons.shopping_bag),
             title: "Bag",
             activeColorPrimary: AppColors.buttonsColor,
             inactiveColorPrimary: AppColors.grayColor),
         PersistentBottomNavBarItem(
-            icon: SvgPicture.asset(AppIcons.favoriteIconSolid),
+            icon: Icon(Icons.favorite_sharp),
             title: "Favorites",
             activeColorPrimary: AppColors.buttonsColor,
             inactiveColorPrimary: AppColors.grayColor),
         PersistentBottomNavBarItem(
-            icon: SvgPicture.asset(AppIcons.profileIconSolid),
+            icon: Icon(Icons.person),
             title: "Profile",
             activeColorPrimary: AppColors.buttonsColor,
             inactiveColorPrimary: AppColors.grayColor),
