@@ -47,6 +47,7 @@ class _CategoryFilterState extends State<CategoryFilter> {
                 setState(() {
 
                 });
+
               },
               child: CustomContainer(
                 containerHeight: 20.h,
