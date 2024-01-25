@@ -10,7 +10,7 @@ class CustomContainer extends StatelessWidget {
     required this.containerHeight,
     required this.containerWidth,
     this.containerColor = Colors.white,
-    required this.borderRadius,
+    this.borderRadius = 8,
     required this.imagePath,
     required this.isImage,
     required this.text,
@@ -47,7 +47,7 @@ class CustomContainer extends StatelessWidget {
       height: containerHeight,
       decoration: ShapeDecoration(
         color: containerColor,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(borderRadius)),
         shadows: [
           BoxShadow(
             color: AppColors.shadowColor,

@@ -209,8 +209,8 @@ class MyOrderDetails extends StatelessWidget {
                     titleColor: AppColors.blackColor,
                     titleSize: Dimensions.fontSizeDefault,
                     titleWeight: FontWeight.w500,
-                    buttonHeight: 36,
-                    buttonWidth: 150,
+                    buttonHeight: 36,    // already w/h putted in custom elevated button
+                    buttonWidth: 150,   //
                     borderColor: AppColors.buttonsColor,
                     buttonColor: AppColors.whiteColor,
                   ),
