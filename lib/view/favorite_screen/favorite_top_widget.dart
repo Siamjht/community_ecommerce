@@ -1,20 +1,22 @@
 import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:community_ecommerce/view/widgets/custom_text.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class FavoriteTopWidget extends StatelessWidget {
+
+class FavoriteTopScreen extends StatelessWidget {
   final String headerText;
   final String subtitleText;
   final String price;
-
   final String images;
-  FavoriteTopWidget({
+  final String cardColor;
+  final String cardSize;
+  FavoriteTopScreen({
     super.key,
     required this.headerText,
     required this.images,
     required this.subtitleText,
-    required this.price,
+    required this.price, required this.cardColor, required this.cardSize,
   });
 
   bool isFavIconTapped = true;
@@ -24,6 +26,8 @@ class FavoriteTopWidget extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
       child: Container(
+        width: 350.w,
+        height: 125.h,
         decoration: ShapeDecoration(
           color: Colors.white,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
@@ -38,8 +42,8 @@ class FavoriteTopWidget extends StatelessWidget {
         child: Row(
           children: [
             Container(
-              // width: 119,
-              // height: 157,
+              width: 119.w,
+              height: 157.h,
               decoration: ShapeDecoration(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
@@ -51,45 +55,63 @@ class FavoriteTopWidget extends StatelessWidget {
                 ),
               ),
             ),
-            Column(
+            Padding(
+              padding: const EdgeInsets.all(13),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Text(subtitleText),
+                  CustomText(
+                    text: subtitleText,
+                  ),
+                  CustomText(
+                    text: headerText,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.bold,
 
-              children: [
+                  ),
 
-                CustomText(
-                  text: headerText,
-                  fontSize: 10,
-                  fontWeight: FontWeight.bold,
-                ),
-                Text(headerText,),
-                Text(subtitleText),
-                Text(price)
+                  Row(
+                    children: [
+                      CustomText(
+                        text: cardColor,
 
-              ],
+                      ),
+                      // const Spacer(),
+                      CustomText(
+                        text: cardSize,
+
+                      ),
+                    ],
+                  ),
+                  CustomText( text: price,),
+
+
+                ],
+              ),
             ),
-            Stack(
-              clipBehavior: Clip.none,
-              children: [
-                Positioned(
-                    bottom: -10,
-                    right: 0,
-                    child: GestureDetector(
-                      onTap: () {
-                        isFavIconTapped = !isFavIconTapped;
-                      },
-                      child: CircleAvatar(
-                          backgroundColor: AppColors.whiteColor,
-                          radius: 20,
-                          child: isFavIconTapped
-                              ? Icon(
-                                  Icons.favorite_sharp,
-                                  color: AppColors.errorMarkColor,
-                                )
-                              : Icon(
-                                  Icons.favorite_border,
-                                  color: AppColors.grayColor,
-                                )),
-                    )),
-              ],
+            Expanded(
+              child: Stack(
+                clipBehavior: Clip.none,
+                children: [
+                  Positioned(
+                      bottom: -10,
+                      right: 0,
+                      child: GestureDetector(
+                        onTap: (){
+                          isFavIconTapped = !isFavIconTapped;
+                        },
+                        child: CircleAvatar(
+                            backgroundColor: AppColors.favoritePositionIconColor,
+                            radius: 20,
+                            child: isFavIconTapped?
+                            Icon(
+                              Icons.shopping_bag, color: AppColors.whiteColor,)
+                                :Icon(Icons.favorite_border, color: AppColors.errorMarkColor,) ),
+                      )
+                  ),
+                ],
+              ),
             )
           ],
         ),

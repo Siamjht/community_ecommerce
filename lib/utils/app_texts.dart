@@ -156,6 +156,8 @@ class AppTexts{
   static const lIME= "LIME";
   static const berries= "&Berries";
   static const colorBlue= "Color: Blue";
+  static const colorOrange= "Color: Orange";
+  static const colorBlack= "Color: Black";
   static const fortySix= "46\$";
   static const thirtyNine= "39\$";
   static const longsLeeveVioleta= "Longsleeve Violeta";

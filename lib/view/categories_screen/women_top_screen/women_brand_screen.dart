@@ -38,8 +38,6 @@ class WomenBrandScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(15),
               child: Container(
-                // width: 400,
-                //   height: 50,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(40), color: Colors.white),
                   child:  TextField(
@@ -53,7 +51,7 @@ class WomenBrandScreen extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 550,
+              height: 550.h,
               child: ListView.builder(
                   itemCount: BrandList.length,
                   itemBuilder: (context, index) {

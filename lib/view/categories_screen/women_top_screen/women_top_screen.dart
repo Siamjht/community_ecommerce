@@ -166,9 +166,9 @@ class WomenTopScreen extends StatelessWidget {
                     itemCount: womenCartItems.length,
                     itemBuilder: (context, index) {
                       return WomenTopWidget(
-                        headerText: womenCartItems[index][0],
+                        headerText: womenCartItems[index][1],
+                        subtitleText: womenCartItems[index][0],
                         images: womenCartItems[index][3],
-                        subtitleText: womenCartItems[index][1],
                         price: womenCartItems[index][2],
                       );
                     }),

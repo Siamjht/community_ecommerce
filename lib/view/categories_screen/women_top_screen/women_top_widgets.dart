@@ -1,7 +1,8 @@
 import 'package:community_ecommerce/utils/app_colors.dart';
+import 'package:community_ecommerce/utils/app_texts.dart';
 import 'package:community_ecommerce/view/widgets/custom_text.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
@@ -25,7 +26,7 @@ class WomenTopWidget extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
       child: Container(
-        width: 343.w,
+        width: 343.h,
         height: 120.h,
         decoration: ShapeDecoration(
           color: Colors.white,
@@ -59,14 +60,18 @@ class WomenTopWidget extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(subtitleText),
+                  // Text(subtitleText),
                   CustomText(
-                      text: headerText,
+                      text: subtitleText,
                   fontSize: 16.sp,
                     fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ), CustomText(
+                      text: headerText,
+                  fontSize: 14.sp,
                   ),
 
-                  CustomText( text: 'price',),
+                  CustomText( text: price,),
 
 
                 ],
@@ -87,7 +92,8 @@ class WomenTopWidget extends StatelessWidget {
                           backgroundColor: AppColors.favoritePositionIconColor,
                           radius: 20,
                             child: isFavIconTapped?
-                            Icon(Icons.shopping_bag, color: AppColors.whiteColor,)
+                            Icon(
+                              Icons.favorite_border, color: AppColors.whiteColor,)
                                 :Icon(Icons.favorite_border, color: AppColors.errorMarkColor,) ),
                       )
                   ),
