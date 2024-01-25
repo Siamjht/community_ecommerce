@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 
 import '../../../routes/routes.dart';
 import '../../my_bag/inner/custom_container.dart';
+import '../../widgets/custom_elevated_button.dart';
 
 class WomenFilterScreen extends StatefulWidget {
   const WomenFilterScreen({super.key});
@@ -87,17 +88,67 @@ class _WomenFilterScreenState extends State<WomenFilterScreen> {
               },
             ),
             ///<<<<<<<<<<<<<<<<<<<<<<<<<This is Colors item >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
-            Expanded(
-              flex: 1,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: CustomText(
-                  text: AppTexts.colors,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w400,
-                ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: CustomText(
+                text: AppTexts.colors,
+                fontSize: 16,
+                fontWeight: FontWeight.w400,
               ),
             ),
+           Expanded(
+             child: ListView.builder(
+               itemCount: 5,
+                 scrollDirection: Axis.horizontal,
+                 itemBuilder: (context,index){
+               return  Padding(
+                 padding: const EdgeInsets.all(8.0),
+                 child: SizedBox(
+                   width: 44,
+                   height: 44,
+                   child: Stack(
+                     children: [
+                       Positioned(
+                         left: 4,
+                         top: 4,
+                         child: Container(
+                           width: 36,
+                           height: 36,
+                           decoration: const ShapeDecoration(
+                             color: Color(0xFF020202),
+                             shape: OvalBorder(),
+                           ),
+                         ),
+                       ),
+                       Positioned(
+                         left: 0,
+                         top: 0,
+                         child: Container(
+                           width: 44,
+                           height: 44,
+                           decoration: const ShapeDecoration(
+                             shape: OvalBorder(
+                               side: BorderSide(width: 1, color: Color(0xFFDB3022)),
+                             ),
+                           ),
+                         ),
+                       ),
+                     ],
+                   ),
+                 )
+                 // CircleAvatar(
+                 //     child: Container(
+                 //       decoration: BoxDecoration(
+                 //           borderRadius: BorderRadius.circular(30),
+                 //           color: Colors.black,
+                 //           border: Border.all(color: Colors.red,width: 2)
+                 //
+                 //       ),
+                 //     )
+                 // ),
+               );
+             }),
+           ),
             ///<<<<<<<<<<<<<<<<<<<<<<<<<>This is Sizes item <>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -113,7 +164,7 @@ class _WomenFilterScreenState extends State<WomenFilterScreen> {
               child: GridView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: sizeList.length,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 1,
                     crossAxisSpacing: 8,
                     mainAxisSpacing: 10,
@@ -148,7 +199,7 @@ class _WomenFilterScreenState extends State<WomenFilterScreen> {
               child: GridView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: catagoryList.length,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     crossAxisSpacing: 8,
                     mainAxisSpacing: 10,
@@ -166,6 +217,30 @@ class _WomenFilterScreenState extends State<WomenFilterScreen> {
                       containerColor: Colors.red,
                     );
                   }),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Row(
+                children: [
+                  Container(
+                    height: 40,
+                    width: 190,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(40),
+                        color: Colors.grey
+                    ),
+                    child: Center(child: Text(AppTexts.discard)),
+                  ),
+                  const SizedBox(
+                    width: 25,
+                  ),
+                  CustomElevatedButton(
+                      onPressed: (){},
+                      buttonHeight: 40,
+                      buttonWidth: 150,
+                      titleText: AppTexts.apply)
+                ],
+              ),
             ),
             Expanded(
               flex: 1,
@@ -201,6 +276,7 @@ class _WomenFilterScreenState extends State<WomenFilterScreen> {
                 ),
               ),
             )
+
           ],
         ),
       ),
