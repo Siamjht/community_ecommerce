@@ -46,7 +46,6 @@ class CategoreTabScreen extends StatelessWidget {
             onTap: (){
               ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>womenTopScreen>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
 
-              Get.toNamed(RouteName.womenTopScreen);
               PersistentNavBarNavigator.pushNewScreenWithRouteSettings(
                 context,
                 settings: RouteSettings(name: RouteName.womenTopScreen),

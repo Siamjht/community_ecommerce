@@ -1,13 +1,14 @@
 import 'package:community_ecommerce/routes/routes.dart';
+import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:community_ecommerce/utils/app_texts.dart';
 import 'package:community_ecommerce/utils/images.dart';
-import 'package:community_ecommerce/view/widgets/custom_listtile.dart';
+import 'package:community_ecommerce/view/widgets/listtile_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
-
 import '../widgets/custom_text.dart';
+import 'my_order_screen/my_order_screen.dart';
 
 class MyProfile extends StatelessWidget {
   MyProfile({super.key});
@@ -32,32 +33,31 @@ class MyProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        actions: [
+          Icon(Icons.search)
+        ],
+      ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(
-            height: 44.h,
-          ),
           Padding(
-            padding: EdgeInsets.all(14.0),
-            child: Align(
-                alignment: Alignment.bottomLeft,
-                child:
-              CustomText(
-                text:AppTexts.myProfile,
-                fontSize: 34.sp,
-                fontWeight: FontWeight.bold,
-              ),
+            padding: const EdgeInsets.symmetric(horizontal: 14),
+            child: CustomText(
+              text:AppTexts.myProfile,
+              fontSize: 34.sp,
+              fontWeight: FontWeight.bold,
             ),
           ),
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.all(14),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: CircleAvatar(
-                  backgroundColor: Colors.black,
+                  backgroundColor: AppColors.blackColor,
                   radius: 50,
                   child: CircleAvatar(
-                    radius: 110,
+                    radius: 100,
                     backgroundImage: AssetImage(AppImages.myProfile),
                   ),
                 ),
@@ -86,11 +86,17 @@ class MyProfile extends StatelessWidget {
                   if(index == 0){
                     return GestureDetector(
                       onTap: (){
-                        Get.toNamed(RouteName.myOrderScreen);
+                        PersistentNavBarNavigator.pushNewScreenWithRouteSettings(
+                          context,
+                          settings: RouteSettings(name: RouteName.myOrderScreen),
+                          screen: MyOrderScreen(),
+                          withNavBar: true,
+                          pageTransitionAnimation: PageTransitionAnimation.cupertino,
+                        );
                       },
                       child: ListTileWidget(
                         title: myProfileHeaderText[index],
-                        subtitle: myProfileSubTileText[index],
+                        subtitle: myProfileSubTileText[index], icons: Icons.arrow_forward_ios_sharp,
                       ),
                     );
                   }
@@ -101,13 +107,13 @@ class MyProfile extends StatelessWidget {
                       },
                       child: ListTileWidget(
                         title: myProfileHeaderText[index],
-                        subtitle: myProfileSubTileText[index],
+                        subtitle: myProfileSubTileText[index], icons: Icons.arrow_forward_ios_sharp,
                       ),
                     );
                   }
                   return ListTileWidget(
                     title: myProfileHeaderText[index],
-                    subtitle: myProfileSubTileText[index],
+                    subtitle: myProfileSubTileText[index], icons: Icons.arrow_forward_ios_sharp,
                   );
                 }),
           ),

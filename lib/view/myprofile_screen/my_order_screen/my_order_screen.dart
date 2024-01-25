@@ -8,6 +8,7 @@ import '../../../utils/app_colors.dart';
 import '../../../utils/app_texts.dart';
 import '../../widgets/custom_text.dart';
 import '../../widgets/my_order_custom_button.dart';
+import '../my_order_details.dart';
 
 class MyOrderScreen extends StatelessWidget {
   MyOrderScreen({super.key});
@@ -104,7 +105,7 @@ class MyOrderScreen extends StatelessWidget {
                                       Text(
                                         myOrdrdate[index],
                                         style:
-                                            TextStyle(fontSize: 14, color: Colors.grey),
+                                        TextStyle(fontSize: 14, color: Colors.grey),
                                       ),
                                     ],
                                   ),
@@ -113,7 +114,7 @@ class MyOrderScreen extends StatelessWidget {
                                       Text(
                                         myOrdrTracking[index],
                                         style:
-                                            TextStyle(fontSize: 14, color: Colors.grey),
+                                        TextStyle(fontSize: 14, color: Colors.grey),
                                       ),
                                       Text(
                                         myOrdriwnumber[index],
@@ -129,7 +130,7 @@ class MyOrderScreen extends StatelessWidget {
                                       Text(
                                         myOrdrquantity[index],
                                         style:
-                                            TextStyle(fontSize: 14, color: Colors.grey),
+                                        TextStyle(fontSize: 14, color: Colors.grey),
                                       ),
                                       Text(
                                         myOrdrThree[index],
@@ -144,7 +145,13 @@ class MyOrderScreen extends StatelessWidget {
                                     children: [
                                       GestureDetector(
                                         onTap: () {
-                                          Get.toNamed(RouteName.myOrderDetails);
+                                          PersistentNavBarNavigator.pushNewScreenWithRouteSettings(
+                                            context,
+                                            settings: RouteSettings(name: RouteName.myOrderDetails),
+                                            screen: MyOrderDetails(),
+                                            withNavBar: true,
+                                            pageTransitionAnimation: PageTransitionAnimation.cupertino,
+                                          );
                                         },
                                         child: Container(
                                           padding: EdgeInsets.symmetric(vertical: 8,horizontal: 12),
@@ -179,6 +186,6 @@ class MyOrderScreen extends StatelessWidget {
             ),
           ],
         )
-        );
+    );
   }
 }
