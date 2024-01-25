@@ -1,3 +1,4 @@
+import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:community_ecommerce/utils/app_icons.dart';
 import 'package:community_ecommerce/view/categories_screen/women_top_screen/women_top_widgets.dart';
 import 'package:flutter/material.dart';
@@ -9,10 +10,9 @@ import '../../../utils/app_texts.dart';
 import '../../../utils/images.dart';
 import '../../widgets/custom_text.dart';
 import 'women_top_bottomshet_widget.dart';
-
 class WomenTopScreen extends StatelessWidget {
   WomenTopScreen({super.key});
-
+    ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..Women card item Lists >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
   final List womenCartItems = [
     [
       AppTexts.pullover,
@@ -39,13 +39,15 @@ class WomenTopScreen extends StatelessWidget {
       AppImages.wshirts,
     ]
   ];
-
-  final List<String> filters = const [
+  ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..Women Filter Lists >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
+  final List<String> womenFilterList = const [
     AppTexts.tShirts,
     AppTexts.cropTops,
     AppTexts.sleeveless,
     AppTexts.apply
   ];
+  ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..Women bottomsheet Lists >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
+
   final List<String> bottomsheet = const [
     AppTexts.popular,
     AppTexts.newest,
@@ -53,7 +55,9 @@ class WomenTopScreen extends StatelessWidget {
     AppTexts.priceLowestToHigh,
     AppTexts.priceHighestLow
   ];
-  final List<String> settingChangeBottomSheet = const [
+  ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..Women settingChangeBottomSheet Lists >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
+
+  final List<String> lowestBottomSheet = const [
     AppTexts.popular,
     AppTexts.newest,
     AppTexts.customerReview,
@@ -85,24 +89,26 @@ class WomenTopScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..Women Filter Listview >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
+
               Expanded(
                 flex: 1,
                 child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    itemCount: filters.length,
+                    itemCount: womenFilterList.length,
                     itemBuilder: (context, index) {
-                      final filter = filters[index];
+                      final filter = womenFilterList[index];
                       return Padding(
                         padding: const EdgeInsets.all(8.0),
                         child:
                         Chip(
-                          backgroundColor: Colors.black,
+                          backgroundColor: AppColors.blackColor,
                           label:
                           CustomText(
                             text:filter,
                             color: Colors.white,
                           ),
-                          padding: EdgeInsets.symmetric(
+                          padding: const EdgeInsets.symmetric(
                             horizontal: 20,
                             vertical: 15,
                           ),
@@ -112,11 +118,15 @@ class WomenTopScreen extends StatelessWidget {
                       );
                     }),
               ),
+              ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..Women WomenFilters Lists >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   GestureDetector(
                     onTap: (){
+                      ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..Press filter and open filterScreen >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
+
                       Get.toNamed(RouteName.filterScreen);
                     },
                     child: Row(
@@ -128,10 +138,12 @@ class WomenTopScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                  ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..Press \lowest and open bottomSheet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
+
                   GestureDetector(
                     onTap: () {
                       Get.bottomSheet(
-                        WomenBottomShet(bottomsheet: bottomsheet),
+                        WomenBottomSheet(bottomsheet: bottomsheet),
                       );
                       // Get.toNamed(RouteName.womenLowestTo);
                     },
@@ -160,12 +172,14 @@ class WomenTopScreen extends StatelessWidget {
                   ),
                 ],
               ),
+              ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..WomenTop All Text Show by ListView >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
+
               Expanded(
                 flex: 5,
                 child: ListView.builder(
                     itemCount: womenCartItems.length,
                     itemBuilder: (context, index) {
-                      return WomenTopWidget(
+                      return WomenTopWidgets(
                         headerText: womenCartItems[index][1],
                         subtitleText: womenCartItems[index][0],
                         images: womenCartItems[index][3],

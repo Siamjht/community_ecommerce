@@ -1,18 +1,21 @@
+import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:community_ecommerce/utils/app_texts.dart';
-import 'package:community_ecommerce/view/my_bag/inner/custom_container.dart';
 import 'package:community_ecommerce/view/widgets/custom_elevated_button.dart';
 import 'package:community_ecommerce/view/widgets/custom_text.dart';
-import 'package:community_ecommerce/view/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-
 import '../../../controllers/controller.dart';
+class WomenBrandPage extends StatefulWidget {
+  const WomenBrandPage({super.key});
 
-class WomenBrandScreen extends StatelessWidget {
-  WomenBrandScreen({super.key});
+  @override
+  State<WomenBrandPage> createState() => _WomenBrandPageState();
+}
 
-  final List BrandList = [
+class _WomenBrandPageState extends State<WomenBrandPage> {
+  ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.This is BrandList Text List.>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.///
+  final List brandList = [
     AppTexts.adidas,
     AppTexts.adidasOriginals,
     AppTexts.blend,
@@ -24,51 +27,57 @@ class WomenBrandScreen extends StatelessWidget {
     AppTexts.redValentino,
     AppTexts.oliver
   ];
+
+  ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.Controller Put>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.///
   Controller controller = Get.put(Controller());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+        ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.This is AppBar.>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.///
         appBar: AppBar(
-          title: Text("Brand"),
+          title: const Text(AppTexts.brand),
           centerTitle: true,
         ),
         body: Column(
           children: [
+            ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.This is Search Container.>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.///
             Padding(
               padding: const EdgeInsets.all(15),
               child: Container(
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(40), color: Colors.white),
-                  child:  TextField(
+                      borderRadius: BorderRadius.circular(40),
+                      color: AppColors.whiteColor),
+                  child: const TextField(
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: AppTexts.search,
                       prefixIcon: Icon(Icons.search),
-
                     ),
-                  )
-              ),
+                  )),
             ),
+
+            ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.This is Brand Page  Text List.>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.///
             SizedBox(
               height: 550.h,
               child: ListView.builder(
-                  itemCount: BrandList.length,
+                  itemCount: brandList.length,
                   itemBuilder: (context, index) {
                     return Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                            padding: EdgeInsets.all(11),
+                            padding: const EdgeInsets.all(11),
                             child: Row(
                               children: [
                                 CustomText(
-                                  text: BrandList[index],
+                                  text: brandList[index],
                                   fontSize: 16.sp,
                                 ),
-                                Spacer(),
+                                const Spacer(),
                                 Checkbox(
-                                  activeColor: Colors.red,
+                                  activeColor: AppColors.errorMarkColor,
                                   value: true,
                                   onChanged: (bool? value) {},
                                 )
@@ -76,33 +85,31 @@ class WomenBrandScreen extends StatelessWidget {
                             ))
                       ],
                     );
-                    ;
                   }),
             ),
-           Padding(
-             padding: const EdgeInsets.all(10),
-             child: Row(
-               children: [
-                 Container(
-                   height: 40,
-                   width: 190,
-                   decoration: BoxDecoration(
-                     borderRadius: BorderRadius.circular(40),
-                     color: Colors.grey
-                   ),
-                   child: Center(child: Text(AppTexts.discard)),
-                 ),
-                 SizedBox(
-                   width: 25,
-                 ),
-                 CustomElevatedButton(
-                     onPressed: (){},
-                     buttonHeight: 40,
-                     buttonWidth: 150,
-                     titleText: AppTexts.apply)
-               ],
-             ),
-           )
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Row(
+                children: [
+                  Container(
+                    height: 40,
+                    width: 190,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(40),
+                        color: AppColors.grayColor),
+                    child: const Center(child: Text(AppTexts.discard)),
+                  ),
+                  const SizedBox(
+                    width: 25,
+                  ),
+                  CustomElevatedButton(
+                      onPressed: () {},
+                      buttonHeight: 40,
+                      buttonWidth: 150,
+                      titleText: AppTexts.apply)
+                ],
+              ),
+            )
           ],
         ));
   }

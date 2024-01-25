@@ -92,7 +92,7 @@ class AppRoutes {
     ),
     GetPage(
       name: RouteName.womenBrandScreen,
-      page: () => WomenBrandScreen(),
+      page: () => WomenBrandPage(),
     ),
     GetPage(
       name: RouteName.myOrderScreen,
