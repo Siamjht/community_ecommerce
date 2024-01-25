@@ -102,6 +102,7 @@ class Controller extends GetxController{
   String promoCode = '';
   List favItemList = [].obs;
   RxBool isStarTapped = false.obs;
+  RxBool isFavIconTapped = false.obs;
 
   RxDouble _sheetHeight = 0.0.obs;
   double get sheetHeight => _sheetHeight.value;

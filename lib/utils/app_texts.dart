@@ -1,8 +1,11 @@
 
 
 class AppTexts{
+
   static const signUp = "Sign Up";
+  static const loginFirst = "Login First";
   static const alreadyAccount = "Already have an account?";
+  static const notHaveAccount = "Don't have any account?";
   static const socialAccountSignUP = "Or sign up with social account";
   static const name = "Name";
   static const email = "Email";
@@ -230,6 +233,13 @@ class AppTexts{
   static const enterPromoCode = 'Enter your promo code';
   static const checkOut = "Check Out";
   static const totalPrice = '124\$';
+  static const totalAmounts= "Total Amount:";
+  //------------------------My Bag Pop up--------------
+  static const deleteItem = 'Delete Item';
+  static const sureToDelete = 'Are you sure want to delete this item?';
+  static const no = 'No';
+  static const yes = 'Yes';
+
   //-----------------------------------------
 
   static const checkoutAppbar  = 'Checkout';

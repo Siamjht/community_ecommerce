@@ -27,12 +27,12 @@ class HomePage extends StatelessWidget {
               children: [
                 Image.asset(AppImages.homeImg),
                 Positioned(
-                  left: 18,
-                  bottom: 24,
+                  left: 18.w,
+                  bottom: 24.h,
                   child: CustomText(
                     text: AppTexts.streetClothes,
                     color: AppColors.whiteColor,
-                    fontSize: Dimensions.fontSizeXXXLarge,
+                    fontSize: Dimensions.fontSizeXXXLarge.sp,
                     fontWeight: FontWeight.w900,
                   ),
                 ),
@@ -42,27 +42,27 @@ class HomePage extends StatelessWidget {
               height: 25.h,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 18.0, right: 14.0),
+              padding: EdgeInsets.only(left: 18.0.w, right: 14.0.w),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   CustomText(
                       text: AppTexts.sale,
-                      fontSize: Dimensions.fontSizeXXXLarge,
+                      fontSize: Dimensions.fontSizeXXXLarge.sp,
                       fontWeight: FontWeight.w700),
                   const Spacer(),
                   CustomText(
                       text: AppTexts.viewAll,
-                      fontSize: Dimensions.fontSizeXSmall,
+                      fontSize: Dimensions.fontSizeXSmall.sp,
                       fontWeight: FontWeight.w400)
                 ],
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 18.0),
+              padding: EdgeInsets.only(left: 18.0.w),
               child: CustomText(
                 text: AppTexts.superSummerSale,
-                fontSize: Dimensions.fontSizeXSmall,
+                fontSize: Dimensions.fontSizeXSmall.sp,
                 fontWeight: FontWeight.w400,
                 color: AppColors.grayColor,
               ),
@@ -135,8 +135,8 @@ class HomeListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 18.0),
-      child: Container(
+      padding:  EdgeInsets.only(left: 18.0.w),
+      child: SizedBox(
         height: 320.h,
         child: ListView.builder(
           shrinkWrap: true,
@@ -144,7 +144,7 @@ class HomeListView extends StatelessWidget {
           itemCount: controller.imagesList.length,
           itemBuilder: (context, index) {
             return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 5),
+              padding: EdgeInsets.symmetric(horizontal: 5.w),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -160,34 +160,40 @@ class HomeListView extends StatelessWidget {
                             fit: BoxFit.cover,
                           ),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
+                            borderRadius: BorderRadius.circular(12.w),
                           ),
                         ),
                         // child: Image.asset(controller.imagesList[index], fit: BoxFit.cover,),
                       ),
                       Positioned(
-                        top: 10,
-                        left: 10,
+                        top: 10.h,
+                        left: 10.w,
                         child: Container(
                           height: 24.h,
                           width: 40.w,
                           decoration: BoxDecoration(
                               color: containerColor,
-                              borderRadius: BorderRadius.circular(29)),
+                              borderRadius: BorderRadius.circular(29.w)),
                           child: Center(
                               child: CustomText(
                             text: containerText,
-                            fontSize: Dimensions.fontSizeXSmall,
+                            fontSize: Dimensions.fontSizeXSmall.sp,
                             color: AppColors.whiteColor,
                           )),
                         ),
                       ),
                       Positioned(
                           right: 0,
-                          bottom: -20,
+                          bottom: -20.h,
                           child: GestureDetector(
                             onTap: () {
-                              controller.favItemList.add(index);
+                              controller.isFavIconTapped.value = !controller.isFavIconTapped.value;
+                              if(controller.isFavIconTapped.value){
+                                controller.favItemList.add(index);
+                              }
+                              else{
+                                controller.favItemList.remove(index);
+                              }
                             },
                             child: Container(
                               height: 40.h,
@@ -207,7 +213,10 @@ class HomeListView extends StatelessWidget {
                                 () => FittedBox(
                                   fit: BoxFit.contain,
                                   child:  controller.favItemList.contains(index)?
-                                  Icon(Icons.favorite_sharp, color: AppColors.errorMarkColor,)
+                                    Padding(
+                                      padding: EdgeInsets.all(10.0.w),
+                                      child: SvgPicture.asset(AppIcons.favoriteIconSolid),
+                                    )
                                       :SvgPicture.asset(AppIcons.favoriteIcon),
                                 ),
                               ),

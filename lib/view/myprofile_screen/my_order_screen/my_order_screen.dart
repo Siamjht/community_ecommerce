@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+
 import '../../../routes/routes.dart';
 import '../../../utils/app_colors.dart';
 import '../../../utils/app_texts.dart';
 import '../../widgets/custom_text.dart';
 import '../../widgets/my_order_custom_button.dart';
+import '../my_order_details.dart';
 
 class MyOrderScreen extends StatelessWidget {
   MyOrderScreen({super.key});
@@ -153,7 +156,13 @@ class MyOrderScreen extends StatelessWidget {
                                     children: [
                                       GestureDetector(
                                         onTap: () {
-                                          Get.toNamed(RouteName.myOrderDetails);
+                                          PersistentNavBarNavigator.pushNewScreenWithRouteSettings(
+                                            context,
+                                            settings: RouteSettings(name: RouteName.myOrderDetails),
+                                            screen: MyOrderDetails(),
+                                            withNavBar: true,
+                                            pageTransitionAnimation: PageTransitionAnimation.cupertino,
+                                          );
                                         },
                                         child: Container(
                                           padding: const EdgeInsets.symmetric(vertical: 8,horizontal: 12),
