@@ -12,13 +12,14 @@ import '../../utils/app_texts.dart';
 import '../../utils/dimentions.dart';
 import '../widgets/custom_text.dart';
 
-class MyOrderDetails extends StatelessWidget {
-  MyOrderDetails({super.key});
+class MyOrderDetail extends StatelessWidget {
+ const MyOrderDetail({super.key});
 
-  Controller controller = Get.put(Controller());
 
   @override
   Widget build(BuildContext context) {
+    Controller controller = Get.put(Controller());
+
     return Scaffold(
         appBar: AppBar(
           leading: const Icon(Icons.arrow_back_ios),
@@ -38,7 +39,7 @@ class MyOrderDetails extends StatelessWidget {
 
       body: SingleChildScrollView(
         child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -53,7 +54,7 @@ class MyOrderDetails extends StatelessWidget {
                     fontSize: Dimensions.fontSizeLarge,
                     fontWeight: FontWeight.w400,
                   ),
-                  Spacer(),
+                  const Spacer(),
                   CustomText(
                     text: AppTexts.orderDate,
                     color: AppColors.grayColor,
@@ -62,7 +63,7 @@ class MyOrderDetails extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 15,),
+              const SizedBox(height: 15,),
               Row(
                 children: [
                   CustomText(
@@ -77,7 +78,7 @@ class MyOrderDetails extends StatelessWidget {
                     fontSize: Dimensions.fontSizeDefault,
                     fontWeight: FontWeight.w500,
                   ),
-                  Spacer(),
+                  const Spacer(),
                   CustomText(
                     text: AppTexts.delivered,
                     color: AppColors.successMarkColor,

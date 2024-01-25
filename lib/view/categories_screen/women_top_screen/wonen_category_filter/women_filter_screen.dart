@@ -6,9 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import '../../../routes/routes.dart';
-import '../../my_bag/inner/custom_container.dart';
-import '../../widgets/custom_elevated_button.dart';
+import '../../../../routes/routes.dart';
+import '../../../my_bag/inner/custom_container.dart';
+import '../../../widgets/custom_elevated_button.dart';
+import 'category_filter_widget.dart';
 
 class WomenFilterScreen extends StatefulWidget {
   const WomenFilterScreen({super.key});
@@ -62,16 +63,20 @@ class _WomenFilterScreenState extends State<WomenFilterScreen> {
               child: CustomText(
                 text: AppTexts.priceRange,
                 fontSize: 16.sp,
-                fontWeight: FontWeight.w400,
+                fontWeight: FontWeight.bold,
               ),
             ),
             Row(
               children: [
                 CustomText(
-                    text: "\$${_currentRangeValues.start.round().toString()}"),
+                    text: "\$${_currentRangeValues.start.round().toString()}",
+                fontWeight: FontWeight.bold,
+                ),
                 const Spacer(),
                 CustomText(
-                    text: "\$${_currentRangeValues.end.round().toString()}"),
+                    text: "\$${_currentRangeValues.end.round().toString()}",
+                fontWeight: FontWeight.bold,
+                ),
               ],
             ),
             RangeSlider(
@@ -98,7 +103,7 @@ class _WomenFilterScreenState extends State<WomenFilterScreen> {
               child: CustomText(
                 text: AppTexts.colors,
                 fontSize: 16.sp,
-                fontWeight: FontWeight.w400,
+                fontWeight:FontWeight.bold,
               ),
             ),
             Expanded(
@@ -133,7 +138,6 @@ class _WomenFilterScreenState extends State<WomenFilterScreen> {
                                   height: 44.h,
                                   decoration:  ShapeDecoration(
                                     shape: OvalBorder(
-
                                       side: BorderSide(width: 1,
                                           color: AppColors.errorMarkColor),
                                     ),
@@ -152,7 +156,7 @@ class _WomenFilterScreenState extends State<WomenFilterScreen> {
               child: CustomText(
                 text: AppTexts.sizes,
                 fontSize: 16.sp,
-                fontWeight: FontWeight.w400,
+                fontWeight: FontWeight.bold,
               ),
             ),
             ///<<<<<<<<<<<<<<<<<<<<<<<<<This is SizeGridview item >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
@@ -203,67 +207,12 @@ class _WomenFilterScreenState extends State<WomenFilterScreen> {
               child: CustomText(
                 text: AppTexts.categories,
                 fontSize: 16.sp,
-                fontWeight: FontWeight.w400,
+                fontWeight: FontWeight.bold,
               ),
             ),
             ///<<<<<<<<<<<<<<<<<<<<<<<<<This is CategoryGriedview item >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..///
+            CategoryFilter(cateGoryList: cateGoryList),
 
-            Expanded(
-              flex: 2,
-              child: GestureDetector(
-                onTap: (){
-
-                },
-                child: GridView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: cateGoryList.length,
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      crossAxisSpacing: 8,
-                      mainAxisSpacing: 10,
-                    ),
-                    itemBuilder: (context, index) {
-                      return CustomContainer(
-                        containerHeight: 20.h,
-                        containerWidth: 100.w,
-                        borderRadius: 10.w,
-                        imagePath: '',
-                        isImage: false,
-                        text: cateGoryList[index],
-                        isText: true,
-                        textColor:AppColors.blackColor,
-                        containerColor: AppColors.errorMarkColor,
-                      );
-                    }),
-              ),
-            ),
-            Center(
-              child: Padding(
-                padding: EdgeInsets.all(10.w),
-                child: Row(
-                  children: [
-                    CustomElevatedButton(
-                        onPressed: (){},
-                        buttonHeight: 40,
-                        buttonWidth: 150,
-                        buttonColor: AppColors.whiteColor,
-                        borderColor: AppColors.blackColor,
-                        titleSize: Dimensions.fontSizeDefault,
-                        titleColor: AppColors.blackColor,
-                        titleText: AppTexts.discard),
-                    SizedBox(
-                      width: 20.w,
-                    ),
-                    CustomElevatedButton(
-                        onPressed: (){},
-                        buttonHeight: 40,
-                        buttonWidth: 150,
-                        titleSize: Dimensions.fontSizeDefault,
-                        titleText: AppTexts.apply)
-                  ],
-                ),
-              ),
-            ),
             Expanded(
               flex: 1,
               child: GestureDetector(
@@ -295,6 +244,33 @@ class _WomenFilterScreenState extends State<WomenFilterScreen> {
                       ),
                     ],
                   ),
+                ),
+              ),
+            ),
+            Center(
+              child: Padding(
+                padding: EdgeInsets.all(10.w),
+                child: Row(
+                  children: [
+                    CustomElevatedButton(
+                        onPressed: (){},
+                        buttonHeight: 40,
+                        buttonWidth: 150,
+                        buttonColor: AppColors.whiteColor,
+                        borderColor: AppColors.blackColor,
+                        titleSize: Dimensions.fontSizeDefault,
+                        titleColor: AppColors.blackColor,
+                        titleText: AppTexts.discard),
+                    SizedBox(
+                      width: 20.w,
+                    ),
+                    CustomElevatedButton(
+                        onPressed: (){},
+                        buttonHeight: 40,
+                        buttonWidth: 150,
+                        titleSize: Dimensions.fontSizeDefault,
+                        titleText: AppTexts.apply)
+                  ],
                 ),
               ),
             )

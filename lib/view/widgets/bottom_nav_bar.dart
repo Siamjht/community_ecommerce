@@ -18,7 +18,7 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> {
   final _pageData = [
     HomePage(),
-    CategorieScreen(),
+    CategoriesScreen(),
     MyBagPage(),
     FavoriteScreen(),
     MyProfile()

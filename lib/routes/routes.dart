@@ -5,7 +5,7 @@ import '../view/auth/forgot_password_page/forgot_password.dart';
 import '../view/auth/login_page/login_page.dart';
 import '../view/auth/signup_page/signup_page.dart';
 import '../view/categories_screen/women_top_screen/women_brand_screen.dart';
-import '../view/categories_screen/women_top_screen/women_filter_screen.dart';
+import '../view/categories_screen/women_top_screen/wonen_category_filter/women_filter_screen.dart';
 import '../view/categories_screen/women_top_screen/women_top_screen.dart';
 import '../view/home/home_page/home_page.dart';
 import '../view/home/reviews_ratings/ratings_reviews_page.dart';
@@ -80,7 +80,7 @@ class AppRoutes {
     ),
     GetPage(
       name: RouteName.myOrderDetails,
-      page: () => MyOrderDetails(),
+      page: () => MyOrderDetail(),
     ),
     GetPage(
       name: RouteName.womenTopScreen,
@@ -104,7 +104,7 @@ class AppRoutes {
     ),
     GetPage(
       name: RouteName.myOrderDetails,
-      page: () => MyOrderDetails(),
+      page: () => MyOrderDetail(),
     ),
     GetPage(
       name: RouteName.myOrderSettingScreen,

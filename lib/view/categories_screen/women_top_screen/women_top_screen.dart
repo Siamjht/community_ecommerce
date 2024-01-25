@@ -68,6 +68,9 @@ class WomenTopScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(actions: [
+        Icon(Icons.search)
+      ],),
         body: Column(
       children: [
          SizedBox(
@@ -120,57 +123,60 @@ class WomenTopScreen extends StatelessWidget {
               ),
               ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..Women WomenFilters Lists >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
 
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  GestureDetector(
-                    onTap: (){
-                      ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..Press filter and open filterScreen >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                      onTap: (){
+                        ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..Press filter and open filterScreen >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
 
-                      Get.toNamed(RouteName.filterScreen);
-                    },
-                    child: Row(
-                      children: [
-                        SvgPicture.asset(
-                          AppIcons.womenFilter,
-                        ),
-                        CustomText(text: AppTexts.filters,),
-                      ],
+                        Get.toNamed(RouteName.filterScreen);
+                      },
+                      child: Row(
+                        children: [
+                          SvgPicture.asset(
+                            AppIcons.womenFilter,
+                          ),
+                          CustomText(text: AppTexts.filters,),
+                        ],
+                      ),
                     ),
-                  ),
-                  ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..Press \lowest and open bottomSheet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
+                    ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..Press \lowest and open bottomSheet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
 
-                  GestureDetector(
-                    onTap: () {
-                      Get.bottomSheet(
-                        WomenBottomSheet(bottomsheet: bottomsheet),
-                      );
-                      // Get.toNamed(RouteName.womenLowestTo);
-                    },
-                    child: Row(
-                      children: [
-                        SvgPicture.asset(
-                          AppIcons.womenPriceLowToHigh,
-                        ),
-                        CustomText(
-                          text:   AppTexts.priceLowestToHigh,)
-                      ],
+                    GestureDetector(
+                      onTap: () {
+                        Get.bottomSheet(
+                          WomenBottomSheet(bottomsheet: bottomsheet),
+                        );
+                        // Get.toNamed(RouteName.womenLowestTo);
+                      },
+                      child: Row(
+                        children: [
+                          SvgPicture.asset(
+                            AppIcons.womenPriceLowToHigh,
+                          ),
+                          CustomText(
+                            text:   AppTexts.priceLowestToHigh,)
+                        ],
+                      ),
                     ),
-                  ),
-                  Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: GestureDetector(
-                          onTap: () {},
-                          child: SvgPicture.asset(
-                            AppIcons.womenGriedIcon,
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: GestureDetector(
+                            onTap: () {},
+                            child: SvgPicture.asset(
+                              AppIcons.womenGriedIcon,
+                            ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                ],
+                      ],
+                    ),
+                  ],
+                ),
               ),
               ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..WomenTop All Text Show by ListView >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>///
 

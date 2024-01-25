@@ -1,3 +1,4 @@
+import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:community_ecommerce/utils/app_texts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,7 +9,7 @@ import '../../widgets/custom_text_field.dart';
 import 'my_order_setting_change_bottom_sheet.dart';
 
 class MyOrderSettingScreen extends StatefulWidget {
-  MyOrderSettingScreen({super.key});
+  const MyOrderSettingScreen({super.key});
 
   @override
   State<MyOrderSettingScreen> createState() => _MyOrderSettingScreenState();
@@ -27,6 +28,9 @@ class _MyOrderSettingScreenState extends State<MyOrderSettingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(actions: [
+        Icon(Icons.search)
+      ],),
       body: Padding(
         padding: const EdgeInsets.all(15),
         child: Column(
@@ -74,7 +78,7 @@ class _MyOrderSettingScreenState extends State<MyOrderSettingScreen> {
                   fontSize: 16.sp,
                   fontWeight: FontWeight.bold,
                 ),
-                Spacer(),
+                const Spacer(),
                 GestureDetector(
                     onTap: () {
                       Get.bottomSheet(
@@ -115,8 +119,10 @@ class _MyOrderSettingScreenState extends State<MyOrderSettingScreen> {
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
                             ),
-                            Spacer(),
+                            const Spacer(),
                             Switch(
+
+                              activeColor: AppColors.successMarkColor,
                                 value: isSwitch,
                                 onChanged: (value) {
                                   setState(() {

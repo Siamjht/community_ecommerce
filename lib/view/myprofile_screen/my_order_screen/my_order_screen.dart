@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-
 import '../../../routes/routes.dart';
 import '../../../utils/app_colors.dart';
 import '../../../utils/app_texts.dart';
@@ -17,32 +16,32 @@ class MyOrderScreen extends StatelessWidget {
     AppTexts.processing,
     AppTexts.cancelled,
   ];
-  final List myOrderTnumber = [
+  final List myOrderTexNumber = [
     AppTexts.order1947034,
     AppTexts.order1947034,
     AppTexts.order1947034,
   ];
-  final List myOrdrdate = [
+  final List myOrderDate = [
     AppTexts.$05122019,
     AppTexts.$05122019,
     AppTexts.$05122019,
   ];
-  final List myOrdrTracking = [
+  final List myOrderTracking = [
     AppTexts.trackingNumber,
     AppTexts.trackingNumber,
     AppTexts.trackingNumber,
   ];
-  final List myOrdriwnumber = [
+  final List myOrderIwNumber = [
     AppTexts.iW3475453455,
     AppTexts.iW3475453455,
     AppTexts.iW3475453455,
   ];
-  final List myOrdrquantity = [
+  final List myOrderQuantity = [
     AppTexts.quantity,
     AppTexts.quantity,
     AppTexts.quantity,
   ];
-  final List myOrdrThree = [
+  final List myOrderThree = [
     AppTexts.three,
     AppTexts.three,
     AppTexts.three,
@@ -51,17 +50,25 @@ class MyOrderScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("MyOrderScreen"),
-        ),
+      appBar: AppBar(actions: const [
+        Icon(Icons.search)
+      ],),
         body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 22),
+              child: CustomText(text: AppTexts.myOrders,
+              fontSize: 34,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             Expanded(
               flex: 1,
               child: Padding(
-                padding: const EdgeInsets.all(20),
-                child: Container(
-                  height: 50.h,
+                padding: const EdgeInsets.all(10),
+                child: SizedBox(
+                  height: 40.h,
                   child: ListView.builder(
                       scrollDirection: Axis.horizontal,
                       itemCount: myOrderTopText.length,
@@ -77,7 +84,7 @@ class MyOrderScreen extends StatelessWidget {
             ),
             Expanded(flex: 6,
               child: ListView.builder(
-                  itemCount: myOrderTnumber.length,
+                  itemCount: myOrderTexNumber.length,
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.all(15),
@@ -85,7 +92,7 @@ class MyOrderScreen extends StatelessWidget {
                         child: Container(
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15),
-                                color: Colors.white),
+                                color: AppColors.whiteColor),
                             child: Padding(
                               padding: const EdgeInsets.all(15),
                               child: Column(
@@ -93,32 +100,32 @@ class MyOrderScreen extends StatelessWidget {
                                   Row(
                                     children: [
                                       Text(
-                                        myOrderTnumber[index],
+                                        myOrderTexNumber[index],
                                         style: TextStyle(
                                             fontSize: 16,
                                             fontWeight: FontWeight.bold,
-                                            color: Colors.black),
+                                            color: AppColors.blackColor),
                                       ),
-                                      Spacer(),
+                                      const Spacer(),
                                       Text(
-                                        myOrdrdate[index],
+                                        myOrderDate[index],
                                         style:
-                                            TextStyle(fontSize: 14, color: Colors.grey),
+                                            TextStyle(fontSize: 14, color:AppColors.grayColor),
                                       ),
                                     ],
                                   ),
                                   Row(
                                     children: [
                                       Text(
-                                        myOrdrTracking[index],
+                                        myOrderTracking[index],
                                         style:
-                                            TextStyle(fontSize: 14, color: Colors.grey),
+                                            TextStyle(fontSize: 14, color: AppColors.grayColor),
                                       ),
                                       Text(
-                                        myOrdriwnumber[index],
+                                        myOrderIwNumber[index],
                                         style: TextStyle(
                                             fontSize: 14,
-                                            color: Colors.black,
+                                            color: AppColors.blackColor,
                                             fontWeight: FontWeight.bold),
                                       ),
                                     ],
@@ -126,18 +133,21 @@ class MyOrderScreen extends StatelessWidget {
                                   Row(
                                     children: [
                                       Text(
-                                        myOrdrquantity[index],
+                                        myOrderQuantity[index],
                                         style:
-                                            TextStyle(fontSize: 14, color: Colors.grey),
+                                            TextStyle(fontSize: 14, color: AppColors.grayColor),
                                       ),
                                       Text(
-                                        myOrdrThree[index],
+                                        myOrderThree[index],
                                         style: TextStyle(
                                             fontSize: 14,
-                                            color: Colors.black,
+                                            color: AppColors.blackColor,
                                             fontWeight: FontWeight.bold),
                                       ),
                                     ],
+                                  ),
+                                  const SizedBox(
+                                    height: 5,
                                   ),
                                   Row(
                                     children: [
@@ -146,21 +156,21 @@ class MyOrderScreen extends StatelessWidget {
                                           Get.toNamed(RouteName.myOrderDetails);
                                         },
                                         child: Container(
-                                          padding: EdgeInsets.symmetric(vertical: 8,horizontal: 12),
+                                          padding: const EdgeInsets.symmetric(vertical: 8,horizontal: 12),
                                           decoration: BoxDecoration(
                                               borderRadius: BorderRadius.circular(40),
-                                              color: Colors.white,
-                                              border: Border.all(color: Colors.black)),
+                                              color: AppColors.whiteColor,
+                                              border: Border.all(color: AppColors.blackColor)),
                                           child: Center(
                                             child: CustomText(
                                               text: AppTexts.details,
                                               fontSize: 14.sp,
-                                              color: Colors.black,
+                                              color: AppColors.blackColor,
                                             ),
                                           ),
                                         ),
                                       ),
-                                      Spacer(),
+                                      const Spacer(),
                                       CustomText(
                                         text: AppTexts.delivered,
                                         fontWeight: FontWeight.bold,
