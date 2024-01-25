@@ -10,11 +10,13 @@ import '../../../utils/app_texts.dart';
 class PromoCodeTextField extends StatelessWidget {
   PromoCodeTextField({
     super.key,
+    this.isContext = false,
     required this.controller,
     required this.textFieldPadding,
     required this.onTap,
   });
 
+  bool isContext;
   final Controller controller;
   final double textFieldPadding;
   VoidCallback onTap;
@@ -46,12 +48,15 @@ class PromoCodeTextField extends StatelessWidget {
                         ? GestureDetector(
                             onTap: () {
                               controller.promoCodeController.text = '';
-                              showModalBottomSheet(
-                                context: context,
-                                builder: (context) {
-                                  return PromoCodeBottomSheet();
-                                },
-                              );
+                              if(isContext){
+                                showModalBottomSheet(
+                                  context: context,
+                                  builder: (context) {
+                                    return PromoCodeBottomSheet();
+                                  },
+                                );
+                              }
+                              isContext = false;
                             },
                             child: Icon(
                               Icons.close,
@@ -65,7 +70,7 @@ class PromoCodeTextField extends StatelessWidget {
                     ),
                   ),
                 ),
-                if (!controller.isGetPromoCode.value)
+                if (!controller.isGetPromoCode.value || isContext)
                   Positioned(
                     right: -5,
                     child: GestureDetector(

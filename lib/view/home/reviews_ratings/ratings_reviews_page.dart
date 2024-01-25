@@ -339,42 +339,47 @@ class RatingsReviewsPage extends StatelessWidget {
 
                                   Align(
                                     alignment: Alignment.centerLeft,
-                                    child: Container(
-                                      width: 104.w,
-                                      height: 104.w,
-                                      decoration: ShapeDecoration(
-                                        color: AppColors.pagesColor,
-                                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
-                                        shadows: [
-                                          BoxShadow(
-                                            color: AppColors.shadowColor,
-                                            blurRadius: 16,
-                                            offset: Offset(0, 1),
-                                          )
-                                        ],
-                                      ),
-                                      child: Column(
-                                        children: [
-                                          Padding(
-                                            padding: EdgeInsets.symmetric(horizontal: 10.0.w, vertical: 15.h),
-                                            child: Container(
-                                              width: 40.w,
-                                              height: 40.h,
-                                              decoration: ShapeDecoration(
-                                                color: AppColors.buttonsColor,
-                                                shape: const OvalBorder(),
-                                              ),
-                                              child: Icon(
-                                                Icons.camera_alt,
-                                                color: AppColors.whiteColor,
+                                    child: GestureDetector(
+                                      onTap: (){
+
+                                      },
+                                      child: Container(
+                                        width: 104.w,
+                                        height: 104.w,
+                                        decoration: ShapeDecoration(
+                                          color: AppColors.pagesColor,
+                                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+                                          shadows: [
+                                            BoxShadow(
+                                              color: AppColors.shadowColor,
+                                              blurRadius: 16,
+                                              offset: Offset(0, 1),
+                                            )
+                                          ],
+                                        ),
+                                        child: Column(
+                                          children: [
+                                            Padding(
+                                              padding: EdgeInsets.symmetric(horizontal: 10.0.w, vertical: 15.h),
+                                              child: Container(
+                                                width: 40.w,
+                                                height: 40.h,
+                                                decoration: ShapeDecoration(
+                                                  color: AppColors.buttonsColor,
+                                                  shape: const OvalBorder(),
+                                                ),
+                                                child: Icon(
+                                                  Icons.camera_alt,
+                                                  color: AppColors.whiteColor,
+                                                ),
                                               ),
                                             ),
-                                          ),
-                                          Padding(
-                                            padding: EdgeInsets.symmetric(horizontal: 8.0.w),
-                                            child: CustomText(text: AppTexts.addPhotos, letterSpacing: -0.41,),
-                                          )
-                                        ],
+                                            Padding(
+                                              padding: EdgeInsets.symmetric(horizontal: 8.0.w),
+                                              child: CustomText(text: AppTexts.addPhotos, letterSpacing: -0.41,),
+                                            )
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),

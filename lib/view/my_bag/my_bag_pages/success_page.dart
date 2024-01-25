@@ -52,7 +52,6 @@ class SuccessPage extends StatelessWidget {
                     Get.toNamed(RouteName.homePage);
                   },
                   titleText: AppTexts.continueShopping.toUpperCase(),
-                buttonWidth: 185.w,
                 buttonHeight: 40.h,
                 titleSize: Dimensions.fontSizeDefault,
                 titleWeight: FontWeight.w400,

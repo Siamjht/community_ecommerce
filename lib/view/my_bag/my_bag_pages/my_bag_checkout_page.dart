@@ -2,7 +2,6 @@ import 'package:community_ecommerce/controllers/controller.dart';
 import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:community_ecommerce/utils/app_texts.dart';
 import 'package:community_ecommerce/utils/dimentions.dart';
-import 'package:community_ecommerce/utils/images.dart';
 import 'package:community_ecommerce/view/widgets/custom_elevated_button.dart';
 import 'package:community_ecommerce/view/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +21,11 @@ class MyBagCheckOutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.arrow_back_ios),
+        leading:  GestureDetector(
+            onTap: (){
+              Get.back();
+            },
+            child: const Icon(Icons.arrow_back_ios)),
         title: CustomText(
           text: AppTexts.checkoutAppbar,
           fontSize: Dimensions.fontSizeXLarge,

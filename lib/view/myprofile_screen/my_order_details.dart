@@ -21,7 +21,11 @@ class MyOrderDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          leading: const Icon(Icons.arrow_back_ios),
+          leading:  GestureDetector(
+              onTap: (){
+                Get.back();
+              },
+              child: const Icon(Icons.arrow_back_ios)),
           title: CustomText(
             text: AppTexts.orderDetails,
             fontSize: Dimensions.fontSizeXLarge.sp,

@@ -42,7 +42,7 @@ class PromoCodeBottomSheet extends StatelessWidget {
             Center(
               child: GestureDetector(
                 onTap: (){
-                  Navigator.pop(context);
+                  Get.back();
                 },
                 child: Container(
                   width: 60.w,

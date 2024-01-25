@@ -4,6 +4,7 @@ import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:community_ecommerce/utils/dimentions.dart';
 import 'package:community_ecommerce/view/widgets/custom_elevated_button.dart';
 import 'package:community_ecommerce/view/widgets/custom_text.dart';
+import 'package:easy_search_bar/easy_search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -15,22 +16,40 @@ import '../inner/my_bag_list_view.dart';
 import '../inner/promo_code_bottom_sheet.dart';
 import '../inner/promo_code_text_field.dart';
 
-class MyBagPage extends StatelessWidget {
+class MyBagPage extends StatefulWidget {
   MyBagPage({super.key});
 
+  @override
+  State<MyBagPage> createState() => _MyBagPageState();
+}
+
+class _MyBagPageState extends State<MyBagPage> {
   Controller controller = Get.put(Controller());
+  String searchValue = '';
+  List<String> suggestions = ["Shoes", "Jens Jacket", "Jens Pants", "Locket", "t-Shirt", "Sport Dress", "Evening Dress", "Blouse"];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          SvgPicture.asset(AppIcons.searchIcon),
-          SizedBox(
-            width: 11.w,
-          )
-        ],
+      appBar: EasySearchBar(
+          searchBackgroundColor: AppColors.whiteColor,
+        iconTheme: IconThemeData(
+          color: AppColors.blackColor,
+        ),
+        elevation: 0,
+        backgroundColor: AppColors.pagesColor,
+          title: Text(''),
+          onSearch: (value) => setState(() => searchValue = value),
+          suggestions: suggestions
       ),
+      // appBar: AppBar(
+      //   actions: [
+      //     SvgPicture.asset(AppIcons.searchIcon),
+      //     SizedBox(
+      //       width: 11.w,
+      //     )
+      //   ],
+      // ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,7 +72,9 @@ class MyBagPage extends StatelessWidget {
             PromoCodeTextField(
                 textFieldPadding: 16.0,
                 controller: controller,
+                isContext: true,
                 onTap: () {
+
                   showModalBottomSheet(
                     context: context,
                     builder: (context) {
@@ -65,19 +86,19 @@ class MyBagPage extends StatelessWidget {
               height: 28.h,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              padding: EdgeInsets.symmetric(horizontal: 16.0.w),
               child: Row(
                 children: [
                   CustomText(
-                    text: AppTexts.totalAmount,
+                    text: AppTexts.totalAmounts,
                     color: AppColors.grayColor,
                     fontWeight: FontWeight.w500,
-                    fontSize: Dimensions.fontSizeDefault,
+                    fontSize: Dimensions.fontSizeDefault.sp,
                   ),
                   const Spacer(),
                   CustomText(
                     text: AppTexts.totalPrice,
-                    fontSize: Dimensions.fontSizeDefault,
+                    fontSize: Dimensions.fontSizeDefault.sp,
                     fontWeight: FontWeight.w500,
                   )
                 ],
@@ -86,12 +107,54 @@ class MyBagPage extends StatelessWidget {
             SizedBox(
               height: 26.h,
             ),
+
+            ///<<<----------------------checkout Button------------->>>>
+            ///
+            ///
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: Center(
                   child: CustomElevatedButton(
                       onPressed: () {
-                        Get.toNamed(RouteName.myBagCheckoutPage);
+                        showDialog(
+                          context: context,
+                          builder: (context) {
+                            return AlertDialog(
+                              title: Center(child: CustomText(text: AppTexts.loginFirst, fontSize: Dimensions.fontSizeLarge,)),
+                              content: const SingleChildScrollView(
+                                child: ListBody(
+                                  children: [
+                                  ],
+                                ),
+                              ),
+                              actions:
+                              [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    CustomElevatedButton(
+                                      onPressed: (){
+                                        Get.back();
+                                      },
+                                      titleText: AppTexts.no,
+                                      titleSize: Dimensions.fontSizeSmall,
+                                      buttonHeight: 30,
+                                    ),
+                                    SizedBox(width: 10.w,),
+                                    CustomElevatedButton(
+                                      onPressed: (){
+                                        Get.toNamed(RouteName.loginPage);
+                                      },
+                                      titleText: AppTexts.yes,
+                                      titleSize: Dimensions.fontSizeSmall,
+                                      buttonHeight: 30,
+                                    ),
+                                  ],
+                                )
+                              ],
+                            );
+                          },
+                        );
                       },
                       titleText: AppTexts.checkOut.toUpperCase(),
                       buttonWidth: double.infinity.w,
