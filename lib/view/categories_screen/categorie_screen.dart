@@ -1,13 +1,12 @@
 import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../utils/app_texts.dart';
 import '../widgets/custom_text.dart';
 import 'categori_tab_screen.dart';
 
-class CategorieScreen extends StatelessWidget {
-  const CategorieScreen({super.key});
+class CategoriesScreen extends StatelessWidget {
+  const CategoriesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +21,7 @@ class CategorieScreen extends StatelessWidget {
           ),
           centerTitle: true,
           actions:  [
-            Icon(
+            const Icon(
               Icons.search,
               size: 24,
             ),
@@ -34,7 +33,7 @@ class CategorieScreen extends StatelessWidget {
             indicatorWeight: 3,
             indicatorSize: TabBarIndicatorSize.tab,
             indicatorColor: AppColors.tabBarIndicatorColor,
-            tabs: [
+            tabs: const [
               Tab(
                 text: AppTexts.women,
               ),

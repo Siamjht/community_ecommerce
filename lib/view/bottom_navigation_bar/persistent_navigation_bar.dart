@@ -1,12 +1,8 @@
 
-
 import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:community_ecommerce/utils/app_icons.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
-
 import '../categories_screen/categorie_screen.dart';
 import '../favorite_screen/favorite_screen.dart';
 import '../home/home_page/home_page.dart';
@@ -38,15 +34,15 @@ class _PersistentNavigationBarState extends State<PersistentNavigationBar> {
   @override
   Widget build(BuildContext context) {
     return PersistentTabView(
-        context,
-        controller: PersistentTabController(initialIndex: _currentIndex),
-        screens: [
-          HomePage(),
-          CategorieScreen(),
-          MyBagPage(),
-          FavoriteScreen(),
-          MyProfile()
-        ],
+      context,
+      controller: PersistentTabController(initialIndex: _currentIndex),
+      screens: [
+        HomePage(),
+        CategoriesScreen(),
+        MyBagPage(),
+        FavoriteScreen(),
+        MyProfile()
+      ],
       items: [
         PersistentBottomNavBarItem(
             icon: Icon(Icons.home),
@@ -84,9 +80,9 @@ class _PersistentNavigationBarState extends State<PersistentNavigationBar> {
       popActionScreens: PopActionScreensType.all,
       navBarStyle: NavBarStyle.style6,
       onItemSelected: (index){
-         setState(() {
-           selectedIndex = index;
-         });
+        setState(() {
+          selectedIndex = index;
+        });
       },
     );
   }

@@ -8,7 +8,6 @@ import 'package:get/get.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 import '../widgets/custom_text.dart';
-import 'my_order_screen/my_order_screen.dart';
 
 class MyProfile extends StatelessWidget {
   MyProfile({super.key});
@@ -87,13 +86,7 @@ class MyProfile extends StatelessWidget {
                   if(index == 0){
                     return GestureDetector(
                       onTap: (){
-                        PersistentNavBarNavigator.pushNewScreenWithRouteSettings(
-                          context,
-                          settings: RouteSettings(name: RouteName.myOrderScreen),
-                          screen: MyOrderScreen(),
-                          withNavBar: true,
-                          pageTransitionAnimation: PageTransitionAnimation.cupertino,
-                        );
+                        Get.toNamed(RouteName.myOrderScreen);
                       },
                       child: ListTileWidget(
                         title: myProfileHeaderText[index],

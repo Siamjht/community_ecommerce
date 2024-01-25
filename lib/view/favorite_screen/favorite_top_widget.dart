@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
-class FavoriteTopScreen extends StatelessWidget {
+class FevoriteTopScreen extends StatelessWidget {
   final String headerText;
   final String subtitleText;
   final String price;
   final String images;
   final String cardColor;
   final String cardSize;
-  FavoriteTopScreen({
+  FevoriteTopScreen({
     super.key,
     required this.headerText,
     required this.images,
@@ -24,18 +24,18 @@ class FavoriteTopScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
       child: Container(
         width: 350.w,
         height: 125.h,
         decoration: ShapeDecoration(
           color: Colors.white,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-          shadows: [
+          shadows:  [
             BoxShadow(
-              color: Color(0x14000000),
+              color: AppColors.womenTopContainerColor,
               blurRadius: 25,
-              offset: Offset(0, 1),
+              offset: const Offset(0, 1),
             )
           ],
         ),
@@ -45,7 +45,7 @@ class FavoriteTopScreen extends StatelessWidget {
               width: 119.w,
               height: 157.h,
               decoration: ShapeDecoration(
-                shape: RoundedRectangleBorder(
+                shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(8),
                         topLeft: Radius.circular(8))),

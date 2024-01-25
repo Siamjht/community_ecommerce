@@ -1,17 +1,15 @@
 import 'package:community_ecommerce/utils/app_colors.dart';
-import 'package:community_ecommerce/utils/app_texts.dart';
 import 'package:community_ecommerce/view/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
-class WomenTopWidget extends StatelessWidget {
+class WomenTopWidgets extends StatelessWidget {
   final String headerText;
   final String subtitleText;
   final String price;
   final String images;
-  WomenTopWidget({
+  WomenTopWidgets({
     super.key,
     required this.headerText,
     required this.images,
@@ -24,7 +22,7 @@ class WomenTopWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
       child: Container(
         width: 343.h,
         height: 120.h,
@@ -33,9 +31,9 @@ class WomenTopWidget extends StatelessWidget {
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
           shadows: [
             BoxShadow(
-              color: Color(0x14000000),
+              color: AppColors.womenTopContainerColor,
               blurRadius: 25,
-              offset: Offset(0, 1),
+              offset: const Offset(0, 1),
             )
           ],
         ),
@@ -45,7 +43,7 @@ class WomenTopWidget extends StatelessWidget {
               width: 119.w,
               height: 157.h,
               decoration: ShapeDecoration(
-                shape: RoundedRectangleBorder(
+                shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(8),
                         topLeft: Radius.circular(8))),
@@ -65,7 +63,7 @@ class WomenTopWidget extends StatelessWidget {
                       text: subtitleText,
                   fontSize: 16.sp,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black,
+                    color:AppColors.blackColor,
                   ), CustomText(
                       text: headerText,
                   fontSize: 14.sp,

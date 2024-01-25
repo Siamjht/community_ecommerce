@@ -8,7 +8,6 @@ import '../../../utils/app_colors.dart';
 import '../../../utils/app_texts.dart';
 import '../../widgets/custom_text.dart';
 import '../../widgets/my_order_custom_button.dart';
-import '../my_order_details.dart';
 
 class MyOrderScreen extends StatelessWidget {
   MyOrderScreen({super.key});
@@ -145,13 +144,7 @@ class MyOrderScreen extends StatelessWidget {
                                     children: [
                                       GestureDetector(
                                         onTap: () {
-                                          PersistentNavBarNavigator.pushNewScreenWithRouteSettings(
-                                            context,
-                                            settings: RouteSettings(name: RouteName.myOrderDetails),
-                                            screen: MyOrderDetails(),
-                                            withNavBar: true,
-                                            pageTransitionAnimation: PageTransitionAnimation.cupertino,
-                                          );
+                                          Get.toNamed(RouteName.myOrderDetails);
                                         },
                                         child: Container(
                                           padding: EdgeInsets.symmetric(vertical: 8,horizontal: 12),

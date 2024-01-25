@@ -1,5 +1,5 @@
+import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:community_ecommerce/utils/app_icons.dart';
-import 'package:community_ecommerce/view/categories_screen/women_top_screen/women_top_widgets.dart';
 import 'package:community_ecommerce/view/favorite_screen/favorite_top_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -99,11 +99,11 @@ class FavoriteScreen extends StatelessWidget {
                       return Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Chip(
-                          backgroundColor: Colors.black,
+                          backgroundColor: AppColors.blackColor,
                           label:
                           CustomText(
                             text: filter,
-                            color: Colors.white,
+                            color: AppColors.whiteColor
                           ),
                           padding: const EdgeInsets.symmetric(
                             horizontal: 30,
@@ -115,44 +115,47 @@ class FavoriteScreen extends StatelessWidget {
                       );
                     }),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
-                children: [
-                  Row(
-                    children: [
-                      SvgPicture.asset(
-                        AppIcons.womenFilter,
-                      ),
-                      CustomText(text: AppTexts.filters,),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      SvgPicture.asset(
-                        AppIcons.womenPriceLowToHigh,
-                      ),
-                      CustomText( text: AppTexts.priceLowestToHigh,)
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      GestureDetector(
-                        onTap: () {},
-                        child: SvgPicture.asset(
-                          AppIcons.womenGriedIcon,
+                  children: [
+                    Row(
+                      children: [
+                        SvgPicture.asset(
+                          AppIcons.womenFilter,
                         ),
-                      ),
-                    ],
-                  ),
-                ],
+                        CustomText(text: AppTexts.filters,),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        SvgPicture.asset(
+                          AppIcons.womenPriceLowToHigh,
+                        ),
+                        CustomText( text: AppTexts.priceLowestToHigh,)
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        GestureDetector(
+                          onTap: () {},
+                          child: SvgPicture.asset(
+                            AppIcons.womenGriedIcon,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
               Expanded(
                 flex: 9,
                 child: ListView.builder(
                     itemCount: favoriteCartItems.length,
                     itemBuilder: (context, index) {
-                      return FavoriteTopScreen(
+                      return FevoriteTopScreen(
                         headerText: favoriteCartItems[index][1],
                         images: favoriteCartItems[index][3],
                         subtitleText: favoriteCartItems[index][0],

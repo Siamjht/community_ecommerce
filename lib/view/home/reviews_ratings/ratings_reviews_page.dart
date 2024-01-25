@@ -1,6 +1,5 @@
 import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:community_ecommerce/utils/dimentions.dart';
-import 'package:community_ecommerce/view/my_bag/inner/custom_container.dart';
 import 'package:community_ecommerce/view/widgets/custom_elevated_button.dart';
 import 'package:community_ecommerce/view/widgets/custom_text.dart';
 import 'package:community_ecommerce/view/widgets/custom_text_field.dart';

@@ -1,15 +1,14 @@
+import 'package:community_ecommerce/utils/app_colors.dart';
 import 'package:community_ecommerce/view/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
-
 import '../../../controllers/controller.dart';
 import '../../../utils/app_texts.dart';
 import '../../widgets/custom_elevated_button.dart';
 import '../../widgets/custom_text_field.dart';
 
 class SettingChangeBottomSheet extends StatelessWidget {
-   SettingChangeBottomSheet({
+  const SettingChangeBottomSheet({
     super.key,
     required this.controller,
   });
@@ -21,8 +20,8 @@ class SettingChangeBottomSheet extends StatelessWidget {
     return Container(
       height: 472.h,
       decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(
+          color: AppColors.whiteColor,
+          borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(34), topRight: Radius.circular(34))),
       child: Column(
         children: [
@@ -36,7 +35,7 @@ class SettingChangeBottomSheet extends StatelessWidget {
             )
           ),
           Container(
-            margin: EdgeInsets.all(15),
+            margin: const EdgeInsets.all(15),
             child: Column(
               children: [
                 CustomTextField(
