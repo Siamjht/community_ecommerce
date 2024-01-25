@@ -7,10 +7,7 @@ import 'package:community_ecommerce/view/widgets/custom_text.dart';
 import 'package:easy_search_bar/easy_search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-
-import '../../../utils/app_icons.dart';
 import '../../../utils/app_texts.dart';
 import '../inner/my_bag_list_view.dart';
 import '../inner/promo_code_bottom_sheet.dart';

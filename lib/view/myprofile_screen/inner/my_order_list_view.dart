@@ -24,7 +24,7 @@ class MyOrderListView extends StatelessWidget {
         return Padding(
           padding: EdgeInsets.symmetric(vertical: 10.h),
           child: Container(
-            height: 120.h,
+            height: 120.w,
             width: double.infinity,
             decoration: ShapeDecoration(
               color: AppColors.whiteColor,

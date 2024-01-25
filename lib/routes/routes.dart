@@ -80,7 +80,7 @@ class AppRoutes {
     ),
     GetPage(
       name: RouteName.myOrderDetails,
-      page: () => MyOrderDetail(),
+      page: () => MyOrderDetails(),
     ),
     GetPage(
       name: RouteName.womenTopScreen,
@@ -102,10 +102,7 @@ class AppRoutes {
       name: RouteName.ratingsReviewsPage,
       page: () => RatingsReviewsPage(),
     ),
-    GetPage(
-      name: RouteName.myOrderDetails,
-      page: () => MyOrderDetail(),
-    ),
+
     GetPage(
       name: RouteName.myOrderSettingScreen,
       page: () => MyOrderSettingScreen(),
