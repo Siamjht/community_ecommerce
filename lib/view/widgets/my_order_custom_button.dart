@@ -3,11 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'custom_text.dart';
 
-class OrderCustomButton extends StatelessWidget {
+class OrderContainer extends StatelessWidget {
   final String label;
   final String text;
 
-  const OrderCustomButton({
+  const OrderContainer({
     super.key,
     required this.label,
     required this.text,

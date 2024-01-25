@@ -121,7 +121,7 @@ class AppTexts{
   static const colors= "Colors";
   static const sizes= "Sizes";
   static const xS= "XS";
-  static const S= "S";
+  static const s= "S";
   static const m= "M";
   static const xL= "XL";
   static const l= "L";
@@ -147,6 +147,7 @@ class AppTexts{
   static const selectSize= "Select size";
   static const sizeInfo= "Size info";
   static const addToCART= "ADD TO CART";
+  static const priceRange= "Price range";
 
 
 ///>>>>>>>>>>>>>>>>>>>>>>>>>FavoriteScreen Texts>>>>>>>>>>>>>>>>///
@@ -167,7 +168,8 @@ class AppTexts{
   static const $05122019= "05-12-2019";
   static const trackingNumber= "Tracking number:";
   static const iW3475453455= "IW3475453455";
-  static const quantity= "Quantity:  3";
+  static const quantity= "Quantity:  ";
+  static const three= "3";
   static const totalAmount= "Total Amount:112\$";
   static const oneHundredtwelve= "112\$";
   static const details= "Details";

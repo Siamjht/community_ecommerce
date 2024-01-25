@@ -1,13 +1,15 @@
 import 'package:community_ecommerce/view/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 import '../../../controllers/controller.dart';
 import '../../../utils/app_texts.dart';
+import '../../widgets/custom_elevated_button.dart';
 import '../../widgets/custom_text_field.dart';
 
 class SettingChangeBottomSheet extends StatelessWidget {
-  const SettingChangeBottomSheet({
+   SettingChangeBottomSheet({
     super.key,
     required this.controller,
   });
@@ -68,6 +70,12 @@ class SettingChangeBottomSheet extends StatelessWidget {
                   labelText: AppTexts.repeatNewPassword,
                   isIcon: false,
                 ),
+                CustomElevatedButton(
+                  onPressed: () {  },
+                  titleText: AppTexts.sAVEPASSWORD,
+                  buttonWidth: 343,
+
+                )
               ],
             ),
           )

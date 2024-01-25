@@ -5,8 +5,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../../utils/app_texts.dart';
-import '../widgets/my_container.dart';
-import '../widgets/custom_container.dart';
+import '../widgets/women_screen_container.dart';
+import '../widgets/container_widgets.dart';
 
 class CategoreTabScreen extends StatelessWidget {
   CategoreTabScreen({super.key});
@@ -34,7 +34,7 @@ class CategoreTabScreen extends StatelessWidget {
          SizedBox(
           height: 20.h,
         ),
-        const CustomContainer(),
+        const CustomContainers(),
          SizedBox(
           height: 10.h,
         ),
@@ -47,7 +47,7 @@ class CategoreTabScreen extends StatelessWidget {
             child: ListView.builder(
                 itemCount: categoriesHeaderText.length,
                 itemBuilder: (context, index) {
-                  return WomwnScreenWidget(
+                  return WomenScreenContainer(
                     images: images[index],
                     child: categoriesHeaderText[index],
                   );
