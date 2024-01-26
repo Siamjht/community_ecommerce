@@ -16,9 +16,7 @@ class WomenBottomSheet extends StatelessWidget {
 
   final List<String> bottomsheet;
 
-  bool isButtonRed = false;
-
-  RxList selected = [].obs;
+  RxList selectedItemsList = [].obs;
 
   ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>_Lowest to height press and open bottom sheet>>>>>>>>>>>>>>///
   @override
@@ -50,15 +48,11 @@ class WomenBottomSheet extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return GestureDetector(
                       onTap: (){
-                        isButtonRed = !isButtonRed;
-                        if(isButtonRed){
-                          selected.add(index);
+                        if(selectedItemsList.contains(index)){
+                          selectedItemsList.remove(index);
                         }
-                        if(!isButtonRed){
-                          // if(!isButtonRed && selected.length == 1){
-                          //   // selected.removeAt(0);
-                          // }
-                          selected.remove(index);
+                        else{
+                          selectedItemsList.add(index);
                         }
                       },
                       child: SizedBox(
@@ -67,7 +61,7 @@ class WomenBottomSheet extends StatelessWidget {
                             text: bottomsheet[index],
                             fontSize: 16.sp,
                             fontWeight: FontWeight.bold,
-                            color: selected.contains(index)? AppColors.errorMarkColor : AppColors.blackColor,
+                            color: selectedItemsList.contains(index)? AppColors.errorMarkColor : AppColors.blackColor,
                             // color:isButtonRed ? Colors.red : null,
                           ),
                           ),
