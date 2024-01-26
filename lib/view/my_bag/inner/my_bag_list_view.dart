@@ -19,12 +19,12 @@ class MyBagListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    RxList itemsList = [].obs;
+    // RxList itemsList = [].obs;
     return ListView.builder(
       itemCount: controller.products.length,
       itemBuilder: (context, index) {
         var items = controller.products[index];
-        itemsList.add(items);
+        // itemsList.add(items);
         RxInt itemQuantity = items.quantity.obs;
 
         return Padding(
